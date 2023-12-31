@@ -1,0 +1,126 @@
+.about {
+  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  padding-top: 3.1rem;
+  padding-bottom: 3rem;
+  background-color: var(---light);
+  background-image: radial-gradient(circle, #0036667d 1px, transparent 0);
+  background-size: 1.5rem 1.5rem;
+  font-weight: 400;
+  font-family: var(---basefont);
+  color: var(---baselight);
+  overflow: hidden;
+}
+
+/* Headline */
+
+.aboutHeroDivider {
+  height: 7.2rem;
+  margin: -2rem 0 0;
+  padding-top: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: var(---basedark);
+  background-image: radial-gradient(circle, #ffc400b4 1px, transparent 0);
+  background-size: 1.5rem 1.5rem;
+  transform: skew(0deg, -2deg);
+  z-index: 1;
+}
+
+.aboutHeroDivider h1 {
+  margin: 0;
+  padding: 0.4rem 0 0 0;
+}
+
+.aboutHeroDivider div {
+  transform: skew(0deg, 2deg);
+  font-family: var(---basefont);
+  font-size: 3.4rem;
+  text-align: center;
+}
+/*  Animation Headline*/
+
+.noAboutHeadline {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1s ease-in-out, transform 1.7s ease-in-out;
+}
+
+.aboutHeadline {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+/* Intro */
+
+.aboutIntro h2 {
+  margin: 0;
+  font-size: 3rem;
+}
+.aboutIntro {
+  margin: 2rem 2rem 0 2rem;
+  padding: 2rem;
+  background-color: var(---light);
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(---basedark);
+}
+
+@media (max-width: 768px) {
+  .aboutHeroDivider {
+    height: 5.2rem;
+  }
+  .aboutHeroDivider div {
+    font-size: 2rem;
+  }
+
+  .aboutIntro {
+    margin: 2.5rem 1rem 0 1rem;
+    padding: 1rem;
+  }
+  .aboutIntro h2 {
+    font-size: 2.2rem;
+  }
+  .aboutIntro p {
+    font-size: 1.3rem;
+  }
+  .pillars {
+    display: none;
+  }
+  .smallScreenPillars {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .pillars {
+    display: block;
+  }
+  .smallScreenPillars {
+    display: none;
+  }
+}
+@media (max-width: 450px) {
+  .aboutHeroDivider {
+    margin: -2.5rem 0 0;
+  }
+
+  .aboutIntro {
+    padding: 0.5rem;
+  }
+  .aboutIntro h2 {
+    font-size: 2rem;
+  }
+  .aboutIntro p {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 360px) {
+  .aboutHeroDivider div {
+    font-size: 1.8rem;
+  }
+  .aboutHeroDivider {
+    height: 5rem;
+  }
+}
+
+/* done */

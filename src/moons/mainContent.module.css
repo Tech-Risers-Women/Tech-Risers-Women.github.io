@@ -1,0 +1,107 @@
+.mainContentWrapper {
+  display: grid;
+  grid-template-columns: 33% 34% 33%;
+  justify-items: center;
+  max-width: 85%;
+  margin: 3rem auto 0;
+  padding: 0.8rem 1.2rem;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  font-family: var(---basefont);
+  text-align: center;
+  color: var(---basedark);
+}
+
+.mainLinkImage {
+  max-width: 80%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.mainLinkDescription {
+  height: max-content;
+  padding: 1rem;
+  background-color: var(---light);
+}
+
+.mainLink {
+  font-size: 1.3rem;
+  color: var(---dark);
+}
+
+.mainLink:hover {
+  color: var(---baselight);
+}
+
+@media (max-width: 768px) {
+  .mainContentWrapper {
+    max-width: 100%;
+    margin: 2rem auto 0;
+    padding: 0.8rem 0.2rem 0.4rem 0.2rem;
+  }
+
+  .mainLinkImage {
+    max-width: 90%;
+  }
+
+  .mainLinkDescription {
+    padding: 0.6rem;
+    font-size: 1.1rem;
+  }
+
+  .mainLink {
+    background-color: var(---light);
+    font-size: 1rem;
+  }
+}
+@media (max-width: 450px) {
+  .mainContentWrapper {
+    grid-template-columns: 100%;
+    margin: 2rem 0.85rem 0;
+  }
+
+  .mainContentWrapper div:nth-of-type(4) {
+    order: 2;
+  }
+
+  .mainContentWrapper div:nth-of-type(7) {
+    order: 3;
+  }
+
+  .mainContentWrapper div:nth-of-type(2) {
+    order: 4;
+    margin-top: 1.5rem;
+  }
+
+  .mainContentWrapper div:nth-of-type(5) {
+    order: 5;
+  }
+
+  .mainContentWrapper div:nth-of-type(8) {
+    order: 6;
+  }
+
+  .mainContentWrapper div:nth-of-type(3) {
+    order: 7;
+    margin-top: 1.5rem;
+  }
+
+  .mainContentWrapper div:nth-of-type(6) {
+    order: 8;
+  }
+
+  .mainContentWrapper div:nth-of-type(9) {
+    order: 9;
+  }
+
+  .mainLinkImage {
+    max-width: 48%;
+  }
+
+  .mainLinkDescription {
+    margin: 1rem 0 0.5rem 0;
+    padding: 0.2rem 0.1rem;
+  }
+}
+/* done */

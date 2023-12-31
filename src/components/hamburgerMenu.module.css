@@ -1,0 +1,107 @@
+.hamburgerButton {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.hamburgerButton div {
+  position: relative;
+  width: 1.7rem;
+  height: 0.25rem;
+  margin: 0.3rem;
+  border-radius: 2px;
+  background-color: var(---basedark);
+  transition: all 0.4s linear;
+  transform-origin: 1px;
+  z-index: 20;
+}
+
+/* open/close button */
+
+.hamburgerTopOpen {
+  transform: rotate(46deg);
+}
+
+.hamburgerMidOpen {
+  opacity: 0;
+}
+
+.hamburgerBottomOpen {
+  transform: rotate(-44deg);
+}
+
+.hamburgerTopClosed,
+.hamburgerBottomClosed {
+  transform: rotate(0);
+}
+
+.hamburgerMidClosed {
+  opacity: 1;
+}
+
+/* Menu */
+
+.hamburgerMenu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.smallScreenMenu a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(---basedark);
+  transition: color 0.3s ease-in-out;
+}
+
+.hamburgerMenu .menu,
+.hamburgerMenu .menuClosed {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  width: 30%;
+  padding: 5rem 1rem 2.5rem 1rem;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 3px 0;
+  background-color: var(---baselight);
+  z-index: 10;
+}
+
+.hamburgerMenu .menu {
+  transform: translateX(0%);
+  transition: all 0.6s ease-in-out;
+}
+
+.hamburgerMenu .menuClosed {
+  transform: translateX(-120%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.hamburgerLink {
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+}
+
+.hamburgerMenu .active {
+  color: var(---light) !important;
+}
+
+@media (max-width: 600px) {
+  .hamburgerMenu .menu,
+  .hamburgerMenu .menuClosed {
+    width: 40%;
+  }
+}
+@media (max-width: 400px) {
+  .hamburgerMenu .menu,
+  .hamburgerMenu .menuClosed {
+    width: 50%;
+  }
+}
+/* done */

@@ -1,0 +1,32 @@
+.error {
+  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: var(---basedark);
+  background-image: radial-gradient(circle, #ffc400b4 1px, transparent 0);
+  background-size: 1.5rem 1.5rem;
+  font-weight: 400;
+  font-family: var(---basefont);
+  color: var(---basedark);
+}
+.error h2,
+.error p {
+  padding: 2rem;
+  background-color: var(---baselight);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.error p {
+  font-size: 1.5rem;
+}
+
+.error a {
+  color: var(---basedark);
+  transition: all 150ms ease-in-out;
+}
+.error a:hover {
+  color: var(---light);
+}

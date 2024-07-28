@@ -1,10 +1,45 @@
 import React from "react";
+import { useState, useRef, useEffect } from "react";
+import styles from "./conduct.module.css";
 
 function Conduct() {
+
+  const [isInViewport, setIsInViewport] = useState(false);
+  const conductHeroDividerRef = useRef(null);
+
+  useEffect(() => {
+    const handleIntersection = (entries) => {
+      const isIntersecting = entries[0].isIntersecting;
+      setIsInViewport(isIntersecting);
+    };
+
+    const observer = new IntersectionObserver(handleIntersection);
+    const currentRef = conductHeroDividerRef.current;
+
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []); 
   return (
-    <>
-      <h1>Code of Conduct</h1>
-      <div>
+    <div className={styles.conduct}>
+      <div ref={conductHeroDividerRef} className={styles.conductHeroDivider}>
+        <div>
+          <h1
+            className={`${styles.noConductHeadline} ${
+              isInViewport ? styles.conductHeadline : styles.noConductHeadline
+            }`}
+          >
+            Code Of Conduct
+          </h1>
+        </div>
+      </div>
+      <div className={styles.conductText}>
         <p>
           All attendees, organisers, facilitators, mentors, volunteers, hosts
           and venue staff involved in Tech Risers Women events are required to
@@ -59,7 +94,7 @@ function Conduct() {
         </p>
       </div>
 
-      <div>
+      <div className={styles.conductText}>
         <h2>Consequences</h2>
         <p>
           If your behaviour proves to be harmful to others, you will have to be
@@ -68,23 +103,22 @@ function Conduct() {
         </p>
       </div>
 
-      <div>
+      <div className={styles.conductText}>
         <h2>Reporting Steps</h2>
         <p>
           The organisers are here to help attendees feel safe for the duration
           of our events.
         </p>
         <p>We value your participation.</p>
-        <p></p>
+        <p>If you need to report an incident please contact a Tech Risers Women organiser:</p>
         <ul>
           <li>
-            Example Person: [ex.ample@hotmail.com](mailto:ex.ample@hotmail.com)
+            Example Person: <a href="mailto:ex.ample@hotmail.com">ex.ample@hotmail.com</a>
           </li>
           <li>
-            For instance:
-            [for.instance@gmail.com](mailto:for.instance@gmail.com)
+            For instance: <a href="mailto:for.instance@gmail.com">for.instance@gmail.com</a>
           </li>
-          <li>Example 2: [ex2@outlook.com](mailto:ex2@outlook.com)</li>
+          <li>Example 2: <a href="ex2@outlook.com]">mailto:ex2@outlook.com</a></li>
         </ul>
         <p>You can also report violations to them during an event.</p>
         <p>
@@ -97,7 +131,7 @@ function Conduct() {
           upon which we based our Code of Conduct.
         </p>
       </div>
-    </>
+    </div>
   );
 }
 

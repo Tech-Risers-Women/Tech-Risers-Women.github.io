@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./about.module.css";
-import Pillars from "../moons/Pillars.js";
-import PillarsSmallScreen from "../moons/PillarsSmallScreen.js";
+import Pillars from "../moons/Pillars.jsx";
+import PillarsSmallScreen from "../moons/PillarsSmallScreen.jsx";
 
 function About() {
   const [isInViewport, setIsInViewport] = useState(false);

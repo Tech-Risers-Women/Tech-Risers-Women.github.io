@@ -2,7 +2,7 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import styles from './navbar.module.css';
 import Logo from '../media/logodark.png';
-import MobileMenu from './HamburgerMenu.js';
+import MobileMenu from './HamburgerMenu.jsx';
 
 function Navbar() {
   return (

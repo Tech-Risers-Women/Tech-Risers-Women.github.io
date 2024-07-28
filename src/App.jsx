@@ -1,16 +1,16 @@
-import {Routes, Route} from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Layout from './components/Layout';
-import Home from './planets/Home';
-import About from './planets/About';
-import Donate from './planets/Donate';
-import Contact from './planets/Contact';
 import Error from './Error';
-import GroupCoding from './planets/GroupCoding';
+import Layout from './components/Layout';
+import About from './planets/About';
 import Architect from './planets/Architect';
 import Bootcamp from './planets/Bootcamp';
-import Join from './planets/Join';
 import Conduct from './planets/Conduct';
+import Contact from './planets/Contact';
+import Donate from './planets/Donate';
+import GroupCoding from './planets/GroupCoding';
+import Home from './planets/Home';
+import Join from './planets/Join';
 
 function App() {
   return (

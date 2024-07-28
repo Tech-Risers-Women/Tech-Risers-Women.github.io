@@ -6,6 +6,11 @@ import About from './planets/About';
 import Donate from './planets/Donate';
 import Contact from './planets/Contact';
 import Error from './Error';
+import GroupCoding from './planets/GroupCoding';
+import Architect from './planets/Architect';
+import Bootcamp from './planets/Bootcamp';
+import Join from './planets/Join';
+import Conduct from './planets/Conduct';
 
 function App() {
   return (
@@ -22,6 +27,26 @@ function App() {
             path='about'
             element={<About />}
           />
+          <Route
+            path='group-coding-sessions'
+            element={<GroupCoding />}
+          />
+          <Route
+            path='join'
+            element={<Join />}
+          />
+          <Route
+            path='code-of-conduct'
+            element={<Conduct />}
+          />
+          <Route
+            path='bootcamp-plus-plus'
+            element={<Bootcamp />}
+          />
+          <Route
+            path='architect-s-club'
+            element={<Architect />}
+          />               
           <Route
             path='donate'
             element={<Donate />}

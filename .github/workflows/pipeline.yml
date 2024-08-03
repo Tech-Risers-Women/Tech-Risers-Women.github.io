@@ -17,6 +17,8 @@ jobs:
             #   run: npm run eslint
             # - name: Run tests
             #  run: npm run test
+            - name: Build
+              run: npm run build
             - name: Deploy
               env:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

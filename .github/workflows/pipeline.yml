@@ -1,27 +1,41 @@
-name: Deployment pipeline
+name: Deploy to GitHub Pages
 
-on: 
+on:
   workflow_dispatch
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
 jobs:
-    simple_deployment_pipeline:
-        runs-on: ubuntu-20.04
-        steps:
-            - uses: actions/checkout@v4
-            - uses: actions/setup-node@v4
-              with:
-                node-version: '20'
-            - name: Install dependencies
-              run: npm install
-            # - name: Check style - necessary ?
-            #   run: npm run eslint
-            # - name: Run tests
-            #  run: npm run test
-            - name: Build
-              run: npm run build
-            - name: Deploy
-              env:
-                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              run: |
-                git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/gros-pataplouf/Tech-Risers-Women.github.io.git
-                npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: './dist'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1

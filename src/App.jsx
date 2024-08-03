@@ -17,14 +17,14 @@ function App() {
     <div className='App'>
       <Routes>
         <Route
-          path=''
+          path='/TRW-dev/'
           element={<Layout />}>
           <Route
             index
             element={<Home />}
           />
           <Route
-            path='about'
+            path='/TRW-dev/about'
             element={<About />}
           />
           <Route
@@ -32,27 +32,27 @@ function App() {
             element={<GroupCoding />}
           />
           <Route
-            path='join'
+            path='/TRW-dev/join'
             element={<Join />}
           />
           <Route
-            path='code-of-conduct'
+            path='/TRW-dev/code-of-conduct'
             element={<Conduct />}
           />
           <Route
-            path='bootcamp-plus-plus'
+            path='/TRW-dev/bootcamp-plus-plus'
             element={<Bootcamp />}
           />
           <Route
-            path='architect-s-club'
+            path='/TRW-dev/architect-s-club'
             element={<Architect />}
           />               
           <Route
-            path='donate'
+            path='/TRW-dev/donate'
             element={<Donate />}
           />
           <Route
-            path='contact'
+            path='/TRW-dev/contact'
             element={<Contact />}
           />
           <Route

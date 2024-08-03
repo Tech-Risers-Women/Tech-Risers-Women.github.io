@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./home.module.css";
-import Intro from "../moons/MainIntro.js";
+import Intro from "../moons/MainIntro.jsx";
 // import MainContent from "../moons/MainContent.js";
 
 function Home() {

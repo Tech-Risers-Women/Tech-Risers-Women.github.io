@@ -2,14 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './navbar.module.css';
 
-const DropdownNav = () => {
+const DropdownNav = ({ name, menuItems }) => {
 	const [isOpen, setIsOpen] = useState(false);
-
-	const menuItems = [
-		{ route: 'group-coding-sessions', title: 'Group coding Sessions' },
-		{ route: 'architect-s-club', title: 'Architects Club' },
-		{ route: 'bootcamp-plus-plus', title: 'Bootcamp ++' }
-	];
 
 	const ref = useRef();
 
@@ -29,11 +23,11 @@ const DropdownNav = () => {
 	return (
 		<div className={styles.dropdownContainer} ref={ref}>
 			<button
-				className={styles.dropdownToggle}
+				className={`${styles.dropdownToggle} `}
 				onClick={() => setIsOpen(!isOpen)}
 				aria-haspopup="true"
 			>
-				Initiatives <span></span>
+				{name} <span></span>
 			</button>
 			{isOpen && (
 				<div>

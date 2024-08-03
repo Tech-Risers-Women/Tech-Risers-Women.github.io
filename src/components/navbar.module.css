@@ -80,6 +80,7 @@
 	font-weight: bold;
 	border: none;
 	outline: 0;
+	color: var(---basedark);
 	background-color: var(---baselight);
 	cursor: pointer;
 	font-size: 1.2rem;

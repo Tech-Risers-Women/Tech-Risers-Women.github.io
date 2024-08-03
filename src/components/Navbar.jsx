@@ -7,41 +7,54 @@ import DropdownNav from './DropdownNav.jsx';
 
 function Navbar() {
 	return (
-		<nav className={styles.navbar}>
-			<div className={styles.mobileMenu}>
-				<MobileMenu />
-			</div>
-			<NavLink
-				to="/"
-				className={({ isActive }) => (isActive ? styles.homeLogo : '')}
-			>
-				<img src={Logo} alt="Tech Risers Women Logo" />
-			</NavLink>
-			<ul className={styles.desktopMenu}>
-				<li>
-					<NavLink
-						to="/"
-						className={({ isActive }) =>
-							isActive ? styles.active : ''
-						}
-					>
-						Home
-					</NavLink>
-				</li>
-				<li>
-					<NavLink
-						to="/about"
-						className={({ isActive }) =>
-							isActive ? styles.active : ''
-						}
-					>
-						About
-					</NavLink>
-				</li>
-				<li>
-					<DropdownNav />
-				</li>
-				{/* <li>
+    <nav className={styles.navbar}>
+      <div className={styles.mobileMenu}>
+        <MobileMenu />
+      </div>
+      <NavLink
+        to="/"
+        className={({ isActive }) => (isActive ? styles.homeLogo : "")}
+      >
+        <img src={Logo} alt="Tech Risers Women Logo" />
+      </NavLink>
+      <ul className={styles.desktopMenu}>
+        <li>
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? styles.active : "")}
+          >
+            Home
+          </NavLink>
+        </li>
+
+        <li>
+          <DropdownNav
+		  	name={"About"}
+            menuItems={[
+              {
+                route: "about",
+                title: "About us",
+              },
+              { route: "code-of-conduct", title: "Code of Conduct" }
+            ]}
+          />
+        </li>
+
+
+        <li>
+          <DropdownNav
+		  	name={"Initiatives"}
+            menuItems={[
+              {
+                route: "group-coding-sessions",
+                title: "Group coding Sessions",
+              },
+              { route: "architect-s-club", title: "Architects Club" },
+              { route: "bootcamp-plus-plus", title: "Bootcamp ++" },
+            ]}
+          />
+        </li>
+        {/* <li>
           <NavLink
             to="/donate"
             className={({ isActive }) => (isActive ? styles.active : "")}
@@ -49,18 +62,16 @@ function Navbar() {
             Donate
           </NavLink>
         </li> */}
-				<li>
-					<NavLink
-						to="/contact"
-						className={({ isActive }) =>
-							isActive ? styles.active : ''
-						}
-					>
-						Contact
-					</NavLink>
-				</li>
-			</ul>
-		</nav>
-	);
+        <li>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => (isActive ? styles.active : "")}
+          >
+            Contact
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
+  );
 }
 export default Navbar;

@@ -17,14 +17,14 @@ function App() {
     <div className='App'>
       <Routes>
         <Route
-          path=''
+          path='/'
           element={<Layout />}>
           <Route
             index
             element={<Home />}
           />
           <Route
-            path='about'
+            path='/about'
             element={<About />}
           />
           <Route
@@ -32,27 +32,27 @@ function App() {
             element={<GroupCoding />}
           />
           <Route
-            path='join'
+            path='/join'
             element={<Join />}
           />
           <Route
-            path='code-of-conduct'
+            path='/code-of-conduct'
             element={<Conduct />}
           />
           <Route
-            path='bootcamp-plus-plus'
+            path='/bootcamp-plus-plus'
             element={<Bootcamp />}
           />
           <Route
-            path='architect-s-club'
+            path='/architect-s-club'
             element={<Architect />}
           />               
           <Route
-            path='donate'
+            path='/donate'
             element={<Donate />}
           />
           <Route
-            path='contact'
+            path='/contact'
             element={<Contact />}
           />
           <Route

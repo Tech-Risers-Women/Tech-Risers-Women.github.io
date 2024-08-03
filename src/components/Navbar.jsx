@@ -26,14 +26,21 @@ function Navbar() {
             Home
           </NavLink>
         </li>
+
         <li>
-          <NavLink
-            to="/about"
-            className={({ isActive }) => (isActive ? styles.active : "")}
-          >
-            About
-          </NavLink>
+          <DropdownNav
+		  	name={"About"}
+            menuItems={[
+              {
+                route: "about",
+                title: "About us",
+              },
+              { route: "code-of-conduct", title: "Code of Conduct" }
+            ]}
+          />
         </li>
+
+
         <li>
           <DropdownNav
 		  	name={"Initiatives"}

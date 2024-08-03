@@ -22,5 +22,4 @@ jobs:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
                 git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/gros-pataplouf/Tech-Risers-Women.github.io.git
-                git checkout feat/subpages
                 npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"

@@ -1,44 +1,12 @@
 import React from "react";
-import { useState, useRef, useEffect } from "react";
 import styles from "./conduct.module.css";
+import Banner from "../moons/Banner";
 
 function Conduct() {
 
-  const [isInViewport, setIsInViewport] = useState(false);
-  const conductHeroDividerRef = useRef(null);
-
-  useEffect(() => {
-    const handleIntersection = (entries) => {
-      const isIntersecting = entries[0].isIntersecting;
-      setIsInViewport(isIntersecting);
-    };
-
-    const observer = new IntersectionObserver(handleIntersection);
-    const currentRef = conductHeroDividerRef.current;
-
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
-
-    return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
-    };
-  }, []); 
   return (
     <div className={styles.conduct}>
-      <div ref={conductHeroDividerRef} className={styles.conductHeroDivider}>
-        <div>
-          <h1
-            className={`${styles.noConductHeadline} ${
-              isInViewport ? styles.conductHeadline : styles.noConductHeadline
-            }`}
-          >
-            Code Of Conduct
-          </h1>
-        </div>
-      </div>
+      <Banner name={"Code of Conduct"} />
       <div className={styles.conductText}>
         <p>
           All attendees, organisers, facilitators, mentors, volunteers, hosts

@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
-import styles from './navbar.module.css';
+import styles from './dropdown.module.css';
 
-const DropdownNav = ({ name, menuItems }) => {
+const DropdownNav = ({ name, menuItems, inHamburger }) => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const ref = useRef();
@@ -21,7 +21,12 @@ const DropdownNav = ({ name, menuItems }) => {
 	}, [isOpen]);
 
 	return (
-		<div className={styles.dropdownContainer} ref={ref}>
+		<div
+			className={`styles.dropdownContainer.${
+				inHamburger ? 'hamburger' : ''
+			}`}
+			ref={ref}
+		>
 			<button
 				className={`${styles.dropdownToggle} `}
 				onClick={() => setIsOpen(!isOpen)}
@@ -30,7 +35,7 @@ const DropdownNav = ({ name, menuItems }) => {
 				{name} <span></span>
 			</button>
 			{isOpen && (
-				<div>
+				<div className="hamburger">
 					<ul className={styles.dropdownMenu}>
 						{menuItems.map((item, index) => (
 							<li key={index} className={styles.dropdownMenuItem}>

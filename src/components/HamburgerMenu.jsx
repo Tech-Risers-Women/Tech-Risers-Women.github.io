@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './hamburgerMenu.module.css';
+import DropdownNav from './DropdownNav';
 
 function HamburgerMenu() {
 	const [navbarOpen, setNavbarOpen] = useState(false);
@@ -88,6 +89,26 @@ function HamburgerMenu() {
               Donate
             </NavLink>
           </li> */}
+					<li className={styles.hamburgerLink}>
+						<DropdownNav
+							name={'Initiatives'}
+							menuItems={[
+								{
+									route: 'group-coding-sessions',
+									title: 'Group coding Sessions'
+								},
+								{
+									route: 'architect-s-club',
+									title: 'Architects Club'
+								},
+								{
+									route: 'bootcamp-plus-plus',
+									title: 'Bootcamp ++'
+								}
+							]}
+							inHamburger={true}
+						/>
+					</li>
 					<li className={styles.hamburgerLink}>
 						<NavLink
 							to="/contact"

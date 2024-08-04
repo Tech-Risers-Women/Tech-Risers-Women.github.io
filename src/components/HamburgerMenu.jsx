@@ -99,7 +99,7 @@ function HamburgerMenu() {
 							menuItems={[
 								{
 									route: 'group-coding-sessions',
-									title: 'Group coding Sessions'
+									title: 'Group Coding Sessions'
 								},
 								{
 									route: 'architect-s-club',

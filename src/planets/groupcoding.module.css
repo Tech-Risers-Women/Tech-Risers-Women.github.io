@@ -20,13 +20,38 @@
     background-color: var(---light);
     background-image: none;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-	border-radius: 0 0 3px 0;
+	  border-radius: 0 0 3px 0;
     margin: 5vw;
     text-align: center;
     font-family: var(---basefont);
     font-size: 1.7rem;
     color: var(---basedark);
-    
+  }
+
+  .groupcodingJoin {
+    display: flex;
+    margin-top: 1rem;
+    position: relative;
+    flex-direction: column;
+    height: 10rem;
+    justify-content: end;
+    font-family: var(---basefont);
+    font-size: 2rem;
+    color: var(---basedark);
+    text-decoration: none;
+    &>svg {
+        display: block;
+        margin: auto;
+        margin-bottom: -1rem;
+        font-size: 4rem;
+        animation: 0.8s 1s 5 heartBeat;
+    }
+    &:hover {
+        &>svg {
+            animation: 0.8s 1s infinite heartBeat;
+        }
+    }
+
   }
 
 
@@ -34,10 +59,43 @@
     display: block;
     width: 40vw;
     filter: hue-rotate(10deg);
-    border: 1px solid var(--basedark);
+    border: 1px solid var(---basedark);
     border-radius: 4px;
-    padding: 20px;
-    background-color: var(--light);
+    padding: .8rem;
+    margin: 2rem;
+    background-color: var(---light);
+  }
+
+
+  @keyframes heartBeat {
+    from {
+        font-size: 4rem;
+        color: var(---accent);
+    }
+    to {
+        font-size: 3.5rem;
+        color: var(---accent);
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .groupcodingImage {
+        width: 90%;
+        margin: auto;
+    }
+
+    .groupcodingTile {
+        flex-direction: column;
+        font-size: 1.4rem;
+
+    }
+  }
+
+  @media (prefers-reduced-motion:reduce) {
+    .groupcodingJoin {
+        animation: none;
+    }
 
 
   }

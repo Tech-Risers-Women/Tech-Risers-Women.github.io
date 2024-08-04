@@ -13,7 +13,6 @@ function HamburgerMenu() {
 
 	useEffect(() => {
 		const handler = (event) => {
-			console.log('the event ref is', ref);
 			if (
 				navbarOpen &&
 				ref.current &&
@@ -70,15 +69,20 @@ function HamburgerMenu() {
 						</NavLink>{' '}
 					</li>
 					<li className={styles.hamburgerLink}>
-						<NavLink
-							to="/about"
-							className={({ isActive }) =>
-								isActive ? styles.active : ''
-							}
-							onClick={closeNavbar}
-						>
-							About
-						</NavLink>
+						<DropdownNav
+							name={'About'}
+							menuItems={[
+								{
+									route: 'about',
+									title: 'About us'
+								},
+								{
+									route: 'code-of-conduct',
+									title: 'Code of Conduct'
+								}
+							]}
+							inHamburger={true}
+						/>
 					</li>
 					{/* <li className={styles.hamburgerLink}>
             <NavLink

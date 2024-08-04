@@ -9,7 +9,6 @@ const DropdownNav = ({ name, menuItems, inHamburger }) => {
 
 	useEffect(() => {
 		const handler = (event) => {
-			console.log('the event ref is', ref);
 			if (isOpen && ref.current && !ref.current.contains(event.target)) {
 				setIsOpen(false);
 			}
@@ -21,22 +20,27 @@ const DropdownNav = ({ name, menuItems, inHamburger }) => {
 	}, [isOpen]);
 
 	return (
-		<div
-			className={`styles.dropdownContainer.${
-				inHamburger ? 'hamburger' : ''
-			}`}
-			ref={ref}
-		>
+		<div ref={ref}>
 			<button
-				className={`${styles.dropdownToggle} `}
+				className={`${
+					inHamburger
+						? styles.hamburgerDropdownToggle
+						: styles.dropdownToggle
+				}`}
 				onClick={() => setIsOpen(!isOpen)}
 				aria-haspopup="true"
 			>
 				{name} <span></span>
 			</button>
 			{isOpen && (
-				<div className="hamburger">
-					<ul className={styles.dropdownMenu}>
+				<div>
+					<ul
+						className={`${
+							inHamburger
+								? styles.hamburgerDropdownMenu
+								: styles.dropdownMenu
+						}`}
+					>
 						{menuItems.map((item, index) => (
 							<li key={index} className={styles.dropdownMenuItem}>
 								<NavLink

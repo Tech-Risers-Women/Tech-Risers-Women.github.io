@@ -11,4 +11,33 @@
     font-family: var(---basefont);
     color: var(---baselight);
     overflow: hidden;
+
+  }
+
+
+  .groupcodingTile {
+    display: flex;
+    background-color: var(---light);
+    background-image: none;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 0 0 3px 0;
+    margin: 5vw;
+    text-align: center;
+    font-family: var(---basefont);
+    font-size: 1.7rem;
+    color: var(---basedark);
+    
+  }
+
+
+  .groupcodingImage {
+    display: block;
+    width: 40vw;
+    filter: hue-rotate(10deg);
+    border: 1px solid var(--basedark);
+    border-radius: 4px;
+    padding: 20px;
+    background-color: var(--light);
+
+
   }

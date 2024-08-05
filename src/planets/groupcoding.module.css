@@ -30,22 +30,26 @@
 
   .groupcodingJoin {
     display: flex;
-    margin-top: 1rem;
+    margin-top: .5rem;
     position: relative;
     flex-direction: column;
-    height: 10rem;
-    justify-content: end;
+    height: 8rem;
+    justify-content: space-between;
     font-family: var(---basefont);
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: var(---basedark);
     text-decoration: none;
     &>svg {
         display: block;
-        margin: auto;
-        margin-bottom: -1rem;
-        font-size: 4rem;
+        margin: -1rem auto 0 auto;
+        font-size: 3rem;
         animation: 0.8s 1s 5 heartBeat;
     }
+    &>p {
+      padding-bottom: 2rem;
+      margin-top: 0;
+    }
+
     &:hover {
         &>svg {
             animation: 0.8s 1s infinite heartBeat;

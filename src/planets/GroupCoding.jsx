@@ -36,6 +36,38 @@ function GroupCoding() {
         </div>
       </div>
 
+      <div className={`${styles.groupcodingTile} ${styles.groupcodingUnflex}`}>
+
+
+      <details className={styles.groupcodingQuestions}>
+        <summary>When and where do the Group Coding Sessions take place?</summary>
+        <span>
+        Our Group Coding sessions are held on Zoom on Wednesdays at 7pm
+        London time.
+        </span>
+      </details>
+
+      <details className={styles.groupcodingQuestions}>
+        <summary>Which programming languages do you use?</summary>
+        <span>
+        We welcome all programming languages.
+        </span>
+      </details>
+
+      <details className={styles.groupcodingQuestions}>
+        <summary>What do I need to know before attending?</summary>
+        <span>
+        These sessions are suitable for people at all stages of their
+            career, as well as those who are considering a career in tech, and
+            would like to experience coding with others in a friendly
+            environment and to expand their skills and knowledge. You'll need to
+            know the basics of at least of one programming language before
+            attending - that's it! The basics include: Setting up a project,
+            basic syntax, variables, primitive types, loops and functions.
+        </span>
+      </details>
+
+      </div>
     </div>
   );
 }

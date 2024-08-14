@@ -12,3 +12,147 @@
     color: var(---baselight);
     overflow: hidden;
   }
+
+  .architect {
+    min-height: 100vh;
+    height: 100%;
+    margin: 0;
+    padding-top: 3.1rem;
+    padding-bottom: 3rem;
+    background-color: var(---light);
+    background-image: radial-gradient(circle, #0036667d 1px, transparent 0);
+    background-size: 1.5rem 1.5rem;
+    font-weight: 400;
+    font-family: var(---basefont);
+    color: var(---baselight);
+    overflow: hidden;
+  }
+
+
+  .architectTile {
+    display: flex;
+    background-color: var(---light);
+    background-image: none;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+	  border-radius: 0 0 3px 0;
+    margin: 5vw;
+    padding: 1vw;
+    text-align: center;
+    font-family: var(---basefont);
+    font-size: 1.7rem;
+    color: var(---basedark);
+  }
+
+  .architectText {
+    margin: auto;
+    padding: 2rem;
+    height: 100%;
+  }
+
+  .architectJoin {
+    display: flex;
+    margin-top: .5rem;
+    position: relative;
+    flex-direction: column;
+    height: 8rem;
+    justify-content: space-between;
+    font-family: var(---basefont);
+    font-size: 1.7rem;
+    color: var(---basedark);
+    text-decoration: none;
+    &>svg {
+        display: block;
+        margin: -1rem auto 0 auto;
+        font-size: 3rem;
+        animation: 0.8s 1s 5 heartBeat;
+    }
+    &>p {
+      padding-bottom: 2rem;
+      margin-top: 0;
+    }
+
+    &:hover {
+        &>svg {
+            animation: 0.8s 1s infinite heartBeat;
+        }
+    }
+
+  }
+
+
+  .architectImage {
+    display: block;
+    width: 40vw;
+    filter: hue-rotate(-10deg);
+    border: 1px solid var(---basedark);
+    border-radius: 4px;
+    padding: .8rem;
+    margin: 2rem;
+    background-color: var(---light);
+  }
+
+  .architectUnflex {
+    display: block;
+  }
+
+  .architectQuestions {
+      padding: 0.2rem;
+      margin: 2rem auto 2rem;
+      border: 1px solid var(---baselight);
+      border-radius: 5px;
+      background-color: var(---basedark);
+      color: var(---baselight);
+      text-align: left;
+      &:hover {
+        cursor: pointer;
+        
+      }
+      &>summary {
+        padding: 0.5rem;
+        border-radius: 5px;
+        background-color: var(---light);
+        color: var(---basedark);
+      }
+
+      &>span {
+        display: block;
+        color: var(---light);
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        line-height: 1.5;
+
+      }
+  
+  }
+
+
+  @keyframes heartBeat {
+    from {
+        font-size: 4rem;
+        color: var(---accent);
+    }
+    to {
+        font-size: 3.5rem;
+        color: var(---accent);
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .architectImage {
+        width: 90%;
+        margin: auto;
+    }
+
+    .architectTile {
+        flex-direction: column;
+        font-size: 1.4rem;
+
+    }
+  }
+
+  @media (prefers-reduced-motion:reduce) {
+    .architectJoin {
+        animation: none;
+    }
+}

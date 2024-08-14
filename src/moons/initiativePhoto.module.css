@@ -1,0 +1,18 @@
+.initiativePhoto {
+    display: block;
+    width: 40vw;
+    filter: hue-rotate(10deg);
+    border: 1px solid var(---basedark);
+    border-radius: 4px;
+    padding: .8rem;
+    margin: 2rem;
+    background-color: var(---light);
+  }
+
+@media (max-width: 768px) {
+    .initiativePhoto {
+        width: 90%;
+        margin: auto;
+    }
+
+  }

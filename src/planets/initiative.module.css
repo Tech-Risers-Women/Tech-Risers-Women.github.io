@@ -1,4 +1,4 @@
-.groupcoding {
+.initiative {
     min-height: 100vh;
     height: 100%;
     margin: 0;
@@ -15,7 +15,7 @@
   }
 
 
-  .groupcodingTile {
+  .initiativeTile {
     display: flex;
     background-color: var(---light);
     background-image: none;
@@ -29,13 +29,13 @@
     color: var(---basedark);
   }
 
-  .groupcodingText {
+  .initiativeText {
     margin: auto;
     padding: 2rem;
     height: 100%;
   }
 
-  .groupcodingJoin {
+  .initiativeJoin {
     display: flex;
     margin-top: .5rem;
     position: relative;
@@ -66,22 +66,11 @@
   }
 
 
-  .groupcodingImage {
-    display: block;
-    width: 40vw;
-    filter: hue-rotate(10deg);
-    border: 1px solid var(---basedark);
-    border-radius: 4px;
-    padding: .8rem;
-    margin: 2rem;
-    background-color: var(---light);
-  }
-
-  .groupcodingUnflex {
+  .initiativeUnflex {
     display: block;
   }
 
-  .groupcodingQuestions {
+  .initiativeQuestions {
       padding: 0.2rem;
       margin: 2rem auto 2rem;
       border: 1px solid var(---baselight);
@@ -125,12 +114,8 @@
 
 
   @media (max-width: 768px) {
-    .groupcodingImage {
-        width: 90%;
-        margin: auto;
-    }
 
-    .groupcodingTile {
+    .initiativeTile {
         flex-direction: column;
         font-size: 1.4rem;
 
@@ -138,7 +123,7 @@
   }
 
   @media (prefers-reduced-motion:reduce) {
-    .groupcodingJoin {
+    .initiativeJoin {
         animation: none;
     }
 }

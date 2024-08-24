@@ -57,5 +57,6 @@
 	}
 	.aboutHeroDivider {
 		height: 5rem;
+		padding-bottom: 0;
 	}
 }

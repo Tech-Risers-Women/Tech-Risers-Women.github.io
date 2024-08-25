@@ -13,7 +13,7 @@ function Bootcamp() {
 			'https://docs.google.com/forms/d/1avQMSWMHpTmXv3atDX1hk3ZUU2T7xuw3M30nuEIXGpU/viewform?edit_requested=true',
 		initiativeImage: moutonImage,
 		initiativeImageAlt:
-			'Melba Roy Mouton,mathematician and computer programmer in NASA’s Trajectory and Geodynamics Division',
+			'Melba Roy Mouton, mathematician and computer programmer in NASA’s Trajectory and Geodynamics Division',
 		initiativeFAQs: [
 			{
 				summary: 'What do I need to know before attending?',

@@ -1,6 +1,7 @@
 .initiativePhoto {
     display: block;
-    width: 40vw;
+    max-height: 60vh;
+    max-width: 40vw;
     filter: hue-rotate(10deg);
     border: 1px solid var(---basedark);
     border-radius: 4px;
@@ -13,6 +14,7 @@
     .initiativePhoto {
         width: 90%;
         margin: auto;
+        max-width: unset;
     }
 
   }

@@ -1,7 +1,7 @@
 {
   "name": "tech-risers-women",
   "version": "0.1.0",
-  "homepage": "https://gros-pataplouf.github.io/TRW-dev/",
+  "homepage": "https://www.techriserswomen.com/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

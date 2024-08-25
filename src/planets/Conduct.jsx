@@ -87,7 +87,7 @@ function Conduct() {
             Clarice Dallorto: <a href="mailto:claricerdallorto@gmail.com">claricerdallorto@gmail.com</a>
           </li>
           <li>
-              Nele Petry: <a href="petrydev@outlook.com]">mailto:petrydev@outlook.com</a>
+              Nele Petry: <a href="mailto:petrydev@outlook.com]">petrydev@outlook.com</a>
           </li>
         </ul>
         <p>You can also report violations to them during an event.</p>

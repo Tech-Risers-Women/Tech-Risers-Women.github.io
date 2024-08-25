@@ -93,8 +93,8 @@ function Conduct() {
         <p>You can also report violations to them during an event.</p>
         <p>
           If the person you need to report is a member of the Tech Risers Women
-          organiser team, please escalate to Sarah Usher at
-          techriserswomen@gmail.com
+          organiser team, please escalate to Sarah Usher at <a href="mailto:techriserswomen@gmail.com]">
+          techriserswomen@gmail.com </a>
         </p>
         <p>
           With thanks to https://www.globaldiversitycfpday.com/code-of-conduct

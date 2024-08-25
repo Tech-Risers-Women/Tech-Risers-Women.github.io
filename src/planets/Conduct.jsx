@@ -81,18 +81,20 @@ function Conduct() {
         <p>If you need to report an incident please contact a Tech Risers Women organiser:</p>
         <ul>
           <li>
-            Example Person: <a href="mailto:ex.ample@hotmail.com">ex.ample@hotmail.com</a>
+            Emma Gale: <a href="mailto:emmajgale3@gmail.com">emmajgale3@gmail.com</a>
           </li>
           <li>
-            For instance: <a href="mailto:for.instance@gmail.com">for.instance@gmail.com</a>
+            Clarice Dallorto: <a href="mailto:claricerdallorto@gmail.com">claricerdallorto@gmail.com</a>
           </li>
-          <li>Example 2: <a href="ex2@outlook.com]">mailto:ex2@outlook.com</a></li>
+          <li>
+              Nele Petry: <a href="petrydev@outlook.com]">mailto:petrydev@outlook.com</a>
+          </li>
         </ul>
         <p>You can also report violations to them during an event.</p>
         <p>
           If the person you need to report is a member of the Tech Risers Women
           organiser team, please escalate to Sarah Usher at
-          techriserwomen@gmail.com
+          techriserswomen@gmail.com
         </p>
         <p>
           With thanks to https://www.globaldiversitycfpday.com/code-of-conduct

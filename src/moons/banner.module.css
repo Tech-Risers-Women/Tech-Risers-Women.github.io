@@ -28,6 +28,7 @@
 	opacity: 0;
 	transform: translateX(-100%);
 	transition: opacity 1s ease-in-out, transform 1.7s ease-in-out;
+	font-size: clamp(16px, 8vw, 76px);
 }
 
 .aboutHeadline {
@@ -38,7 +39,7 @@
 
 @media (max-width: 768px) {
 	.aboutHeroDivider {
-		height: max-content;
+		height: min-content;
 		padding-bottom: 1.75rem;
 	}
 	.aboutHeroDivider div {

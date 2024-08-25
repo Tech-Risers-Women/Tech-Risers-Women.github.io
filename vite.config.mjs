@@ -8,7 +8,7 @@ export default defineConfig(({ command }) => {
   };
 
   if (command !== 'serve') {
-      config.base = '/TRW-dev/';
+      config.base = '/Tech-Risers-Women.github.io/';
   }
 
   return config;

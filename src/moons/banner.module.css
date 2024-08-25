@@ -1,61 +1,62 @@
-
 .aboutHeroDivider {
-    height: 7.2rem;
-    margin: -2rem 0 0;
-    padding-top: 1rem;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    background-color: var(---basedark);
-    background-image: radial-gradient(circle, #ffc400b4 1px, transparent 0);
-    background-size: 1.5rem 1.5rem;
-    transform: skew(0deg, -2deg);
-    z-index: 1;
-  }
-  
-  .aboutHeroDivider h1 {
-    margin: 0;
-    padding: 0.4rem 0 0 0;
-    color: var(---baselight);
-
-  }
-  
-  .aboutHeroDivider div {
-    transform: skew(0deg, 2deg);
-    font-family: var(---basefont);
-    font-size: 3.4rem;
-    text-align: center;
-  }
-  /*  Animation Headline*/
-  
-  .noAboutHeadline {
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: opacity 1s ease-in-out, transform 1.7s ease-in-out;
-  }
-  
-  .aboutHeadline {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-
-  @media (max-width: 768px) {
-    .aboutHeroDivider {
-      height: max-content;
-    }
-    .aboutHeroDivider div {
-      font-size: 10vw;
-    }
-  }
-  
-  @media (max-width: 450px) {
-    .aboutHeroDivider {
-      margin: -2.5rem 0 0;
-    }
+	height: 7.2rem;
+	margin: -2rem 0 0;
+	padding-top: 1.75rem;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	background-color: var(---basedark);
+	background-image: radial-gradient(circle, #ffc400b4 1px, transparent 0);
+	background-size: 1.5rem 1.5rem;
+	transform: skew(0deg, -2deg);
+	z-index: 1;
 }
-  @media (max-width: 360px) {
-    .aboutHeroDivider div {
-      font-size: 1.8rem;
-    }
-    .aboutHeroDivider {
-      height: 5rem;
-    }
-  }
+
+.aboutHeroDivider h1 {
+	margin: 0;
+	padding: 0.4rem 0 0 0;
+	color: var(---baselight);
+}
+
+.aboutHeroDivider div {
+	transform: skew(0deg, 2deg);
+	font-family: var(---basefont);
+	font-size: 3.4rem;
+	text-align: center;
+}
+/*  Animation Headline*/
+
+.noAboutHeadline {
+	opacity: 0;
+	transform: translateX(-100%);
+	transition: opacity 1s ease-in-out, transform 1.7s ease-in-out;
+}
+
+.aboutHeadline {
+	opacity: 1;
+	transform: translateX(0%);
+	font-size: clamp(16px, 8vw, 76px);
+}
+
+@media (max-width: 768px) {
+	.aboutHeroDivider {
+		height: max-content;
+		padding-bottom: 1.75rem;
+	}
+	.aboutHeroDivider div {
+		font-size: 10vw;
+	}
+}
+
+@media (max-width: 450px) {
+	.aboutHeroDivider {
+		margin: -2.5rem 0 0;
+	}
+}
+@media (max-width: 360px) {
+	.aboutHeroDivider div {
+		font-size: 1.8rem;
+	}
+	.aboutHeroDivider {
+		height: 5rem;
+		padding-bottom: 0;
+	}
+}

@@ -1,72 +1,69 @@
 .navbar img {
-  max-height: 3.75rem;
-  margin: -1rem;
-  padding: 0;
-  background-color: var(---baselight);
+	max-height: 3.75rem;
+	margin: -1rem;
+	padding: 0;
+	background-color: var(---baselight);
 }
 
 .navbar {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: var(---baselight);
-  background-image: radial-gradient(
-    circle,
-   #003666a9 1px,
-    transparent 0
-  );
-  background-size: 1.5rem 1.5rem;
-  z-index: 5;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+	background-color: var(---baselight);
+	background-image: radial-gradient(circle, #003666a9 1px, transparent 0);
+	background-size: 1.5rem 1.5rem;
+	z-index: 5;
 }
 
 /* Menu */
 
 .desktopMenu {
-  display: flex;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  z-index: 9;
+	display: flex;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	z-index: 9;
 }
 
 .desktopMenu li {
-  margin-right: 1rem;
+	margin-right: 1rem;
 }
 
 .desktopMenu a {
-  text-decoration: none;
-  color: var(---basedark);
-  font-weight: bold;
-  font-size: 1.2rem;
-  transition: color 0.3s ease-in-out;
+	text-decoration: none;
+	color: var(---basedark);
+	font-weight: bold;
+	font-size: 1.2rem;
+	transition: color 0.3s ease-in-out;
 }
 
 .desktopMenu a:hover {
-  color: white;
-  opacity: 1;
+	color: white;
+	opacity: 1;
 }
 
 /* Visuals */
 
 .active {
-  color: var(---light) !important;
+	color: var(---light) !important;
 }
 .homeLogo {
-  opacity: 0;
+	opacity: 0;
 }
 .mobileMenu {
-  display: none;
+	display: none;
 }
 @media (max-width: 768px) {
-  .desktopMenu {
-    display: none;
-  }
+	.desktopMenu {
+		display: none;
+	}
 
-  .mobileMenu {
-    display: block;
-  }
+	.mobileMenu {
+		display: block;
+	}
 }
+
 /* done */

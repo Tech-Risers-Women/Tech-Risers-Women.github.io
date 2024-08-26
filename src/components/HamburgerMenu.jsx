@@ -105,6 +105,7 @@ function HamburgerMenu() {
 								{
 									route: 'architect-s-club',
 									title: 'Architects Kata Club'
+									title: 'Architects Kata Club'
 								},
 								{
 									route: 'bootcamp-plus-plus',

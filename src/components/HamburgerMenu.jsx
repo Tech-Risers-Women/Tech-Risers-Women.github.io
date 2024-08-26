@@ -82,6 +82,7 @@ function HamburgerMenu() {
 								}
 							]}
 							inHamburger={true}
+							closeNavBar={closeNavbar}
 						/>
 					</li>
 					{/* <li className={styles.hamburgerLink}>

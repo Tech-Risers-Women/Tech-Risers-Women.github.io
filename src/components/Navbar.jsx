@@ -42,6 +42,8 @@ function Navbar() {
 								title: 'Code of Conduct'
 							}
 						]}
+						closeNavbar={() => null}
+
 					/>
 				</li>
 
@@ -63,6 +65,8 @@ function Navbar() {
 							}
 						]}
 						inHamburger={false}
+						closeNavbar={() => null}
+
 					/>
 				</li>
 				{/* <li>

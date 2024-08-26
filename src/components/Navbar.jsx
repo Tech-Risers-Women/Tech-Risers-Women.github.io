@@ -55,7 +55,7 @@ function Navbar() {
 							},
 							{
 								route: 'architect-s-club',
-								title: 'Architects Club'
+								title: 'Architects Kata Club'
 							},
 							{
 								route: 'bootcamp-plus-plus',

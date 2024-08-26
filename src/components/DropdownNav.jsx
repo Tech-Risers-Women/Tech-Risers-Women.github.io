@@ -21,6 +21,7 @@ const DropdownNav = ({ name, menuItems, inHamburger }) => {
 
 	const handleClick = () => {
 		setIsOpen(!isOpen);
+		closeNavbar();
 	};
 
 	return (

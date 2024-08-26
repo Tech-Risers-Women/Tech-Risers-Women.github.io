@@ -82,6 +82,7 @@ function HamburgerMenu() {
 								}
 							]}
 							inHamburger={true}
+							closeNavbar={closeNavbar}
 						/>
 					</li>
 					{/* <li className={styles.hamburgerLink}>
@@ -103,7 +104,7 @@ function HamburgerMenu() {
 								},
 								{
 									route: 'architect-s-club',
-									title: 'Architects Club'
+									title: 'Architects Kata Club'
 								},
 								{
 									route: 'bootcamp-plus-plus',

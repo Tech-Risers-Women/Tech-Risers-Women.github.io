@@ -65,14 +65,6 @@ function Navbar() {
 						inHamburger={false}
 					/>
 				</li>
-				{/* <li>
-          <NavLink
-            to="/donate"
-            className={({ isActive }) => (isActive ? styles.active : "")}
-          >
-            Donate
-          </NavLink>
-        </li> */}
 				<li>
 					<NavLink
 						to="/contact"

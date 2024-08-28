@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './dropdown.module.css';
-// test comment
+
 const DropdownNav = ({ name, menuItems, inHamburger, closeNavbar }) => {
 	const [isOpen, setIsOpen] = useState(false);
 

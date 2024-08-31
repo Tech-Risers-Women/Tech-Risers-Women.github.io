@@ -33,8 +33,11 @@
 .dropdownMenuItem {
 	padding: 0.5rem 0;
 	list-style: none;
+}
+
+.dropdownMenu li:not(:last-child),
+.hamburgerDropdownMenu li:not(:last-child) {
 	border-bottom: 1px dotted var(---basedark);
-	/* padding-bottom: 0.5rem; */
 }
 
 .dropdownMenuItem a {

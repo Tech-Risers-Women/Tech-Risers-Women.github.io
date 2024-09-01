@@ -81,7 +81,7 @@
   color: var(---basedark);
   &:hover {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-    background-color: rgb(166, 200, 239);
+    background-color: var(---babyblue);
     & .contactLink {
       color: var(---dark);
     }

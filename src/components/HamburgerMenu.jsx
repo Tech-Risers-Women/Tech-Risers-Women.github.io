@@ -85,15 +85,6 @@ function HamburgerMenu() {
 							closeNavbar={closeNavbar}
 						/>
 					</li>
-					{/* <li className={styles.hamburgerLink}>
-            <NavLink
-              to="/donate"
-              className={({ isActive }) => (isActive ? styles.active : "")}
-              onClick={closeNavbar}
-            >
-              Donate
-            </NavLink>
-          </li> */}
 					<li className={styles.hamburgerLink}>
 						<DropdownNav
 							name={'Initiatives'}

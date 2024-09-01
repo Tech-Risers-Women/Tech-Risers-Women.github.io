@@ -61,8 +61,17 @@
     font-size: 1.5rem;
     text-align: center;
     color: var(---basedark);
-    &>ul>li {
+    &>ul {
+      padding: 0;
+    }
+    &>ul>li,
+    &>ul>li>a,
+    &>p>a {
+        padding:  .5rem 0;
         list-style-type: none;
+        text-align: center;
+        text-decoration: none;
+        color: unset;
     }
   }
 
@@ -78,6 +87,10 @@
       font-size: 2rem;
     }
     .conductIntro p {
+      font-size: 1.2rem;
+    }
+
+    .conductText {
       font-size: 1.2rem;
     }
   }

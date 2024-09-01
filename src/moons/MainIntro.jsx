@@ -30,6 +30,13 @@ function intro() {
             alt='sign up for updates about Tech risers Women'>
             <button className={styles.getUpdatesButton}>get updates</button>
           </a>
+          <a
+            href='https://docs.google.com/forms/d/1avQMSWMHpTmXv3atDX1hk3ZUU2T7xuw3M30nuEIXGpU/viewform?edit_requested=true'
+            target='_blank'
+            rel='noreferrer'
+            alt='Join us'>
+            <button className={styles.getUpdatesButton}>join us</button>
+          </a>
         </div>
         <div>
           <img

@@ -37,6 +37,11 @@
 	/* padding-bottom: 0.5rem; */
 }
 
+.dropdownMenu li:not(:last-child),
+.hamburgerDropdownMenu li:not(:last-child) {
+	border-bottom: 1px dotted var(---basedark);
+}
+
 .dropdownMenuItem a {
 	font-size: 1.2rem;
 }

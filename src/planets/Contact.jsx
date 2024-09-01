@@ -49,30 +49,24 @@ function Contact() {
         </p>
         <div>
           <div className={styles.contactLinks}>
-            <div className={styles.linkWrapper}>
-              <a
+            <a className={styles.linkWrapper}
                 href="mailto:techriserswomen@gmail.com?subject=Tech Risers Women"
                 target="_blank"
                 rel="noreferrer"
-                title="send an Email to Tech Risers Women to get in touch"
-                className={styles.contactLink}
+                title="send an email to Tech Risers Women to get in touch"
               >
-                <LuMail />
-              </a>
-              <p>send us an Email</p>
-            </div>
-            <div className={styles.linkWrapper}>
-              <a
+                <LuMail className={styles.contactLink} />
+              <p>send us an email</p>
+            </a>
+            <a className={styles.linkWrapper}
                 href="https://forms.gle/MqyXV2HPRtUMAopE6"
                 target="_blank"
                 rel="noreferrer"
                 title="Fill out this form to receive regular updates"
-                className={styles.contactLink}
-              >
-                <TbHeartCode />
-              </a>
+            >
+                <TbHeartCode className={styles.contactLink} />
               <p>sign up for updates</p>
-            </div>
+            </a>
             <a
               className={styles.linkWrapper}
               href="https://docs.google.com/forms/d/1avQMSWMHpTmXv3atDX1hk3ZUU2T7xuw3M30nuEIXGpU/viewform?edit_requested=true"
@@ -81,7 +75,6 @@ function Contact() {
               title="Join our group sessions and initiatives"
             >
               <LuHeartHandshake className={styles.contactLink} />
-
               <p>join us</p>
             </a>
           </div>

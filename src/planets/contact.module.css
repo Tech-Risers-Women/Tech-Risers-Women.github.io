@@ -66,26 +66,25 @@
   line-height: 1.5;
 }
 
-
 .contactLinks{
   display: flex;
   flex-wrap: wrap;
 }
 
-
 .linkWrapper{
-  margin-inline:1rem;
-  margin:0 6rem;
-  padding: 3vw;
+  margin-inline: 1rem;
+  margin: 0 4rem;
+  padding: clamp(1rem, 2rem, 3vw);
   border-radius: 1rem;
   text-decoration: none;
   flex: 1 0 7rem;
+  color: var(---basedark);
   &:hover {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
     background-color: rgb(166, 200, 239);
-  }
-  &:visited {
-    color: unset;
+    & .contactLink {
+      color: var(---dark);
+    }
   }
 }
 
@@ -96,9 +95,6 @@
   color: var(---baselight);
 }
 
-.contactLink :hover {
-  color: var(---dark);
-}
 @media (max-width: 768px) {
   .contactHeroDivider {
     height: 5.2rem;

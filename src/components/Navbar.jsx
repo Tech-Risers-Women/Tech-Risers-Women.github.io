@@ -51,11 +51,11 @@ function Navbar() {
 						menuItems={[
 							{
 								route: 'group-coding-sessions',
-								title: 'Group coding Sessions'
+								title: 'Group Coding Sessions'
 							},
 							{
 								route: 'architect-s-club',
-								title: 'Architects Kata Club'
+								title: 'Architects\' Kata Club'
 							},
 							{
 								route: 'bootcamp-plus-plus',
@@ -65,14 +65,6 @@ function Navbar() {
 						inHamburger={false}
 					/>
 				</li>
-				{/* <li>
-          <NavLink
-            to="/donate"
-            className={({ isActive }) => (isActive ? styles.active : "")}
-          >
-            Donate
-          </NavLink>
-        </li> */}
 				<li>
 					<NavLink
 						to="/contact"

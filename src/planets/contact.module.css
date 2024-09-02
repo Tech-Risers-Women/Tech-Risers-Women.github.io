@@ -58,27 +58,36 @@
 }
 
 .contactWrapper h2,
-.contactWrapper p {
+.contactWrapper p,
+.contactWrapper span
+.contactWrapper a {
   text-align: center;
   font-size: 1.7rem;
-}
-
-.contactWrapper p {
   line-height: 1.5;
 }
 
 .contactLinks{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .linkWrapper{
-  margin-inline:1rem;
+  margin-inline: 1rem;
+  margin: 0 4rem;
+  padding: clamp(1rem, 2rem, 3vw);
+  border-radius: 1rem;
+  text-decoration: none;
+  flex: 1 0 7rem;
+  color: var(---basedark);
+  &:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(---babyblue);
+    & .contactLink {
+      color: var(---dark);
+    }
+  }
 }
 
-.linkWrapper{
-  margin:0 0.3rem;
-}
 
 .contactLink {
   margin-inline: 1.5rem;
@@ -86,9 +95,6 @@
   color: var(---baselight);
 }
 
-.contactLink :hover {
-  color: var(---dark);
-}
 @media (max-width: 768px) {
   .contactHeroDivider {
     height: 5.2rem;
@@ -134,6 +140,9 @@
   .contactLink {
     margin-inline: 1rem;
     font-size: 1.7rem;
+  }
+  .linkWrapper {
+    margin: 0 1rem;
   }
 }
 @media (max-width: 360px) {

@@ -3,7 +3,6 @@ import styles from "./conduct.module.css";
 import Banner from "../moons/Banner";
 
 function Conduct() {
-
   return (
     <div className={styles.conduct}>
       <Banner name={"Code of Conduct"} />
@@ -78,26 +77,37 @@ function Conduct() {
           of our events.
         </p>
         <p>We value your participation.</p>
-        <p>If you need to report an incident please contact a Tech Risers Women organiser:</p>
+        <p>
+          If you need to report an incident please contact a Tech Risers Women
+          organiser:
+        </p>
         <ul>
           <li>
-            Emma Gale: <a href="mailto:emmajgale3@gmail.com">emmajgale3@gmail.com</a>
+            <a href="mailto:emmajgale3@gmail.com">
+              Emma Gale: emmajgale3@gmail.com
+            </a>
           </li>
           <li>
-            Clarice Dallorto: <a href="mailto:claricerdallorto@gmail.com">claricerdallorto@gmail.com</a>
+            <a href="mailto:claricerdallorto@gmail.com">
+              Clarice Dallorto: claricerdallorto@gmail.com
+            </a>
           </li>
           <li>
-              Nele Petry: <a href="mailto:petrydev@outlook.com]">petrydev@outlook.com</a>
+            <a href="mailto:petrydev@outlook.com]">
+              Nele Petry: petrydev@outlook.com
+            </a>
           </li>
         </ul>
         <p>You can also report violations to them during an event.</p>
         <p>
           If the person you need to report is a member of the Tech Risers Women
-          organiser team, please escalate to Sarah Usher at <a href="mailto:techriserswomen@gmail.com]">
-          techriserswomen@gmail.com </a>
+          organiser team, please escalate to Sarah Usher at {" "}
+          <a href="mailto:techriserswomen@gmail.com"> 
+            techriserswomen@gmail.com
+          </a>
         </p>
         <p>
-          With thanks to https://www.globaldiversitycfpday.com/code-of-conduct
+          With thanks to https://<wbr/>www.<wbr/>globaldiversitycfpday<wbr/>.com/<wbr/>code-of-conduct
           upon which we based our Code of Conduct.
         </p>
       </div>

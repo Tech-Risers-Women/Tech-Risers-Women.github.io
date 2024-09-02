@@ -25,16 +25,6 @@ function Footer() {
             <LuMail />
           </a>
         </span>
-        {/* <span className={styles.icon}>
-            <a href="/" title="" className={styles.socialsLink}>
-            <FaXTwitter />
-            </a>
-          </span> */}
-        {/* <span className={styles.icon}>
-          <a href="/" title="" className={styles.socialsLink}>
-          <SiInstagram />
-          </a>
-          </span> */}
         get updates
         <span className={styles.icon}>
           <a
@@ -42,6 +32,18 @@ function Footer() {
             target='_blank'
             rel='noreferrer'
             title='Fill out this form to receive regular updates'
+            className={styles.contactLink}>
+            <TbHeartCode />
+          </a>
+        </span>
+        <wbr/>
+        join&nbsp;us
+        <span className={styles.icon}>
+          <a
+            href='https://docs.google.com/forms/d/1avQMSWMHpTmXv3atDX1hk3ZUU2T7xuw3M30nuEIXGpU/viewform?edit_requested=true'
+            target='_blank'
+            rel='noreferrer'
+            title='Fill out this form to join our workshops and group coding sessions'
             className={styles.contactLink}>
             <TbHeartCode />
           </a>

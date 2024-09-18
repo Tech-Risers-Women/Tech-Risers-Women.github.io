@@ -19,7 +19,7 @@ function GroupCoding() {
       {
         summary: "When and where do the Group Coding Sessions take place?",
         details:
-          "Our Group Coding sessions are held on Zoom on Wednesdays at 7pm London time.",
+          "Our Group Coding sessions are held on Zoom on Wednesdays at 6pm BST.",
       },
       {
         summary: "Which programming languages do you use?",

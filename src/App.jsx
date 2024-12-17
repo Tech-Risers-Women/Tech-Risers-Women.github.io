@@ -11,6 +11,7 @@ import Donate from './planets/Donate';
 import GroupCoding from './planets/GroupCoding';
 import Home from './planets/Home';
 import Join from './planets/Join';
+import WhoWeAre from './planets/WhoWeAre';
 
 function App() {
   return (
@@ -35,6 +36,11 @@ function App() {
             path='/join'
             element={<Join />}
           />
+          <Route
+            path='/who-we-are'
+            element={<WhoWeAre />}
+          />
+
           <Route
             path='/code-of-conduct'
             element={<Conduct />}

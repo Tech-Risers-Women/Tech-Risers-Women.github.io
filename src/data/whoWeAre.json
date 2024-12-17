@@ -1,0 +1,25 @@
+{
+    "pageTitle": "Who we are",
+    "secondaryTitle": "What we stand for",
+    "chapeau": "Discover who is behind TRW, and what we stand for",
+    "people": [
+        {
+            "name": "Test Testperson",
+            "imageUrl": "/src/media/carolShaw.png",
+            "languages": "Assembly",
+            "presentation": "Lorem r natus voluptatum ex beatae doloribus, odio cumque placeat, in libero culpa quidem? Alias fugiat reiciendis, beatae eveniet repellendus ea adipisci ad exercitationem earum maiores tenetur eos."
+        },
+        {
+            "name": "Test Testperson 2",
+            "imageUrl": "/src/media/carolShaw.png",
+            "languages": "Ada",
+            "presentation": "Lorem r natus voluptatum ex beatae doloribus, odio cumque placeat, in libero culpa quidem? Alias fugiat reiciendis, beatae eveniet repellendus ea adipisci ad exercitationem earum maiores tenetur eos."
+        },
+        {
+            "name": "Test Testperson 3",
+            "imageUrl": "/src/media/carolShaw.png",
+            "languages": "Delphi",
+            "presentation": "Lorem r natus voluptatum ex beatae doloribus, odio cumque placeat, in libero culpa quidem? Alias fugiat reiciendis, beatae eveniet repellendus ea adipisci ad exercitationem earum maiores tenetur eos."
+        }
+    ]
+}

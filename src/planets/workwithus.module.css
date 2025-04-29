@@ -1,0 +1,37 @@
+.workwithus {
+  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  padding-top: 3.1rem;
+  padding-bottom: 3rem;
+  background-color: var(---light);
+  background-image: radial-gradient(circle, #0036667d 1px, transparent 0);
+  background-size: 1.5rem 1.5rem;
+  font-weight: 400;
+  font-family: var(---basefont);
+  color: var(---baselight);
+  overflow: hidden;
+}
+
+.workwithusText {
+  margin: 2rem 2rem 0 2rem;
+  padding: 2rem;
+  background-color: var(---light);
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(---basedark);
+  &>ul {
+    padding: 0;
+  }
+  &>ul>li,
+    &>ul>li>a,
+    &>p>a {
+        padding:  .5rem 0;
+        list-style-type: none;
+        text-align: center;
+        text-decoration: none;
+        color: unset;
+    }
+  }
+
+/* done */

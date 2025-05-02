@@ -80,10 +80,14 @@ function HamburgerMenu() {
 									route: 'code-of-conduct',
 									title: 'Code Of Conduct'
 								},
-                                {
-                                	route: 'work-with-us',
-                                	title: 'Work With Us'
-                                }
+								{
+									route: 'work-with-us',
+									title: 'Work With Us'
+								},
+								{
+									route: 'events',
+									title: 'Events'
+								}
 							]}
 							inHamburger={true}
 							closeNavbar={closeNavbar}

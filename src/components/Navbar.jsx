@@ -41,10 +41,14 @@ function Navbar() {
 								route: 'code-of-conduct',
 								title: 'Code Of Conduct'
 							},
-                            {
-                            	route: 'work-with-us',
-                            	title: 'Work With Us'
-                            }
+							{
+								route: 'work-with-us',
+								title: 'Work With Us'
+							},
+							{
+								route: 'events',
+								title: 'Events'
+							}
 						]}
 					/>
 				</li>
@@ -59,7 +63,7 @@ function Navbar() {
 							},
 							{
 								route: 'architect-s-club',
-								title: 'Architects\' Kata Club'
+								title: "Architects' Kata Club"
 							},
 							{
 								route: 'bootcamp-plus-plus',

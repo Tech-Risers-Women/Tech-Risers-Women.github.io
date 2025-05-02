@@ -46,4 +46,9 @@
 	cursor: pointer;
 }
 
+.getUpdatesButton:hover {
+	border: 2px solid var(---baselight);
+	background-color: transparent;
+	color: var(---basedark);
+}
 /* done */

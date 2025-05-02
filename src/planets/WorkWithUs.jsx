@@ -18,9 +18,7 @@ function WorkWithUs() {
 					<li>Help lead sessions</li>
 					<li>Help with social media</li>
 					<li>Help with general orgainsing</li>
-					<li>
-						Help with any other way you would like to contribute
-					</li>
+					<li>Help in any other way you would like to contribute</li>
 				</ul>
 				<a href="https://forms.gle/mT6ySwpGRWDBrjHK7">
 					<button className={styles.getUpdatesButton}>
@@ -30,6 +28,21 @@ function WorkWithUs() {
 			</div>
 			<div className={styles.workwithusText}>
 				<h2>Partner with us!</h2>
+				<p>
+					We are open to collaborating with companies and communities
+					who want to showcase and share practical skills with our
+					community.
+				</p>
+				<p>
+					All of our events feature hands on skills, for example
+					workshops, whiteboarding sessions and coding. We can assist
+					with workshop design if required.
+				</p>
+				<a href="https://forms.gle/DPiQh9SuB8Vhktxg6">
+					<button className={styles.getUpdatesButton}>
+						Partner with us
+					</button>
+				</a>
 			</div>
 		</div>
 	);

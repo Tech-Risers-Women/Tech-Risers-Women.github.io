@@ -11,7 +11,7 @@ function WorkWithUs() {
 				<p>
 					Tech Risers Women is managed and run by volunteers. We're
 					always on the lookout for people to join us to help with
-					keeping it running. This is an opportunity to share you
+					keeping it running. This is an opportunity to share your
 					skills and learn new ones.
 				</p>
 				<ul>

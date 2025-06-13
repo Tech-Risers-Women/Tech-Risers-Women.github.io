@@ -88,8 +88,8 @@ function Conduct() {
             </a>
           </li>
           <li>
-            <a href="mailto:claricerdallorto@gmail.com">
-              Clarice Dallorto: claricerdallorto@gmail.com
+            <a href="mailto:isabel.monteiro.costa@gmail.com">
+              Isabel Costa: isabel.monteiro.costa@gmail.com
             </a>
           </li>
           <li>

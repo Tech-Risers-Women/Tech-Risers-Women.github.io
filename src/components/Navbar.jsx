@@ -35,11 +35,19 @@ function Navbar() {
 						menuItems={[
 							{
 								route: 'about',
-								title: 'About us'
+								title: 'About Us'
 							},
 							{
 								route: 'code-of-conduct',
-								title: 'Code of Conduct'
+								title: 'Code Of Conduct'
+							},
+							{
+								route: 'work-with-us',
+								title: 'Work With Us'
+							},
+							{
+								route: 'events',
+								title: 'Events'
 							}
 						]}
 					/>
@@ -55,7 +63,7 @@ function Navbar() {
 							},
 							{
 								route: 'architect-s-club',
-								title: 'Architects\' Kata Club'
+								title: "Architects' Kata Club"
 							},
 							{
 								route: 'bootcamp-plus-plus',

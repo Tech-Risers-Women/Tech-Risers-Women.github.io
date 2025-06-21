@@ -35,6 +35,23 @@ function WorkWithUs() {
           We would love to partner with other communities and share across our audiences. <br />
           We are open to partnering with companies who are looking to see more women promoted on the IC career track.
         </p>
+
+        <a
+            href='https://forms.gle/CHMeCsVV6Lf5NsZu5'
+            target='_blank'
+            rel='noreferrer'
+            alt='Volunteer with us'>
+            <button className={styles.button}>Volunteer with us</button>
+        </a>
+
+        <a
+            href='https://forms.gle/ThRF2PPKhg6NsqQFA'
+            target='_blank'
+            rel='noreferrer'
+            alt='Partner with us'>
+            <button className={styles.button}>Partner with us</button>
+        </a>
+
       </div>
 
       <div className={styles.workwithusText}>

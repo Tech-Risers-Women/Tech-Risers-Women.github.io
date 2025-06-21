@@ -78,20 +78,21 @@ function WorkWithUs() {
           If you haven't worked in events before, you'll learn how to run events online.
         </p>
 
+        <h3>We want to see:</h3>
+        <p></p>
+
         <div className={styles.centeredBlock}>
-          <p>We want to see:</p>
 
           <div className={styles.leftAlignedListWrapper}>
             <ul className={styles.leftAlignedList}>
               <li>more women stay in tech</li>
               <li>more women get promoted</li>
-              <li>more women engineers leading important technical work</li>
+              <li>more women Technical Leaders</li>
             </ul>
           </div>
 
-          <p>Join us as we make it happen.</p>
         </div>
-
+        <h3>Join us as we make it happen.</h3>
 
       </div>
     </div>

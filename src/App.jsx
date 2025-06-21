@@ -6,6 +6,7 @@ import About from './planets/About';
 import Architect from './planets/Architect';
 import Bootcamp from './planets/Bootcamp';
 import Conduct from './planets/Conduct';
+import WorkWithUs from './planets/WorkWithUs';
 import Contact from './planets/Contact';
 import Donate from './planets/Donate';
 import GroupCoding from './planets/GroupCoding';
@@ -38,6 +39,10 @@ function App() {
           <Route
             path='/code-of-conduct'
             element={<Conduct />}
+          />
+          <Route
+            path='/work-with-us'
+            element={<WorkWithUs />}
           />
           <Route
             path='/bootcamp-plus-plus'

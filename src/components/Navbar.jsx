@@ -35,12 +35,16 @@ function Navbar() {
 						menuItems={[
 							{
 								route: 'about',
-								title: 'About us'
+								title: 'About Us'
 							},
 							{
 								route: 'code-of-conduct',
-								title: 'Code of Conduct'
-							}
+								title: 'Code Of Conduct'
+							},
+                            {
+                            	route: 'work-with-us',
+                            	title: 'Work With Us'
+                            }
 						]}
 					/>
 				</li>

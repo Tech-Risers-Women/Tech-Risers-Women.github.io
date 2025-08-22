@@ -26,8 +26,6 @@ export default function EventCard({ event }) {
 					)}
 					{end && (
 						<>
-							{' '}
-							–{' '}
 							<time dateTime={event.end}>{formatDate(end)}</time>
 						</>
 					)}

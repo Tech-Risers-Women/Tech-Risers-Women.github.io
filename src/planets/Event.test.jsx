@@ -33,4 +33,31 @@ describe('Events page', () => {
 			/could not load events/i
 		);
 	});
+
+	it('renders event data from JSON', async () => {
+		vi.stubGlobal(
+			'fetch',
+			vi.fn().mockResolvedValue({
+				ok: true,
+				json: async () => [
+					{
+						id: 'meetup-1',
+						title: 'Group Coding Session',
+						start: '2025-08-27T18:00:00+01:00',
+						end: '2025-08-27T20:00:00+01:00',
+						location: 'online',
+						description: 'online group coding session'
+					}
+				]
+			})
+		);
+
+		render(<Events />);
+
+		expect(
+			await screen.findByText('Group Coding Session')
+		).toBeInTheDocument();
+
+		expect(screen.getByText('online')).toBeInTheDocument();
+	});
 });

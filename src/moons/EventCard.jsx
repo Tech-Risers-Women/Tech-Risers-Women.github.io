@@ -16,7 +16,7 @@ export default function EventCard({ event }) {
 	const end = event.end ? toDate(event.end) : null;
 
 	return (
-		<li className="styles.card">
+		<li className={styles.card}>
 			<h3 className="text-xl font-semibold">{event.title}</h3>
 
 			{(start || end) && (

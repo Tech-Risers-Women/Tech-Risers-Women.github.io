@@ -9,7 +9,7 @@ vi.mock('../moons/Banner', () => ({
 }));
 
 afterEach(() => {
-	vi.restoreAllMocks(); // reset fetch and any other mocks
+	vi.restoreAllMocks();
 });
 
 describe('Events page', () => {
@@ -22,5 +22,15 @@ describe('Events page', () => {
 
 		expect(screen.getByText(/loading events/i)).toBeInTheDocument();
 		await screen.findByRole('heading', { name: /upcoming events/i });
+	});
+
+	it('shows an error if fetch fails', async () => {
+		global.fetch = vi.fn().mockResolvedValue({ ok: false, status: 500 });
+
+		render(<Events />);
+
+		expect(await screen.findByRole('alert')).toHaveTextContent(
+			/could not load events/i
+		);
 	});
 });

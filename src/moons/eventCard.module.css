@@ -1,3 +1,22 @@
 .card {
 	border: 1px solid black;
 }
+
+.eventDate {
+	display: grid;
+	gap: 0.5rem;
+	margin-top: 0.5rem;
+}
+
+.eventDateItem {
+	display: inline-flex;
+	align-items: baseline;
+	gap: 0.5rem;
+}
+
+.icon {
+	inline-size: 1em;
+	block-size: 1em;
+	translate: 0 1px;
+	opacity: 0.9;
+}

@@ -58,6 +58,6 @@ describe('Events page', () => {
 			await screen.findByText('Group Coding Session')
 		).toBeInTheDocument();
 
-		expect(screen.getByText('online')).toBeInTheDocument();
+		expect(screen.getByText('Location: online')).toBeInTheDocument();
 	});
 });

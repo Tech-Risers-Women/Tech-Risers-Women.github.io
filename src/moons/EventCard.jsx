@@ -1,4 +1,6 @@
+import { LuCalendar, LuClock } from 'react-icons/lu';
 import styles from './eventCard.module.css';
+
 const toDate = (iso) => new Date(iso);
 const formatDayDate = (d) =>
 	d.toLocaleString('en-GB', {
@@ -22,7 +24,7 @@ const formatTimeZone = (d) =>
 		hour: '2-digit',
 		minute: '2-digit',
 		timeZone: 'Europe/London',
-		timeZoneName: 'short' // gives "BST" or "GMT"
+		timeZoneName: 'short'
 	});
 
 export default function EventCard({ event }) {
@@ -31,35 +33,52 @@ export default function EventCard({ event }) {
 
 	return (
 		<li className={styles.card}>
-			<h3 className="text-xl font-semibold">{event.title}</h3>
+			<h3 className={styles.title}>{event.title}</h3>
 
-			<p className="mt-1">
+			<div className={styles.eventDate}>
 				{start && (
 					<>
-						<time dateTime={event.start}>
-							{formatDayDate(start)}
-						</time>
-						{' : '}
+						<span className={styles.eventDateItem}>
+							<LuCalendar
+								aria-hidden="true"
+								className={styles.icon}
+							/>
+							<time dateTime={event.start}>
+								{formatDayDate(start)}
+							</time>
+						</span>
 
-						<time dateTime={event.start}>{formatTime(start)}</time>
-						{end && (
-							<>
-								{' — '}
-								<time dateTime={event.end}>
-									{formatTimeZone(end)}
-								</time>
-							</>
-						)}
+						<span className={styles.eventDateItem}>
+							<LuClock
+								aria-hidden="true"
+								className={styles.icon}
+							/>
+							<time dateTime={event.start}>
+								{formatTimeZone(start)}
+							</time>
+							{end && (
+								<>
+									{' — '}
+									<time dateTime={event.end}>
+										{formatTime(end)}
+									</time>
+								</>
+							)}
+						</span>
 					</>
 				)}
-			</p>
+			</div>
 
-			{event.location && <p className="mt-1">{event.location}</p>}
-			{event.description && <p className="mt-2">{event.description}</p>}
+			{event.location && (
+				<p className={styles.location}>Location: {event.location}</p>
+			)}
+			{event.description && (
+				<p className={styles.description}>{event.description}</p>
+			)}
 
 			{event.url && (
-				<p className="mt-3">
-					<a className="underline" href={event.url}>
+				<p className={styles.linkWrap}>
+					<a className={styles.link} href={event.url}>
 						More details
 					</a>
 				</p>

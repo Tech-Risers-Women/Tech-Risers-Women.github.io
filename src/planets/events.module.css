@@ -27,9 +27,8 @@
 	& > ul > li,
 	& > ul > li > a,
 	& > p > a {
-		padding: 0.5rem 0;
+		padding: 0.5rem;
 		list-style-type: none;
-		text-align: center;
 		text-decoration: none;
 		color: unset;
 	}

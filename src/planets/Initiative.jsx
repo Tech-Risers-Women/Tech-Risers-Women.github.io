@@ -5,9 +5,11 @@ import { LuHeartHandshake } from "react-icons/lu";
 function Initiative({ initiative, children }) {
   const { initiativeText, initiativeLink, initiativeFAQs } = initiative;
   const [banner, photo] = children;
+
   return (
     <div className={styles.initiative}>
       {banner}
+
       <div className={styles.initiativeTile}>
         <div className={styles.initiativeText}>
           <p>{initiativeText}</p>
@@ -31,7 +33,10 @@ function Initiative({ initiative, children }) {
               key={faq.summary.substring(0, 10)}
             >
               <summary>{faq.summary}</summary>
-              <span>{faq.details}</span>
+
+              <p style={{ whiteSpace: "pre-line", marginTop: "0.5rem" }}>
+                {faq.details}
+              </p>
             </details>
           );
         })}

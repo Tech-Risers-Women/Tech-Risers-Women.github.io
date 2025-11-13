@@ -5,6 +5,7 @@ import Layout from './components/Layout';
 import About from './planets/About';
 import Architect from './planets/Architect';
 import Bootcamp from './planets/Bootcamp';
+import CareerCorner from './planets/CareerCorner';
 import Conduct from './planets/Conduct';
 import WorkWithUs from './planets/WorkWithUs';
 import Contact from './planets/Contact';
@@ -51,7 +52,11 @@ function App() {
           <Route
             path='/architect-s-club'
             element={<Architect />}
-          />               
+          />
+          <Route
+            path='/career-corner'
+            element={<CareerCorner />}
+          />
           <Route
             path='/donate'
             element={<Donate />}

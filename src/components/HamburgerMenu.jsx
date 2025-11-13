@@ -104,7 +104,11 @@ function HamburgerMenu() {
 								{
 									route: 'bootcamp-plus-plus',
 									title: 'Bootcamp ++'
-								}
+								},
+                                {
+                                    route: 'career-corner',
+                                    title: 'Career Corner'
+                                }
 							]}
 							inHamburger={true}
 							closeNavbar={closeNavbar}

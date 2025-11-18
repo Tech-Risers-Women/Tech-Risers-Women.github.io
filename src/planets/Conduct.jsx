@@ -82,21 +82,26 @@ function Conduct() {
           organiser:
         </p>
         <ul>
-          <li>
-            <a href="mailto:emmajgale3@gmail.com">
-              Emma Gale: emmajgale3@gmail.com
-            </a>
-          </li>
-          <li>
-            <a href="mailto:isabel.monteiro.costa@gmail.com">
-              Isabel Costa: isabel.monteiro.costa@gmail.com
-            </a>
-          </li>
-          <li>
-            <a href="mailto:petrydev@outlook.com]">
-              Nele Petry: petrydev@outlook.com
-            </a>
-          </li>
+            <li>
+                <a href="mailto:bgarciagil@gmail.com">
+                          Blanca Garcia Gil: bgarciagil@gmail.com
+                </a>
+            </li>
+            <li>
+                <a href="mailto:emmajgale3@gmail.com">
+                          Emma Gale: emmajgale3@gmail.com
+                </a>
+            </li>
+            <li>
+                <a href="mailto:isabel.monteiro.costa@gmail.com">
+                          Isabel Costa: isabel.monteiro.costa@gmail.com
+                </a>
+            </li>
+            <li>
+                <a href="mailto:petrydev@outlook.com">
+                         Nele Petry: petrydev@outlook.com
+                </a>
+            </li>
         </ul>
         <p>You can also report violations to them during an event.</p>
         <p>

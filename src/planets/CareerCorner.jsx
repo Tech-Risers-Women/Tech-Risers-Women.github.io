@@ -22,8 +22,7 @@ function CareerCorner() {
 			{
 				summary: 'What do I need to know before attending?',
 				details: `This initiative is for already working engineers, mostly focused on those on the IC track, but it's generic enough for managers too.
-				          For Reflection Sessions or Career Checkins, you don't need to bring anything in particular, but if you have your brag book, learning plan or 1-1 notes,
-				          these might be useful to have on hand.
+				          For Reflection Sessions or Career Checkins, you don't need to bring anything in particular, but if you have your brag book, learning plan or 1-1 notes, these might be useful to have on hand.
 				          Any Core Skills Workshops will indicate prerequisites for attendance, on the event page.
 				         `
 			}

@@ -28,10 +28,10 @@ function Footer() {
         get updates
         <span className={styles.icon}>
           <a
-            href='https://forms.gle/MqyXV2HPRtUMAopE6'
+            href='https://www.linkedin.com/newsletters/tech-risers-women-newsletter-7422318142938468352/'
             target='_blank'
             rel='noreferrer'
-            title='Fill out this form to receive regular updates'
+            title='Sign up for updates about Tech Risers Women - everyone welcome!'
             className={styles.contactLink}>
             <TbHeartCode />
           </a>

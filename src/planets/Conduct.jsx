@@ -97,11 +97,11 @@ function Conduct() {
                           Isabel Costa: isabel.monteiro.costa@gmail.com
                 </a>
             </li>
-            <li>
-                <a href="mailto:petrydev@outlook.com">
-                         Nele Petry: petrydev@outlook.com
-                </a>
-            </li>
+{/*             <li> */}
+{/*                 <a href="mailto:petrydev@outlook.com"> */}
+{/*                          Nele Petry: petrydev@outlook.com */}
+{/*                 </a> */}
+{/*             </li> */}
         </ul>
         <p>You can also report violations to them during an event.</p>
         <p>

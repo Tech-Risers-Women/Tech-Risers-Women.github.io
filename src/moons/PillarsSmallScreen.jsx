@@ -53,10 +53,11 @@ function Pillars() {
         </div>
       </div>{" "}
       <div className={`${styles.pillarClosed} ${info}`} onClick={handleClick}>
-        Tech Risers Women emphasizes the creation of a supportive and
-        collaborative community amongst women in tech. We want to build
-        connections, share experiences, insights, and opportunities, ultimately
-        to gain confidence, feel heard, and thrive with a sense of belonging
+        Tech Risers Women emphasises the creation of a supportive and
+        collaborative community and we specifically cover topics pertinent to our members.
+        We aim to build confidence, increase skills and knowledge, share experiences, insights, and opportunities, as well
+         as ensure that the women in our community feel heard, and are empowered to thrive in tech with a sense of belonging
+         they may not have yet in the work environment.
       </div>
       {/* Pillar 2 */}
       <div className={styles.pillar} onClick={handleClick2}>
@@ -66,10 +67,12 @@ function Pillars() {
         </div>
       </div>
       <div className={`${styles.pillarClosed} ${info2}`} onClick={handleClick2}>
-        The focus here is on providing tangible, hands-on skills that are
-        directly applicable in the tech field. Workshops, training sessions, and
+        We focus on providing tangible, hands-on skills that are
+        directly applicable in software architecture, development and testing.
+        Workshops, training sessions, and
         collaborative projects are designed to equip women with the practical
-        knowledge needed to navigate the challenges of the industry. The goal is
+        knowledge and experience needed to navigate various technical and socio-political challenges in tech.
+        The goal is
         to ensure that participants not only gain theoretical knowledge but also
         develop the skills necessary for real-world scenarios, and to raise
         confidence and competence in their roles.
@@ -82,13 +85,12 @@ function Pillars() {
         </div>
       </div>{" "}
       <div className={`${styles.pillarClosed} ${info3}`} onClick={handleClick3}>
-        We want to create an environment that supports continuous learning and
-        mentorship to foster the professional development of women in tech. This
-        involves providing resources, guidance, and opportunities to grow
-        professionaly. By emphasizing professional and personal growth, the
-        initiative aims to empower women to achieve their goals, whether it be
-        through skill-building, networking, or mentorship programs, ultimately
-        contributing to their success in the tech sector.
+        We create a space that supports continuous learning and
+        career status reflection, to foster the professional development of each woman in the community.
+        This involves providing resources, guidance, and opportunities to grow
+        professionally. By emphasizing professional and personal growth, the
+        initiative aims to empower women to achieve their goals, ultimately
+        contributing to their career progression in the tech sector.
       </div>
     </div>
   );

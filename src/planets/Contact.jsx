@@ -59,10 +59,10 @@ function Contact() {
               <p>send us an email</p>
             </a>
             <a className={styles.linkWrapper}
-                href="https://forms.gle/MqyXV2HPRtUMAopE6"
+                href="https://www.linkedin.com/newsletters/tech-risers-women-newsletter-7422318142938468352/"
                 target="_blank"
                 rel="noreferrer"
-                title="Fill out this form to receive regular updates"
+                title="Sign up for updates about Tech Risers Women - everyone welcome!"
             >
                 <TbHeartCode className={styles.contactLink} />
               <p>sign up for updates</p>
@@ -72,7 +72,7 @@ function Contact() {
               href="https://docs.google.com/forms/d/1avQMSWMHpTmXv3atDX1hk3ZUU2T7xuw3M30nuEIXGpU/viewform?edit_requested=true"
               target="_blank"
               rel="noreferrer"
-              title="Join our group sessions and initiatives"
+              title="Sign-up as a member - choose the initiatives you would like to participate in"
             >
               <LuHeartHandshake className={styles.contactLink} />
               <p>join us</p>

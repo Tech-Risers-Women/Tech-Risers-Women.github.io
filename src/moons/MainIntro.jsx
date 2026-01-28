@@ -17,25 +17,25 @@ function intro() {
             women in tech toward their professional goals.
           </p>
 
-          <Link
-            to='/about'
-            title='learn more about Tech risers Women'>
-            <button className={styles.aboutButton}>learn more</button>
-          </Link>
+{/*           <Link */}
+{/*             to='/about' */}
+{/*             title='learn more about Tech risers Women'> */}
+{/*             <button className={styles.aboutButton}>learn more</button> */}
+{/*           </Link> */}
 
           <a
-            href='https://forms.gle/MqyXV2HPRtUMAopE6'
+            href='https://www.linkedin.com/newsletters/tech-risers-women-newsletter-7422318142938468352/'
             target='_blank'
             rel='noreferrer'
-            alt='sign up for updates about Tech risers Women'>
-            <button className={styles.getUpdatesButton}>get updates</button>
+            alt='Sign up for updates about Tech Risers Women - everyone welcome!'>
+            <button className={styles.getUpdatesButton}>Public Newsletter</button>
           </a>
           <a
             href='https://docs.google.com/forms/d/1avQMSWMHpTmXv3atDX1hk3ZUU2T7xuw3M30nuEIXGpU/viewform?edit_requested=true'
             target='_blank'
             rel='noreferrer'
-            alt='Join us'>
-            <button className={styles.getUpdatesButton}>join us</button>
+            alt='Sign-up as a member - choose the initiatives you would like to participate in'>
+            <button className={styles.getUpdatesButton}>Join Us</button>
           </a>
         </div>
         <div>

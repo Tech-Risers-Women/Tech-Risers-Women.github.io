@@ -12,9 +12,9 @@ function intro() {
             Fostering empowerment in the tech industry, our community-run
             initiative brings together women through regular meetings and group
             coding sessions. We provide a platform for collaborative learning,
-            mentorship, and networking, creating a community that champions
+            training, skill application and networking, creating a community that champions
             diversity and innovation. Join us as we inspire, support, and propel
-            women in tech toward their professional goals
+            women in tech toward their professional goals.
           </p>
 
           <Link

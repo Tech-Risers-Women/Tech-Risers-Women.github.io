@@ -32,7 +32,7 @@ function Pillars() {
       <div className={`${styles.pillar1} ${info}`} 
            onClick={handleClick}>
         <div className={styles.pillarDescription}>
-          Tech Risers Women emphasizes the creation of a supportive and
+          Tech Risers Women emphasises the creation of a supportive and
           collaborative community amongst women in tech. We want to build
           connections, share experiences, insights, and opportunities,
           ultimately to gain confidence, feel heard, and thrive with a sense of
@@ -77,7 +77,7 @@ function Pillars() {
           We want to create an environment that supports continuous learning and
           mentorship to foster the professional development of women in tech.
           This involves providing resources, guidance, and opportunities to grow
-          professionaly. By emphasizing professional and personal growth, the
+          professionally. By emphasising professional and personal growth, the
           initiative aims to empower women to achieve their goals, whether it be
           through skill-building, networking, or mentorship programs, ultimately
           contributing to their success in the tech sector.

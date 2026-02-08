@@ -8,7 +8,9 @@ function Bootcamp() {
 	const initiative = {
 		initiativeName: 'Bootcamp ++',
 		initiativeText:
-			"Have you completed a bootcamp and started working, but feel you've barely scratched the surface? Are you looking for a friendly place to structure your learning journey and build knowledge in a community-driven environment? Then bootcamp++ might be what you are looking for. Together, we deep-dive into various computer science and software engineering topics which are relevant to our careers. We'll complete practical exercises with peer-reviews, along with occasional workshops from experienced engineers. This is not a course, but rather a pathway you can walk with others, while we rise in our careers together.",
+			`Have you completed a bootcamp and started working, but feel you've barely scratched the surface? Are you looking for a friendly place to structure your learning journey and build knowledge in a community-driven environment?
+			Then Bootcamp++ might be what you are looking for. Together, we deep-dive into various computer science and software engineering topics which are relevant to our careers. We'll complete practical exercises with peer-reviews, along with occasional workshops from experienced engineers.
+			This is not a course, but rather a pathway you can walk with others, while we rise in our careers together.`,
 		initiativeLink:
 			'https://docs.google.com/forms/d/1avQMSWMHpTmXv3atDX1hk3ZUU2T7xuw3M30nuEIXGpU/viewform?edit_requested=true',
 		initiativeImage: moutonImage,

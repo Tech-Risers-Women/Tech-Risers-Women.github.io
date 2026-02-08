@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './footer.module.css';
-// import { FaXTwitter } from "react-icons/fa6";
-// import { SiInstagram } from "react-icons/si";
+import { FaXTwitter } from "react-icons/fa6";
+import { SiInstagram } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa6";
 import {LuMail} from 'react-icons/lu';
 import {TbHeartCode} from 'react-icons/tb';
 
@@ -46,6 +47,29 @@ function Footer() {
             title='Fill out this form to join our workshops and group coding sessions'
             className={styles.contactLink}>
             <TbHeartCode />
+          </a>
+        </span>
+      </p>
+      <p className={styles.socialMedia}>
+        follow us
+        <span className={styles.icon}>
+          <a
+            href='https://www.linkedin.com/company/tech-risers-women'
+            target='_blank'
+            rel='noreferrer'
+            title='Follow Tech Risers Women on LinkedIn'
+            className={styles.contactLink}>
+            <FaLinkedin />
+          </a>
+        </span>
+        <span className={styles.icon}>
+          <a
+            href='https://www.instagram.com/techrisers_women/'
+            target='_blank'
+            rel='noreferrer'
+            title='Follow Tech Risers Women on Instagram'
+            className={styles.contactLink}>
+            <SiInstagram />
           </a>
         </span>
       </p>

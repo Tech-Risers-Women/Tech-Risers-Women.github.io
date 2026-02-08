@@ -58,13 +58,13 @@ function WorkWithUs() {
         <h2>Why volunteer or partner with us</h2>
 
         <p>
-          Our community focuses on practice and applying skills. You'll be able to help
+          Our community focuses on practise and applying skills. You'll be able to help
           an upcoming mid/senior/staff engineer improve their technical skills, grow their confidence,
           and see them move up the career ladder, making sure more women stay in technical roles, and rise.
         </p>
 
         <p>
-          You'll also practice your own mentorship, communication and facilitation skills in the process.
+          You'll also practise your own mentorship, communication and facilitation skills in the process.
           As a partner, you'll reach an audience of aspiring women engineering leaders and be able to
           contribute to their growth.
         </p>

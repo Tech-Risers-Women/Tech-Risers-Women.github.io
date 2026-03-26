@@ -38,13 +38,18 @@ function Navbar() {
 								title: 'About Us'
 							},
 							{
+								route: 'events',
+								title: 'Events'
+							},
+
+							{
 								route: 'code-of-conduct',
 								title: 'Code Of Conduct'
 							},
-                            {
-                            	route: 'work-with-us',
-                            	title: 'Work With Us'
-                            }
+							{
+								route: 'work-with-us',
+								title: 'Work With Us'
+							}
 						]}
 					/>
 				</li>
@@ -59,16 +64,16 @@ function Navbar() {
 							},
 							{
 								route: 'architect-s-club',
-								title: 'Architects\' Kata Club'
+								title: "Architects' Kata Club"
 							},
 							{
 								route: 'bootcamp-plus-plus',
 								title: 'Bootcamp ++'
 							},
-                            {
-                            	route: 'career-corner',
-                            	title: 'Career Corner'
-                            }
+							{
+								route: 'career-corner',
+								title: 'Career Corner'
+							}
 						]}
 						inHamburger={false}
 					/>

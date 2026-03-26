@@ -77,13 +77,17 @@ function HamburgerMenu() {
 									title: 'About Us'
 								},
 								{
+									route: 'events',
+									title: 'Events'
+								},
+								{
 									route: 'code-of-conduct',
 									title: 'Code Of Conduct'
 								},
-                                {
-                                	route: 'work-with-us',
-                                	title: 'Work With Us'
-                                }
+								{
+									route: 'work-with-us',
+									title: 'Work With Us'
+								}
 							]}
 							inHamburger={true}
 							closeNavbar={closeNavbar}
@@ -105,10 +109,10 @@ function HamburgerMenu() {
 									route: 'bootcamp-plus-plus',
 									title: 'Bootcamp ++'
 								},
-                                {
-                                    route: 'career-corner',
-                                    title: 'Career Corner'
-                                }
+								{
+									route: 'career-corner',
+									title: 'Career Corner'
+								}
 							]}
 							inHamburger={true}
 							closeNavbar={closeNavbar}

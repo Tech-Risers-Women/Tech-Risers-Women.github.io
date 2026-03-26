@@ -27,9 +27,23 @@ const formatTimeZone = (d) =>
 		timeZoneName: 'short'
 	});
 
+const getInitiativeClass = (initiative) => {
+	switch (initiative) {
+		case 'Architects Kata Club':
+			return styles.architectsKataClub;
+		case 'Bootcamp++':
+			return styles.bootcamp;
+		case 'Career Corner':
+			return styles.careerCorner;
+		case 'GCS':
+			return styles.gcs;
+	}
+};
+
 export default function EventCard({ event }) {
 	const start = event.start ? toDate(event.start) : null;
 	const end = event.end ? toDate(event.end) : null;
+	const initiativeClass = getInitiativeClass(event.initiative);
 
 	return (
 		<li className={styles.card}>

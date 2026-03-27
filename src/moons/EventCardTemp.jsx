@@ -1,4 +1,4 @@
-import { LuCalendar, LuClock } from 'react-icons/lu';
+import { LuCalendar, LuClock, LuMapPin } from 'react-icons/lu';
 import styles from './eventCard.module.css';
 
 const toDate = (iso) => new Date(iso);
@@ -36,8 +36,8 @@ const getInitiativeClass = (initiative) => {
 			return styles.bootcamp;
 		case 'Career Corner':
 			return styles.careerCorner;
-		case 'GCS':
-			return styles.gcs;
+		case 'Conduct':
+			return styles.conduct;
 		default:
 			return styles.defaultInitiative;
 	}
@@ -50,6 +50,12 @@ export default function EventCard({ event }) {
 
 	return (
 		<li className={styles.card}>
+			{event.image && (
+				<div className={styles.imageWrap}>
+					<img className={styles.image} src={event.image} alt="" />
+				</div>
+			)}
+
 			<div className={styles.content}>
 				{event.initiative && (
 					<p className={`${styles.badge} ${initiativeClass}`}>
@@ -59,24 +65,24 @@ export default function EventCard({ event }) {
 
 				<h3 className={styles.title}>{event.title}</h3>
 
-				<div className={styles.eventDate}>
-					{start && (
-						<>
-							<span className={styles.eventDateItem}>
-								<LuCalendar
-									aria-hidden="true"
-									className={styles.icon}
-								/>
-								<time dateTime={event.start}>
-									{formatDayDate(start)}
-								</time>
-							</span>
+				{start && (
+					<div className={styles.meta}>
+						<div className={styles.metaItem}>
+							<LuCalendar
+								aria-hidden="true"
+								className={styles.icon}
+							/>
+							<time dateTime={event.start}>
+								{formatDayDate(start)}
+							</time>
+						</div>
 
-							<span className={styles.eventDateItem}>
-								<LuClock
-									aria-hidden="true"
-									className={styles.icon}
-								/>
+						<div className={styles.metaItem}>
+							<LuClock
+								aria-hidden="true"
+								className={styles.icon}
+							/>
+							<div>
 								<time dateTime={event.start}>
 									{formatTimeZone(start)}
 								</time>
@@ -88,26 +94,44 @@ export default function EventCard({ event }) {
 										</time>
 									</>
 								)}
-							</span>
-						</>
-					)}
-				</div>
+							</div>
+						</div>
 
-				{event.location && (
-					<p className={styles.location}>
-						Location: {event.location}
-					</p>
+						{event.location && (
+							<div className={styles.metaItem}>
+								<LuMapPin
+									aria-hidden="true"
+									className={styles.icon}
+								/>
+								{event.locationUrl ? (
+									<a
+										className={styles.locationLink}
+										href={event.locationUrl}
+										target="_blank"
+										rel="noreferrer"
+									>
+										{event.location}
+									</a>
+								) : (
+									<span className={styles.locationText}>
+										{event.location}
+									</span>
+								)}
+							</div>
+						)}
+					</div>
 				)}
+
 				{event.description && (
 					<p className={styles.description}>{event.description}</p>
 				)}
 
 				{event.url && (
-					<p className={styles.linkWrap}>
-						<a className={styles.link} href={event.url}>
-							More details
+					<div className={styles.actions}>
+						<a className={styles.button} href={event.url}>
+							View details
 						</a>
-					</p>
+					</div>
 				)}
 			</div>
 		</li>

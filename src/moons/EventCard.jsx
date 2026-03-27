@@ -59,10 +59,10 @@ export default function EventCard({ event }) {
 
 				<h3 className={styles.title}>{event.title}</h3>
 
-				<div className={styles.eventDate}>
+				<div className={styles.meta}>
 					{start && (
 						<>
-							<span className={styles.eventDateItem}>
+							<div className={styles.metaItem}>
 								<LuCalendar
 									aria-hidden="true"
 									className={styles.icon}
@@ -70,34 +70,36 @@ export default function EventCard({ event }) {
 								<time dateTime={event.start}>
 									{formatDayDate(start)}
 								</time>
-							</span>
+							</div>
 
-							<span className={styles.eventDateItem}>
+							<div className={styles.metaItem}>
 								<LuClock
 									aria-hidden="true"
 									className={styles.icon}
 								/>
-								<time dateTime={event.start}>
-									{formatTimeZone(start)}
-								</time>
-								{end && (
-									<>
-										{' — '}
-										<time dateTime={event.end}>
-											{formatTime(end)}
-										</time>
-									</>
-								)}
-							</span>
+								<div>
+									<time dateTime={event.start}>
+										{formatTimeZone(start)}
+									</time>
+									{end && (
+										<>
+											{' — '}
+											<time dateTime={event.end}>
+												{formatTime(end)}
+											</time>
+										</>
+									)}
+								</div>
+							</div>
 						</>
 					)}
-				</div>
 
-				{event.location && (
-					<p className={styles.location}>
-						Location: {event.location}
-					</p>
-				)}
+					{event.location && (
+						<p className={styles.location}>
+							Location: {event.location}
+						</p>
+					)}
+				</div>
 				{event.description && (
 					<p className={styles.description}>{event.description}</p>
 				)}

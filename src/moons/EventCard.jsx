@@ -1,4 +1,4 @@
-import { LuCalendar, LuClock } from 'react-icons/lu';
+import { LuCalendar, LuClock, LuMapPin } from 'react-icons/lu';
 import styles from './eventCard.module.css';
 
 const toDate = (iso) => new Date(iso);
@@ -95,9 +95,19 @@ export default function EventCard({ event }) {
 					)}
 
 					{event.location && (
-						<p className={styles.location}>
-							Location: {event.location}
-						</p>
+						<div className={styles.metaItem}>
+							<LuMapPin
+								aria-hidden="true"
+								className={styles.icon}
+							/>
+							{event.locationUrl ? (
+								<a href="{event.locationUrl}"></a>
+							) : (
+								<span className={styles.location}>
+									Location: {event.location}
+								</span>
+							)}
+						</div>
 					)}
 				</div>
 				{event.description && (

@@ -36,8 +36,8 @@ const getInitiativeClass = (initiative) => {
 			return styles.bootcamp;
 		case 'Career Corner':
 			return styles.careerCorner;
-		case 'GCS':
-			return styles.gcs;
+		case 'Group Coding Sessions':
+			return styles.groupCoding;
 		default:
 			return styles.defaultInitiative;
 	}

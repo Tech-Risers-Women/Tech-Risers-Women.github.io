@@ -49,7 +49,7 @@ export default function EventCard({ event }) {
 	const initiativeClass = getInitiativeClass(event.initiative);
 
 	return (
-		<li className={styles.card}>
+		<li className={`${styles.card} ${initiativeClass} `}>
 			<div className={styles.content}>
 				{event.initiative && (
 					<p className={`${styles.badge} ${initiativeClass}`}>
@@ -101,7 +101,14 @@ export default function EventCard({ event }) {
 								className={styles.icon}
 							/>
 							{event.locationUrl ? (
-								<a href="{event.locationUrl}"></a>
+								<a
+									href={event.locationUrl}
+									className={styles.locationLink}
+									target="_blank"
+									rel="noreferrer"
+								>
+									Location: {event.location}
+								</a>
 							) : (
 								<span className={styles.location}>
 									Location: {event.location}

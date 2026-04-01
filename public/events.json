@@ -8,5 +8,39 @@
 		"location": "Online",
 		"locationUrl": "",
 		"description": "We'll be covering why TDD is useful, how to get started using it, and the role that TDD plays in an AI-assisted world."
+	},
+
+	{
+		"id": "ad-clickstream",
+		"title": "Ad Clickstream Architecture Kata",
+		"initiative": "Architects Kata Club",
+		"start": "2026-03-22T14:30:00",
+		"end": "2026-03-22T17:30:00",
+		"location": "Online: Luma",
+		"locationUrl": "https://luma.com/join/eh-mxSOrjy9v1B7DOX",
+		"url": "event page test",
+		"description": "How would you design the data platform behind a high-volume ad clickstream? Our first Architecture Kata for 2026 is here, and we’re tackling a common interview scenario - covering scale, speed, real-time processing."
+	},
+
+	{
+		"id": "quarterly-review-session",
+		"title": "Quarterly Career Review Session",
+		"initiative": "Career Corner",
+		"start": "2026-04-15T18:00:00",
+		"end": "2026-03-22T19:00:00",
+		"location": "Online",
+		"locationUrl": "",
+		"description": "Whether you're working towards a promotion, holding tight or on a break, these sessions create spaceto track progress, reflect and inspire insights"
+	},
+
+	{
+		"id": "git-series",
+		"title": "Get Great at Git",
+		"initiative": "Bootcamp++",
+		"start": "2026-04-15T18:00:00",
+		"end": "2026-03-22T19:00:00",
+		"location": "Online",
+		"locationUrl": "",
+		"description": "Join us for a practical, hands-on study group session focused on using Git confidently from the command line (terminal). We’ll walk through core workflows, essential commands, and the mistakes people often run into. We’ll practice them together, and make sure you practise the commands yourself so they start to feel familiar, building your Git-usage skills and confidence."
 	}
 ]

@@ -1,5 +1,6 @@
 .card {
 	border: 1px solid black;
+	margin-bottom: 1rem;
 }
 
 .badge {
@@ -32,7 +33,22 @@
 	opacity: 0.9;
 }
 
-.groupCoding {
+.badge.groupCoding {
 	background: #c3d7f0;
 	color: #003666;
+}
+
+.badge.architectsKataClub {
+	background: #f4cedf;
+	color: #5e1dcf;
+}
+
+.badge.careerCorner {
+	background: rgb(200, 234, 243);
+	color: rgb(224, 5, 23);
+}
+
+.badge.bootcamp {
+	background: #e9ddff;
+	color: #5b21b6;
 }

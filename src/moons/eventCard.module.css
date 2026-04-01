@@ -1,38 +1,47 @@
+/* Card */
 .card {
-	border: 1px solid black;
+	border: 1px solid #6c88be;
+	border-top: 4px solid transparent;
 	margin-bottom: 1rem;
+	transition:
+		transform 0.15s ease,
+		box-shadow 0.15s ease;
 }
 
+.card:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Card Variants */
+.card.groupCoding {
+	border-top-color: #003666;
+}
+
+.card.architectsKataClub {
+	border-top-color: #5e1dcf;
+}
+
+.card.careerCorner {
+	border-top-color: #dc2626;
+}
+
+.card.bootcamp {
+	border-top-color: #f97316;
+}
+
+/* Badge */
 .badge {
 	display: inline-block;
-	padding: 0.45rem 0.65rem;
+	padding: 0.35rem 0.75rem;
 	border: 1px solid rgba(0, 0, 0, 0.05);
 	border-radius: 999px;
-	font-size: 0.9rem;
+	font-size: 1rem;
 	font-weight: 600;
 	margin-bottom: 0.75rem;
 }
 
-.meta {
-	display: flex;
-	flex-direction: column;
-	gap: 0.4rem;
-	margin: 0.5rem 0 0.75;
-}
-
-.metaItem {
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-}
-
-.icon {
-	inline-size: 1em;
-	block-size: 1em;
-	translate: 0 1px;
-	opacity: 0.9;
-}
-
+/* Badge variants */
 .badge.groupCoding {
 	background: #c3d7f0;
 	color: #003666;
@@ -44,11 +53,41 @@
 }
 
 .badge.careerCorner {
-	background: rgb(200, 234, 243);
-	color: rgb(224, 5, 23);
+	background: #baefef;
+	color: #b12424;
 }
 
 .badge.bootcamp {
-	background: #e9ddff;
+	background: #d3cdf5;
 	color: #5b21b6;
+}
+
+/* Meta */
+.meta {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+	margin: 0.5rem 0 0.75rem;
+}
+
+.metaItem {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.icon {
+	inline-size: 1em;
+	block-size: 1em;
+	flex-shrink: 0;
+	opacity: 0.85;
+}
+
+.link {
+	color: #5e1dcf;
+	transition: color 0.15s ease;
+}
+
+.link:hover {
+	color: #350a80;
 }

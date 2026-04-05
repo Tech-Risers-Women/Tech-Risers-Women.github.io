@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './events.module.css';
 import Banner from '../moons/Banner';
 import EventCard from '../moons/EventCard';
+import Button from '../moons/Button';
 
 function Events() {
 	const [isLoading, setIsLoading] = useState(true);
@@ -71,11 +72,11 @@ function Events() {
 				)}
 
 				{sortedPastEvents.length > 0 && (
-					<button onClick={() => setShowPastEvents((prev) => !prev)}>
+					<Button onClick={() => setShowPastEvents((prev) => !prev)}>
 						{showPastEvents
 							? 'Hide Past Events'
 							: 'View Past Events'}
-					</button>
+					</Button>
 				)}
 
 				{showPastEvents && sortedPastEvents.length > 0 && (

@@ -7,6 +7,7 @@
 		"end": "2025-08-27T19:00:00+01:00",
 		"location": "Online",
 		"locationUrl": "",
+		"url": "event page test",
 		"description": "We'll be covering why TDD is useful, how to get started using it, and the role that TDD plays in an AI-assisted world."
 	},
 
@@ -42,6 +43,7 @@
 		"end": "2026-04-18T19:00:00",
 		"location": "Online",
 		"locationUrl": "",
+		"url": "event page test",
 		"description": "Join us for a practical, hands-on study group session focused on using Git confidently from the command line (terminal). We’ll walk through core workflows, essential commands, and the mistakes people often run into. We’ll practice them together, and make sure you practise the commands yourself so they start to feel familiar, building your Git-usage skills and confidence."
 	}
 ]

@@ -1,5 +1,9 @@
 import { LuCalendar, LuClock, LuMapPin } from 'react-icons/lu';
 import styles from './eventCard.module.css';
+import architectsLogo from '../media/logos/arch-kata.png';
+import bootcampLogo from '../media/logos/bootcamp.png';
+import careerCornerLogo from '../media/logos/career-corner.png';
+import groupCodingLogo from '../media/logos/gcs.png';
 
 const toDate = (iso) => new Date(iso);
 
@@ -43,13 +47,24 @@ const getInitiativeClass = (initiative) => {
 	}
 };
 
+const logoMap = {
+	'Architects Kata Club': architectsLogo,
+	'Bootcamp++': bootcampLogo,
+	'Career Corner': careerCornerLogo,
+	'Group Coding Sessions': groupCodingLogo
+};
+
 export default function EventCard({ event }) {
 	const start = event.start ? toDate(event.start) : null;
 	const end = event.end ? toDate(event.end) : null;
 	const initiativeClass = getInitiativeClass(event.initiative);
+	const logoSrc = logoMap[event.initiative];
 
 	return (
 		<li className={`${styles.card} ${initiativeClass} `}>
+			<div className={styles.logoWrap}>
+				{<img src={logoSrc} alt="" className={styles.logo} />}
+			</div>
 			<div className={styles.content}>
 				{event.initiative && (
 					<p className={`${styles.badge} ${initiativeClass}`}>

@@ -6,6 +6,9 @@
 	transition:
 		transform 0.15s ease,
 		box-shadow 0.15s ease;
+	display: grid;
+	grid-template-columns: 88px 1fr;
+	gap: 1.25rem;
 }
 
 .card:hover {
@@ -16,6 +19,7 @@
 /* Card Variants */
 .card.groupCoding {
 	border-top-color: #003666;
+	border-left-color: #003666;
 }
 
 .card.architectsKataClub {
@@ -24,10 +28,27 @@
 
 .card.careerCorner {
 	border-top-color: #dc2626;
+	border-left-color: #dc2626;
 }
 
 .card.bootcamp {
 	border-top-color: #f97316;
+}
+/* Logo*/
+.logoWrap {
+	inline-size: 88px;
+	block-size: 88px;
+	border-radius: 10px;
+	overflow: hidden;
+	flex-shrink: 0;
+	padding: 6px;
+	opacity: 0.9;
+}
+.logo {
+	inline-size: 100%;
+	block-size: 100%;
+	object-fit: cover;
+	display: block;
 }
 
 /* Badge */
@@ -85,6 +106,8 @@
 
 .link {
 	color: #5e1dcf;
+	font-weight: 600;
+	text-underline-offset: 0.18em;
 	transition: color 0.15s ease;
 }
 

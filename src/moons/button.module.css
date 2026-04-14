@@ -20,9 +20,10 @@
 
 /* Hover */
 .button:hover {
-	background-color: #1a3a6a;
-	transform: translateY(-1px);
+	background-color: #1c4480;
+	transform: translateY(-2px);
 	box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+	filter: brightness(1.1);
 }
 
 .button:active {

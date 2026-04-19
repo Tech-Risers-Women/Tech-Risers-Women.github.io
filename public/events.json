@@ -1,4 +1,31 @@
 [
+    {
+      "id": "git-series-2",
+      "title": "Get Comfortable with Git - Study Group",
+      "initiative": "Bootcamp++",
+      "start": "2026-04-30T18:00:00+00:00",
+      "end": "2026-04-18T19:00:00+00:00",
+      "description": "For those who want time to practice, ask questions or just work with others who are learning Git."
+    },
+
+    {
+      "id": "git-series",
+      "title": "Test your Git skills",
+      "initiative": "Bootcamp++",
+      "start": "2026-04-24T107:00:00+00:00",
+      "end": "2026-04-24T08:00:00+00:00",
+      "description": "In this interactive lab, you'll put your git skills to the test with real scenarios."
+    },
+
+    {
+      "id": "git-series",
+      "title": "Test your Git skills",
+      "initiative": "Bootcamp++",
+      "start": "2026-04-22T18:30:00+00:00",
+      "end": "2026-04-22T19:30:00+00:00",
+      "description": "In this interactive lab, you'll put your git skills to the test with real scenarios."
+    },
+
 	{
 		"id": "tdd-intro",
 		"title": "TDD Intro – Why, How & AI",
@@ -31,14 +58,6 @@
 	{
 		"id": "git-series",
 		"title": "Get Great at Git",
-		"initiative": "Bootcamp++",
-		"start": "2026-04-18T18:00:00",
-		"end": "2026-04-18T19:00:00",
-		"description": "Join us for a practical, hands-on study group session focused on using Git confidently from the command line (terminal). We’ll walk through core workflows, essential commands, and the mistakes people often run into. We’ll practice them together, and make sure you practise the commands yourself so they start to feel familiar, building your Git-usage skills and confidence."
-	},
-	{
-		"id": "git-series-2",
-		"title": "Get Comfortable with Git - Study Group",
 		"initiative": "Bootcamp++",
 		"start": "2026-04-18T18:00:00",
 		"end": "2026-04-18T19:00:00",

@@ -1,0 +1,91 @@
+[
+    {
+      "id": "git-series-2",
+      "title": "Get Comfortable with Git - Study Group",
+      "initiative": "Bootcamp++",
+      "start": "2026-04-30T18:00:00+00:00",
+      "end": "2026-04-30T19:00:00+00:00",
+      "description": "For those who want time to practice, ask questions or just work with others who are learning Git."
+    },
+
+    {
+      "id": "git-series-1",
+      "title": "Test your Git skills",
+      "initiative": "Bootcamp++",
+      "start": "2026-04-24T07:00:00+00:00",
+      "end": "2026-04-24T08:00:00+00:00",
+      "description": "In this interactive lab, you'll put your git skills to the test with real scenarios."
+    },
+
+    {
+      "id": "git-series",
+      "title": "Test your Git skills",
+      "initiative": "Bootcamp++",
+      "start": "2026-04-22T18:30:00+00:00",
+      "end": "2026-04-22T19:30:00+00:00",
+      "description": "In this interactive lab, you'll put your git skills to the test with real scenarios."
+    },
+
+	{
+		"id": "tdd-intro",
+		"title": "TDD Intro – Why, How & AI",
+		"initiative": "Group Coding Sessions",
+		"start": "2025-08-27T18:00:00+01:00",
+		"end": "2025-08-27T19:00:00+01:00",
+		"description": "We'll be covering why TDD is useful, how to get started using it, and the role that TDD plays in an AI-assisted world."
+	},
+
+	{
+		"id": "quarterly-review-session",
+		"title": "Quarterly Career Review Session",
+		"initiative": "Career Corner",
+		"start": "2026-03-28T11:00:00+00:00",
+		"end": "2026-03-28T12:00:00+00:00",
+		"description": "Whether you're working towards a promotion, holding tight or on a break, these sessions create spaceto track progress, reflect and inspire insights"
+	},
+
+    {
+      "id": "quarterly-review-session",
+      "title": "Quarterly Career Review Session",
+      "initiative": "Career Corner",
+      "start": "2026-03-23T18:00:00+00:00",
+      "end": "2026-03-23T19:00:00+00:00",
+      "description": "Whether you're working towards a promotion, holding tight or on a break, these sessions create spaceto track progress, reflect and inspire insights"
+    },
+
+    {
+      "id": "ad-clickstream",
+      "title": "Ad Clickstream Architecture Kata",
+      "initiative": "Architects Kata Club",
+      "start": "2026-03-22T14:30:00+00:00",
+      "end": "2026-03-22T17:30:00+00:00",
+      "description": "How would you design the data platform behind a high-volume ad clickstream? Our first Architecture Kata for 2026 is here, and we’re tackling a common interview scenario - covering scale, speed, real-time processing."
+    },
+
+    {
+      "id": "gcs",
+      "title": "TDD Intro cycle",
+      "initiative": "Group Coding Sessions",
+      "start": "2026-03-09T18:15:00+00:00",
+      "end": "2026-03-09T19:30:00+00:00",
+      "description": "Recap the Hows & Whys of TDD and start practicing. We’ll do 2-3 practice katas and you’ll come away with the ability to continue practicing on your own or with an AI tool."
+    },
+
+    {
+      "id": "gcs",
+      "title": "TDD Intro cycle",
+      "initiative": "Group Coding Sessions",
+      "start": "2026-03-02T18:15:00+00:00",
+      "end": "2026-03-02T19:30:00+00:00",
+      "description": "Recap the Hows & Whys of TDD and start practicing. We’ll do 2-3 practice katas and you’ll come away with the ability to continue practicing on your own or with an AI tool."
+    },
+
+    {
+      "id": "gcs",
+      "title": "TDD Intro cycle",
+      "initiative": "Group Coding Sessions",
+      "start": "2026-02-23T18:15:00+00:00",
+      "end": "2026-02-23T19:30:00+00:00",
+      "description": "Recap the Hows & Whys of TDD and start practicing. We’ll do 2-3 practice katas and you’ll come away with the ability to continue practicing on your own or with an AI tool."
+    }
+]

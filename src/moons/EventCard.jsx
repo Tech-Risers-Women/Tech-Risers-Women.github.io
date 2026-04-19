@@ -93,29 +93,6 @@ export default function EventCard({ event }) {
 							</div>
 						</>
 					)}
-
-					{event.location && (
-						<div className={styles.metaItem}>
-							<LuMapPin
-								aria-hidden="true"
-								className={styles.icon}
-							/>
-							{event.locationUrl ? (
-								<a
-									href={event.locationUrl}
-									className={styles.locationLink}
-									target="_blank"
-									rel="noreferrer"
-								>
-									Location: {event.location}
-								</a>
-							) : (
-								<span className={styles.location}>
-									Location: {event.location}
-								</span>
-							)}
-						</div>
-					)}
 				</div>
 				{event.description && (
 					<p className={styles.description}>{event.description}</p>

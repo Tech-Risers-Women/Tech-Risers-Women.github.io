@@ -1,30 +1,28 @@
-import { LuCalendar, LuClock, LuMapPin } from 'react-icons/lu';
+import { LuCalendar, LuClock } from 'react-icons/lu';
 import styles from './eventCard.module.css';
 
 const toDate = (iso) => new Date(iso);
 
 const formatDayDate = (d) =>
-	d.toLocaleString('en-GB', {
+	d.toLocaleDateString('en-GB', {
 		weekday: 'short',
 		day: '2-digit',
 		month: 'short',
-		year: 'numeric',
-		timeZone: 'Europe/London'
+		year: 'numeric'
 	});
 
 const formatTime = (d) =>
-	d.toLocaleString('en-GB', {
-		hour: '2-digit',
-		minute: '2-digit',
-		hour12: false,
-		timeZone: 'Europe/London'
-	});
-
-const formatTimeZone = (d) =>
 	d.toLocaleTimeString('en-GB', {
 		hour: '2-digit',
 		minute: '2-digit',
-		timeZone: 'Europe/London',
+		hour12: false
+	});
+
+const formatTimeWithZone = (d) =>
+	d.toLocaleTimeString('en-GB', {
+		hour: '2-digit',
+		minute: '2-digit',
+		hour12: false,
 		timeZoneName: 'short'
 	});
 
@@ -79,7 +77,7 @@ export default function EventCard({ event }) {
 								/>
 								<div>
 									<time dateTime={event.start}>
-										{formatTimeZone(start)}
+										{formatTimeWithZone(start)}
 									</time>
 									{end && (
 										<>

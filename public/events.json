@@ -4,15 +4,15 @@
       "title": "Get Comfortable with Git - Study Group",
       "initiative": "Bootcamp++",
       "start": "2026-04-30T18:00:00+00:00",
-      "end": "2026-04-18T19:00:00+00:00",
+      "end": "2026-04-30T19:00:00+00:00",
       "description": "For those who want time to practice, ask questions or just work with others who are learning Git."
     },
 
     {
-      "id": "git-series",
+      "id": "git-series-1",
       "title": "Test your Git skills",
       "initiative": "Bootcamp++",
-      "start": "2026-04-24T107:00:00+00:00",
+      "start": "2026-04-24T07:00:00+00:00",
       "end": "2026-04-24T08:00:00+00:00",
       "description": "In this interactive lab, you'll put your git skills to the test with real scenarios."
     },

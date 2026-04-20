@@ -86,6 +86,7 @@ function Events() {
 						))}
 					</ul>
 				)}
+				<p>All our events are online</p>
 			</div>
 		</div>
 	);

@@ -14,10 +14,12 @@ import GroupCoding from './planets/GroupCoding';
 import Home from './planets/Home';
 import Join from './planets/Join';
 import Events from './planets/Events';
+import ScrollToTop from './utils/ScrollToTop';
 
 function App() {
 	return (
 		<div className="App">
+			<ScrollToTop />
 			<Routes>
 				<Route path="/" element={<Layout />}>
 					<Route index element={<Home />} />

@@ -1,30 +1,78 @@
 [
-    {
-      "id": "git-series-2",
-      "title": "Get Comfortable with Git - Study Group",
-      "initiative": "Bootcamp++",
-      "start": "2026-04-30T18:00:00+00:00",
-      "end": "2026-04-30T19:00:00+00:00",
-      "description": "For those who want time to practice, ask questions or just work with others who are learning Git."
-    },
+	{
+		"id": "structures-and-alogrithms-3",
+		"title": "Data Structures & Algorithms - Intro Series - part 3",
+		"initiative": "Bootcamp++",
+		"start": "2026-06-17T18:00:00+01:00",
+		"end": "2026-06-17T19:30:00+01:00",
+		"description": "Part 3 of a short, structured series exploring the fundamentals of data structures and algorithms in a collaborative, discussion-led format."
+	},
+	{
+		"id": "structures-and-alogrithms-2",
+		"title": "Data Structures & Algorithms - Intro Series - part 2",
+		"initiative": "Bootcamp++",
+		"start": "2026-06-10T18:00:00+01:00",
+		"end": "2026-06-10T19:30:00+01:00",
+		"description": "Part 2 of a short, structured series exploring the fundamentals of data structures and algorithms in a collaborative, discussion-led format."
+	},
+	{
+		"id": "structures-and-alogrithms-1",
+		"title": "Data Structures & Algorithms - Intro Series - part 1",
+		"initiative": "Bootcamp++",
+		"start": "2026-06-03T18:00:00+01:00",
+		"end": "2026-06-03T19:30:00+01:00",
+		"description": "Part 1 of a short, structured series exploring the fundamentals of data structures and algorithms in a collaborative, discussion-led format."
+	},
+	{
+		"id": "metrics-and-monitoring",
+		"title": "Metrics and Monitoring Architecture Kata",
+		"initiative": "Architects Kata Club",
+		"start": "2026-06-07T09:30:00+01:00",
+		"end": "2026-06-07T11:00:00+01:00",
+		"description": "We’ll work through a realistic Metrics & Monitoring scenario together - exploring observability, alerting, telemetry, scaling concerns, dashboards, reliability trade-offs and operational thinking. This kata will cover the design, but we'll also focus on the interview technique."
+	},
+	{
+		"id": "shopping-kart",
+		"title": "Outside-In TDD Shopping Cart Kata",
+		"initiative": "Group Coding Sessions",
+		"start": "2026-05-31T09:30:00+01:00",
+		"end": "2026-04-30T10:45:00+01:00",
+		"description": "A hands-on workshop in outside-in TDD. Starting from real user interactions, we’ll design a shopping cart from the API inward, using tests to drive behaviour, shape boundaries, and guide implementation."
+	},
+	{
+		"id": "learning-plan",
+		"title": "Create a curated Learning Plan for the Roles you really want",
+		"initiative": "Career Corner",
+		"start": "2026-05-11T18:00:00+01:00",
+		"end": "2026-04-30T18:40:00+01:00",
+		"description": "A combined Career Corner and Bootcamp++ event about crafting your own curated learning plan, based on the roles you actually want in tech."
+	},
+	{
+		"id": "git-series-2",
+		"title": "Get Comfortable with Git - Study Group",
+		"initiative": "Bootcamp++",
+		"start": "2026-04-30T18:00:00+00:00",
+		"end": "2026-04-30T19:00:00+00:00",
+		"description": "For those who want time to practice, ask questions or just work with others who are learning Git."
+	},
 
-    {
-      "id": "git-series-1",
-      "title": "Test your Git skills",
-      "initiative": "Bootcamp++",
-      "start": "2026-04-24T07:00:00+00:00",
-      "end": "2026-04-24T08:00:00+00:00",
-      "description": "In this interactive lab, you'll put your git skills to the test with real scenarios."
-    },
+	{
+		"id": "git-series-1",
+		"title": "Test your Git skills",
+		"initiative": "Bootcamp++",
+		"start": "2026-04-24T07:00:00+00:00",
+		"end": "2026-04-24T08:00:00+00:00",
+		"description": "In this interactive lab, you'll put your git skills to the test with real scenarios."
+	},
 
-    {
-      "id": "git-series",
-      "title": "Test your Git skills",
-      "initiative": "Bootcamp++",
-      "start": "2026-04-22T18:30:00+00:00",
-      "end": "2026-04-22T19:30:00+00:00",
-      "description": "In this interactive lab, you'll put your git skills to the test with real scenarios."
-    },
+	{
+		"id": "git-series",
+		"title": "Test your Git skills",
+		"initiative": "Bootcamp++",
+		"start": "2026-04-22T18:30:00+00:00",
+		"end": "2026-04-22T19:30:00+00:00",
+		"description": "In this interactive lab, you'll put your git skills to the test with real scenarios."
+	},
 
 	{
 		"id": "tdd-intro",
@@ -44,48 +92,48 @@
 		"description": "Whether you're working towards a promotion, holding tight or on a break, these sessions create spaceto track progress, reflect and inspire insights"
 	},
 
-    {
-      "id": "quarterly-review-session",
-      "title": "Quarterly Career Review Session",
-      "initiative": "Career Corner",
-      "start": "2026-03-23T18:00:00+00:00",
-      "end": "2026-03-23T19:00:00+00:00",
-      "description": "Whether you're working towards a promotion, holding tight or on a break, these sessions create spaceto track progress, reflect and inspire insights"
-    },
+	{
+		"id": "quarterly-review-session",
+		"title": "Quarterly Career Review Session",
+		"initiative": "Career Corner",
+		"start": "2026-03-23T18:00:00+00:00",
+		"end": "2026-03-23T19:00:00+00:00",
+		"description": "Whether you're working towards a promotion, holding tight or on a break, these sessions create spaceto track progress, reflect and inspire insights"
+	},
 
-    {
-      "id": "ad-clickstream",
-      "title": "Ad Clickstream Architecture Kata",
-      "initiative": "Architects Kata Club",
-      "start": "2026-03-22T14:30:00+00:00",
-      "end": "2026-03-22T17:30:00+00:00",
-      "description": "How would you design the data platform behind a high-volume ad clickstream? Our first Architecture Kata for 2026 is here, and we’re tackling a common interview scenario - covering scale, speed, real-time processing."
-    },
+	{
+		"id": "ad-clickstream",
+		"title": "Ad Clickstream Architecture Kata",
+		"initiative": "Architects Kata Club",
+		"start": "2026-03-22T14:30:00+00:00",
+		"end": "2026-03-22T17:30:00+00:00",
+		"description": "How would you design the data platform behind a high-volume ad clickstream? Our first Architecture Kata for 2026 is here, and we’re tackling a common interview scenario - covering scale, speed, real-time processing."
+	},
 
-    {
-      "id": "gcs",
-      "title": "TDD Intro cycle",
-      "initiative": "Group Coding Sessions",
-      "start": "2026-03-09T18:15:00+00:00",
-      "end": "2026-03-09T19:30:00+00:00",
-      "description": "Recap the Hows & Whys of TDD and start practicing. We’ll do 2-3 practice katas and you’ll come away with the ability to continue practicing on your own or with an AI tool."
-    },
+	{
+		"id": "gcs",
+		"title": "TDD Intro cycle",
+		"initiative": "Group Coding Sessions",
+		"start": "2026-03-09T18:15:00+00:00",
+		"end": "2026-03-09T19:30:00+00:00",
+		"description": "Recap the Hows & Whys of TDD and start practicing. We’ll do 2-3 practice katas and you’ll come away with the ability to continue practicing on your own or with an AI tool."
+	},
 
-    {
-      "id": "gcs",
-      "title": "TDD Intro cycle",
-      "initiative": "Group Coding Sessions",
-      "start": "2026-03-02T18:15:00+00:00",
-      "end": "2026-03-02T19:30:00+00:00",
-      "description": "Recap the Hows & Whys of TDD and start practicing. We’ll do 2-3 practice katas and you’ll come away with the ability to continue practicing on your own or with an AI tool."
-    },
+	{
+		"id": "gcs",
+		"title": "TDD Intro cycle",
+		"initiative": "Group Coding Sessions",
+		"start": "2026-03-02T18:15:00+00:00",
+		"end": "2026-03-02T19:30:00+00:00",
+		"description": "Recap the Hows & Whys of TDD and start practicing. We’ll do 2-3 practice katas and you’ll come away with the ability to continue practicing on your own or with an AI tool."
+	},
 
-    {
-      "id": "gcs",
-      "title": "TDD Intro cycle",
-      "initiative": "Group Coding Sessions",
-      "start": "2026-02-23T18:15:00+00:00",
-      "end": "2026-02-23T19:30:00+00:00",
-      "description": "Recap the Hows & Whys of TDD and start practicing. We’ll do 2-3 practice katas and you’ll come away with the ability to continue practicing on your own or with an AI tool."
-    }
+	{
+		"id": "gcs",
+		"title": "TDD Intro cycle",
+		"initiative": "Group Coding Sessions",
+		"start": "2026-02-23T18:15:00+00:00",
+		"end": "2026-02-23T19:30:00+00:00",
+		"description": "Recap the Hows & Whys of TDD and start practicing. We’ll do 2-3 practice katas and you’ll come away with the ability to continue practicing on your own or with an AI tool."
+	}
 ]

@@ -102,13 +102,13 @@ export default function EventCard({ event }) {
 								/>
 								<div>
 									<time dateTime={event.start}>
-										{formatTimeWithZone(start)}
+										{formatTime(start)}
 									</time>
 									{end && (
 										<>
 											{' — '}
 											<time dateTime={event.end}>
-												{formatTime(end)}
+												{formatTimeWithZone(end)}
 											</time>
 										</>
 									)}

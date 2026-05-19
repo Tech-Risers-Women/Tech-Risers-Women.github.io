@@ -7,10 +7,14 @@
 	border-radius: 6px;
 	background-color: #214f94;
 	color: var(---light);
+	font-family: inherit;
 	font-size: 1rem;
 	font-weight: 600;
-
+	letter-spacing: 0.02em;
+	display: inline-block;
 	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
 	transition:
 		background-color 0.2s ease,
 		color 0.2s ease,
@@ -18,6 +22,10 @@
 		box-shadow 0.1s ease;
 }
 
+a.button,
+a.button:visited {
+	color: var(---light);
+}
 /* Hover */
 .button:hover {
 	background-color: #1c4480;

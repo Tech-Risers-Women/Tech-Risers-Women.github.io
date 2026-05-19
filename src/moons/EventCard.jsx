@@ -1,5 +1,6 @@
 import { LuCalendar, LuClock } from 'react-icons/lu';
 import styles from './eventCard.module.css';
+import { Link } from 'react-router-dom';
 
 const toDate = (iso) => new Date(iso);
 
@@ -41,19 +42,43 @@ const getInitiativeClass = (initiative) => {
 	}
 };
 
+const getInitiativeRoute = (initiative) => {
+	switch (initiative) {
+		case 'Architects Kata Club':
+			return '/architect-s-club';
+		case 'Bootcamp++':
+			return '/bootcamp-plus-plus';
+		case 'Career Corner':
+			return '/career-corner';
+		case 'Group Coding Sessions':
+			return '/group-coding-sessions';
+		default:
+			return null;
+	}
+};
+
 export default function EventCard({ event }) {
 	const start = event.start ? toDate(event.start) : null;
 	const end = event.end ? toDate(event.end) : null;
 	const initiativeClass = getInitiativeClass(event.initiative);
+	const initiativeRoute = getInitiativeRoute(event.initiative);
 
 	return (
 		<li className={`${styles.card} ${initiativeClass} `}>
 			<div className={styles.content}>
-				{event.initiative && (
-					<p className={`${styles.badge} ${initiativeClass}`}>
-						{event.initiative}
-					</p>
-				)}
+				{event.initiative &&
+					(initiativeRoute ? (
+						<Link
+							to={`${initiativeRoute}`}
+							className={`${styles.badge} ${initiativeClass}`}
+						>
+							{event.initiative}
+						</Link>
+					) : (
+						<p className={`${styles.badge} ${initiativeClass}`}>
+							{event.initiative}
+						</p>
+					))}
 
 				<h3 className={styles.title}>{event.title}</h3>
 
@@ -77,13 +102,13 @@ export default function EventCard({ event }) {
 								/>
 								<div>
 									<time dateTime={event.start}>
-										{formatTimeWithZone(start)}
+										{formatTime(start)}
 									</time>
 									{end && (
 										<>
 											{' — '}
 											<time dateTime={event.end}>
-												{formatTime(end)}
+												{formatTimeWithZone(end)}
 											</time>
 										</>
 									)}

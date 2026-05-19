@@ -40,18 +40,6 @@
 	color: inherit;
 }
 
-.aboutButton,
-.getUpdatesButton {
-	margin: 1rem;
-	padding: 0.5rem 0.7rem;
-	border: 2px solid var(---basedark);
-	border-radius: 3px;
-	background-color: #214f94;
-	color: var(---light);
-	font-size: 1.2rem;
-	cursor: pointer;
-}
-
 @media (max-width: 1024px) {
 	.introWrapper {
 		max-width: 85%;

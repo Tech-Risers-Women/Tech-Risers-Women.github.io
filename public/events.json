@@ -35,16 +35,16 @@
 		"id": "shopping-kart",
 		"title": "Outside-In TDD Shopping Cart Kata",
 		"initiative": "Group Coding Sessions",
-		"start": "2026-05-31T09:30:00+01:00",
-		"end": "2026-04-30T10:45:00+01:00",
-		"description": "A hands-on workshop in outside-in TDD. Starting from real user interactions, we’ll design a shopping cart from the API inward, using tests to drive behaviour, shape boundaries, and guide implementation."
+		"start": "2026-05-31T10:00:00+01:00",
+		"end": "2026-05-31T11:45:00+01:00",
+		"description": "A hands-on workshop in outside-in TDD using an excellent portfolio example. Starting from real user interactions, we’ll design a shopping cart from the API inward, using tests to drive behaviour, shape boundaries, and guide implementation."
 	},
 	{
 		"id": "learning-plan",
 		"title": "Create a curated Learning Plan for the Roles you really want",
 		"initiative": "Career Corner",
 		"start": "2026-05-11T18:00:00+01:00",
-		"end": "2026-04-30T18:40:00+01:00",
+		"end": "2026-05-11T18:40:00+01:00",
 		"description": "A combined Career Corner and Bootcamp++ event about crafting your own curated learning plan, based on the roles you actually want in tech."
 	},
 	{

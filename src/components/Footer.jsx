@@ -11,7 +11,7 @@ function Footer() {
     <footer className={styles.footer}>
       <p className={styles.footerWrapper}>
         <b>Tech Risers Women</b> is an initiative to empower women in tech
-        through collaborative learning, mentorship, group coding and networking
+        through collaborative learning, skill-building, and career reflection
         sessions
       </p>
       <p>

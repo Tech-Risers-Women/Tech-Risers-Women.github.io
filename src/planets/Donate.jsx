@@ -42,7 +42,7 @@ function Donate() {
           <h2> Help us to empower women in tech today</h2>
           <p>
             Contribute to our mission by making a donation. Your support helps
-            to provide opportunities for skill-building, mentorship, and
+            to provide opportunities for skill-building, training, and
             community. Support us, to create a world of opportunities where
             every woman has the chance to thrive and shine.
           </p>

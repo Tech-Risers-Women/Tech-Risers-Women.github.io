@@ -74,13 +74,14 @@ function Pillars() {
       <div className={`${styles.pillar3} ${info3}`} 
            onClick={handleClick3}>
         <div className={styles.pillarDescription}>
-          We want to create an environment that supports continuous learning and
-          mentorship to foster the professional development of women in tech.
-          This involves providing resources, guidance, and opportunities to grow
-          professionally. By emphasising professional and personal growth, the
-          initiative aims to empower women to achieve their goals, whether it be
-          through skill-building, networking, or mentorship programs, ultimately
-          contributing to their success in the tech sector.
+          We want to create an environment that encourages continuous learning,
+          confidence, and career growth for women in tech.
+          Through access to resources, guidance, networking, and skill-building opportunities,
+          the community supports members at every stage of their journey.
+          The focus is both professional and personal development -
+          helping women deepen their understanding of the industry,
+          strengthen technical and core skills, expand their networks,
+          and progress toward their career goals in the tech sector.
         </div>
         <img src={pillar3Image} 
              alt="Carol Shaw, the first female video game developer, sitting on her desk" 

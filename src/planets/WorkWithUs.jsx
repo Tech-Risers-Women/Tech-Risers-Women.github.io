@@ -64,7 +64,7 @@ function WorkWithUs() {
         </p>
 
         <p>
-          You'll also practise your own mentorship, communication and facilitation skills in the process.
+          You'll also practise your own teaching, mentorship, communication and facilitation skills in the process.
           As a partner, you'll reach an audience of aspiring women engineering leaders and be able to
           contribute to their growth.
         </p>

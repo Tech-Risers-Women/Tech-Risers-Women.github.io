@@ -17,7 +17,7 @@ function About() {
           advancing women in tech. Tech Risers Women is a community-driven space
           that concentrates on acquiring practical skills and continuous
           professional growth. Together, we're shaping an inclusive and dynamic
-          environment where women excell in the tech world.
+          environment where women excel in the tech world.
         </p>
       </div>
       <div className={styles.pillars}>

@@ -7,7 +7,6 @@
       "end": "2026-06-26T13:00:00+00:00",
       "description": "Whether you're working towards a promotion, holding tight or on a break, these sessions create space to track progress, reflect and inspire insights"
     },
-
     {
       "id": "quarterly-review-session",
       "title": "Quarterly Career Review Session",
@@ -16,7 +15,14 @@
       "end": "2026-06-22T19:00:00+00:00",
       "description": "Whether you're working towards a promotion, holding tight or on a break, these sessions create space to track progress, reflect and inspire insights"
     },
-
+    {
+      "id": "shopping-kart",
+      "title": "Outside-In TDD Shopping Cart Kata",
+      "initiative": "Group Coding Sessions",
+      "start": "2026-06-15T18:00:00+01:00",
+      "end": "2026-06-15T19:45:00+01:00",
+      "description": "A hands-on workshop in outside-in TDD using an excellent portfolio example. Starting from real user interactions, we’ll design a shopping cart from the API inward, using tests to drive behaviour, shape boundaries, and guide implementation."
+    },
 	{
 		"id": "structures-and-alogrithms-3",
 		"title": "Data Structures & Algorithms - Intro Series - part 3",

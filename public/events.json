@@ -1,4 +1,22 @@
 [
+    {
+      "id": "quarterly-review-session",
+      "title": "Quarterly Career Review Session",
+      "initiative": "Career Corner",
+      "start": "2026-06-26T12:00:00+00:00",
+      "end": "2026-06-26T13:00:00+00:00",
+      "description": "Whether you're working towards a promotion, holding tight or on a break, these sessions create space to track progress, reflect and inspire insights"
+    },
+
+    {
+      "id": "quarterly-review-session",
+      "title": "Quarterly Career Review Session",
+      "initiative": "Career Corner",
+      "start": "2026-06-22T18:00:00+00:00",
+      "end": "2026-06-22T19:00:00+00:00",
+      "description": "Whether you're working towards a promotion, holding tight or on a break, these sessions create space to track progress, reflect and inspire insights"
+    },
+
 	{
 		"id": "structures-and-alogrithms-3",
 		"title": "Data Structures & Algorithms - Intro Series - part 3",
@@ -89,7 +107,7 @@
 		"initiative": "Career Corner",
 		"start": "2026-03-28T11:00:00+00:00",
 		"end": "2026-03-28T12:00:00+00:00",
-		"description": "Whether you're working towards a promotion, holding tight or on a break, these sessions create spaceto track progress, reflect and inspire insights"
+		"description": "Whether you're working towards a promotion, holding tight or on a break, these sessions create space to track progress, reflect and inspire insights"
 	},
 
 	{
@@ -98,7 +116,7 @@
 		"initiative": "Career Corner",
 		"start": "2026-03-23T18:00:00+00:00",
 		"end": "2026-03-23T19:00:00+00:00",
-		"description": "Whether you're working towards a promotion, holding tight or on a break, these sessions create spaceto track progress, reflect and inspire insights"
+		"description": "Whether you're working towards a promotion, holding tight or on a break, these sessions create space to track progress, reflect and inspire insights"
 	},
 
 	{

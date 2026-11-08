@@ -1,5 +1,77 @@
 [
     {
+      "id": "tickethub-tipping-point",
+      "title": "TicketHub's Tipping Point Architecture Kata",
+      "initiative": "Architects Kata Club",
+      "start": "2026-11-28T14:30:00+00:00",
+      "end": "2026-11-28T15:45:00+00:00",
+      "description": "TicketHub sells tickets for around 200 independent venues and is about to host its biggest ever on-sale - on an architecture that was never built for it. We'll review the current system, find the bottlenecks, and design how to evolve it from where it is today to where it needs to be."
+    },
+    {
+      "id": "tickethub-tipping-point",
+      "title": "TicketHub's Tipping Point Architecture Kata",
+      "initiative": "Architects Kata Club",
+      "start": "2026-11-23T17:00:00+00:00",
+      "end": "2026-11-23T18:15:00+00:00",
+      "description": "TicketHub sells tickets for around 200 independent venues and is about to host its biggest ever on-sale - on an architecture that was never built for it. We'll review the current system, find the bottlenecks, and design how to evolve it from where it is today to where it needs to be."
+    },
+    {
+      "id": "unseen-design-interview",
+      "title": "Unseen Design Interview Practice",
+      "initiative": "Architects Kata Club",
+      "start": "2026-10-17T15:00:00+01:00",
+      "end": "2026-10-17T16:30:00+01:00",
+      "description": "An interview-style architecture review, where we walk through an existing system and practise how to assess it, ask the right questions and talk through our thinking."
+    },
+    {
+      "id": "quarterly-review-session",
+      "title": "Quarterly Career Review Session",
+      "initiative": "Career Corner",
+      "start": "2026-10-02T16:00:00+01:00",
+      "end": "2026-10-02T17:00:00+01:00",
+      "description": "Whether you're working towards a promotion, holding tight or on a break, these sessions create space to track progress, reflect and inspire insights"
+    },
+    {
+      "id": "quarterly-review-session",
+      "title": "Quarterly Career Review Session",
+      "initiative": "Career Corner",
+      "start": "2026-09-28T18:00:00+01:00",
+      "end": "2026-09-28T19:00:00+01:00",
+      "description": "Whether you're working towards a promotion, holding tight or on a break, these sessions create space to track progress, reflect and inspire insights"
+    },
+    {
+      "id": "impact-workshop",
+      "title": "Impact Workshop: Finding your value",
+      "initiative": "Career Corner",
+      "start": "2026-09-18T12:00:00+01:00",
+      "end": "2026-09-18T13:00:00+01:00",
+      "description": "Moving from “talking about what I did” to “talking about the value I brought and the impact it had” is one of the most powerful career shifts you can make."
+    },
+    {
+      "id": "impact-workshop",
+      "title": "Impact Workshop: Finding your value",
+      "initiative": "Career Corner",
+      "start": "2026-09-14T18:00:00+01:00",
+      "end": "2026-09-14T19:00:00+01:00",
+      "description": "Moving from “talking about what I did” to “talking about the value I brought and the impact it had” is one of the most powerful career shifts you can make."
+    },
+    {
+      "id": "osi-model",
+      "title": "Practical applications of the OSI model",
+      "initiative": "Bootcamp++",
+      "start": "2026-07-22T18:00:00+01:00",
+      "end": "2026-07-22T19:00:00+01:00",
+      "description": "Most production issues aren’t “code problems” - they’re network or system boundary problems. The OSI model gives you a structured way to narrow down where things are going wrong."
+    },
+    {
+      "id": "osi-model",
+      "title": "Practical applications of the OSI model",
+      "initiative": "Bootcamp++",
+      "start": "2026-07-13T17:30:00+01:00",
+      "end": "2026-07-13T18:30:00+01:00",
+      "description": "Most production issues aren’t “code problems” - they’re network or system boundary problems. The OSI model gives you a structured way to narrow down where things are going wrong."
+    },
+    {
       "id": "quarterly-review-session",
       "title": "Quarterly Career Review Session",
       "initiative": "Career Corner",

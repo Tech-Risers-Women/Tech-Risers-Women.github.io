@@ -54,7 +54,7 @@ function EventRow({ event }) {
 			<div className={styles.action}>
 				<time className={styles.time} dateTime={event.start}>
 					<span className={styles.fullDate}>{longDate(event.start)}</span>
-					{timeRange(event)} UK
+					{timeRange(event)}
 				</time>
 				<ExternalLink
 					href={LINKS.joinForm}
@@ -113,7 +113,7 @@ function Events() {
 			<PageHero
 				eyebrow="All events are online"
 				title="Events"
-				lede="Career Corner and Architects’ Kata Club each meet at least once a quarter. Group Coding and Bootcamp++ sessions are added here as they’re scheduled. Times are shown in UK time."
+				lede="Career Corner and Architects’ Kata Club each meet at least once a quarter. Group Coding and Bootcamp++ sessions are added here as they’re scheduled."
 			/>
 
 			<section className={styles.upcoming}>

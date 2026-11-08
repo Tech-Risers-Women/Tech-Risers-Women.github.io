@@ -1,8 +1,5 @@
-// All event times are shown in UK time, whatever the visitor's timezone.
-const UK = 'Europe/London';
-
-const fmt = (iso, options) =>
-	new Date(iso).toLocaleString('en-GB', { timeZone: UK, ...options });
+// Event times are shown in the visitor's own timezone (the browser's default).
+const fmt = (iso, options) => new Date(iso).toLocaleString('en-GB', options);
 
 export const weekdayShort = (iso) =>
 	fmt(iso, { weekday: 'short' }).toUpperCase();

@@ -6,7 +6,7 @@ import PageHero from '../moons/PageHero';
 import useEvents, { eventKey } from '../hooks/useEvents';
 import { INITIATIVES, getInitiativeByEventKey } from '../data/initiatives';
 import { LINKS } from '../data/links';
-import { ExternalLink, toneClass } from '../components/ui.jsx';
+import { ExternalLink } from '../components/ui.jsx';
 import {
 	dayOfMonth,
 	longDate,
@@ -41,11 +41,6 @@ function EventRow({ event }) {
 						</Link>
 					) : (
 						event.initiative && <span className={ui.tag}>{event.initiative}</span>
-					)}
-					{initiative && (
-						<span className={`${ui.tag} ${toneClass[initiative.tone]}`}>
-							{initiative.frequency}
-						</span>
 					)}
 				</div>
 				<h3 className={styles.title}>{event.title}</h3>

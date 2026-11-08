@@ -1,21 +1,21 @@
-import React from 'react';
-import './error.css';
+import { Link } from 'react-router-dom';
+import ui from './components/ui.module.css';
+import PageHero from './moons/PageHero';
 
 function Error() {
-  return (
-    <div className='error'>
-      <h2>404 - Page Not Found</h2>
-      <p>
-        <a
-          href='https://www.techriserswomen.com/'
-          title='Tech risers Women main page'>
-          Click here
-        </a>{' '}
-        to go back to the main page, or use the menu to find a page that does
-        exist.
-      </p>
-    </div>
-  );
+	return (
+		<PageHero
+			eyebrow="404"
+			title="Page not found"
+			lede="Sorry, we couldn’t find that page. Head back to the home page, or use the menu to find a page that does exist."
+		>
+			<div className={ui.btnRow}>
+				<Link to="/" className={`${ui.btn} ${ui.btnMustard}`}>
+					Go to the home page
+				</Link>
+			</div>
+		</PageHero>
+	);
 }
 
 export default Error;

@@ -1,66 +1,71 @@
 import { useState, useEffect, useRef } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import styles from './dropdown.module.css';
 
-const DropdownNav = ({ name, menuItems, inHamburger, closeNavbar }) => {
+const DropdownNav = ({ name, menuItems }) => {
 	const [isOpen, setIsOpen] = useState(false);
-
 	const ref = useRef();
+	const { pathname } = useLocation();
+	const isSectionActive = menuItems.some((item) => item.route === pathname);
 
 	useEffect(() => {
-		const handler = (event) => {
-			if (isOpen && ref.current && !ref.current.contains(event.target)) {
+		if (!isOpen) return undefined;
+		const onPointer = (event) => {
+			if (ref.current && !ref.current.contains(event.target)) {
 				setIsOpen(false);
 			}
 		};
-		document.addEventListener('mousedown', handler);
+		const onKey = (event) => {
+			if (event.key === 'Escape') setIsOpen(false);
+		};
+		document.addEventListener('mousedown', onPointer);
+		document.addEventListener('keydown', onKey);
 		return () => {
-			document.removeEventListener('mousedown', handler);
+			document.removeEventListener('mousedown', onPointer);
+			document.removeEventListener('keydown', onKey);
 		};
 	}, [isOpen]);
 
-	const handleClick = () => {
-		setIsOpen(!isOpen);
-		closeNavbar && closeNavbar();
-	};
-
 	return (
-		<div ref={ref}>
+		<div className={styles.dropdown} ref={ref}>
 			<button
-				className={`${
-					inHamburger
-						? styles.hamburgerDropdownToggle
-						: styles.dropdownToggle
-				}`}
-				onClick={() => setIsOpen(!isOpen)}
-				aria-haspopup="true"
+				type="button"
+				className={`${styles.toggle} ${isSectionActive ? styles.toggleActive : ''}`}
+				onClick={() => setIsOpen((open) => !open)}
+				aria-expanded={isOpen}
 			>
-				{name} <span></span>
+				{name}
+				<svg
+					className={`${styles.chevron} ${isOpen ? styles.chevronOpen : ''}`}
+					width="14"
+					height="14"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					strokeWidth="2.4"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+					aria-hidden="true"
+				>
+					<path d="M6 9l6 6 6-6" />
+				</svg>
 			</button>
 			{isOpen && (
-				<div>
-					<ul
-						className={`${
-							inHamburger
-								? styles.hamburgerDropdownMenu
-								: styles.dropdownMenu
-						}`}
-					>
-						{menuItems.map((item, index) => (
-							<li key={index} className={styles.dropdownMenuItem}>
-								<NavLink
-									to={`/${item.route}`}
-									className={({ isActive }) =>
-										isActive ? styles.active : ''
-									}
-									onClick={handleClick}
-								>
-									{item.title}
-								</NavLink>
-							</li>
-						))}
-					</ul>
-				</div>
+				<ul className={styles.menu}>
+					{menuItems.map((item) => (
+						<li key={item.route}>
+							<NavLink
+								to={item.route}
+								className={({ isActive }) =>
+									`${styles.item} ${isActive ? styles.itemActive : ''}`
+								}
+								onClick={() => setIsOpen(false)}
+							>
+								{item.title}
+							</NavLink>
+						</li>
+					))}
+				</ul>
 			)}
 		</div>
 	);

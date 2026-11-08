@@ -1,135 +1,87 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useState, useRef, useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import styles from './hamburgerMenu.module.css';
-import DropdownNav from './DropdownNav';
+import ui from './ui.module.css';
+import { LINKS } from '../data/links';
+import { ExternalLink } from './ui.jsx';
 
-function HamburgerMenu() {
-	const [navbarOpen, setNavbarOpen] = useState(false);
-
-	const toggleNavbar = () => setNavbarOpen(!navbarOpen);
-	const closeNavbar = () => setNavbarOpen(false);
-
+function HamburgerMenu({ items }) {
+	const [open, setOpen] = useState(false);
 	const ref = useRef();
+	const { pathname } = useLocation();
+
+	// Close the menu whenever the route changes.
+	useEffect(() => {
+		setOpen(false);
+	}, [pathname]);
 
 	useEffect(() => {
-		const handler = (event) => {
-			if (
-				navbarOpen &&
-				ref.current &&
-				!ref.current.contains(event.target)
-			) {
-				setNavbarOpen(false);
+		if (!open) return undefined;
+		const onPointer = (event) => {
+			if (ref.current && !ref.current.contains(event.target)) {
+				setOpen(false);
 			}
 		};
-		document.addEventListener('mousedown', handler);
-		return () => {
-			document.removeEventListener('mousedown', handler);
+		const onKey = (event) => {
+			if (event.key === 'Escape') setOpen(false);
 		};
-	}, [navbarOpen]);
+		document.addEventListener('mousedown', onPointer);
+		document.addEventListener('keydown', onKey);
+		return () => {
+			document.removeEventListener('mousedown', onPointer);
+			document.removeEventListener('keydown', onKey);
+		};
+	}, [open]);
+
+	const linkClass = ({ isActive }) =>
+		`${styles.link} ${isActive ? styles.active : ''}`;
 
 	return (
-		<div className={styles.hamburgerMenu} ref={ref}>
-			{/* Hamburger Button */}
-			<button className={styles.hamburgerButton} onClick={toggleNavbar}>
-				<div
-					className={
-						navbarOpen
-							? styles.hamburgerTopOpen
-							: styles.hamburgerTopClosed
-					}
-				></div>
-				<div
-					className={
-						navbarOpen
-							? styles.hamburgerMidOpen
-							: styles.hamburgerMidClosed
-					}
-				></div>
-				<div
-					className={
-						navbarOpen
-							? styles.hamburgerBottomOpen
-							: styles.hamburgerBottomClosed
-					}
-				></div>
+		<div ref={ref}>
+			<button
+				type="button"
+				className={styles.button}
+				onClick={() => setOpen((o) => !o)}
+				aria-expanded={open}
+				aria-controls="mobile-menu"
+				aria-label={open ? 'Close menu' : 'Open menu'}
+			>
+				<span className={`${styles.bar} ${open ? styles.barTopOpen : ''}`} />
+				<span className={`${styles.bar} ${open ? styles.barMidOpen : ''}`} />
+				<span className={`${styles.bar} ${open ? styles.barBottomOpen : ''}`} />
 			</button>
 
-			<div className={navbarOpen ? styles.menu : styles.menuClosed}>
-				{/* Menu */}
-				<ul className={`${styles.smallScreenMenu} ${styles.open}`}>
-					<li className={styles.hamburgerLink}>
-						<NavLink
-							to="/"
-							className={({ isActive }) =>
-								isActive ? styles.active : ''
-							}
-							onClick={closeNavbar}
-						>
-							Home
-						</NavLink>{' '}
-					</li>
-					<li className={styles.hamburgerLink}>
-						<DropdownNav
-							name={'About'}
-							menuItems={[
-								{
-									route: 'about',
-									title: 'About Us'
-								},
-								{
-									route: 'events',
-									title: 'Events'
-								},
-								{
-									route: 'code-of-conduct',
-									title: 'Code Of Conduct'
-								},
-								{
-									route: 'work-with-us',
-									title: 'Work With Us'
-								}
-							]}
-							inHamburger={true}
-							closeNavbar={closeNavbar}
-						/>
-					</li>
-					<li className={styles.hamburgerLink}>
-						<DropdownNav
-							name={'Initiatives'}
-							menuItems={[
-								{
-									route: 'group-coding-sessions',
-									title: 'Group Coding Sessions'
-								},
-								{
-									route: 'architect-s-club',
-									title: 'Architects Kata Club'
-								},
-								{
-									route: 'bootcamp-plus-plus',
-									title: 'Bootcamp ++'
-								},
-								{
-									route: 'career-corner',
-									title: 'Career Corner'
-								}
-							]}
-							inHamburger={true}
-							closeNavbar={closeNavbar}
-						/>
-					</li>
-					<li className={styles.hamburgerLink}>
-						<NavLink
-							to="/contact"
-							className={({ isActive }) =>
-								isActive ? styles.active : ''
-							}
-							onClick={closeNavbar}
-						>
-							Contact
-						</NavLink>
-					</li>
+			<div id="mobile-menu" className={styles.panel} hidden={!open}>
+				<ul className={styles.list}>
+					{items.map((item) =>
+						item.children ? (
+							<li key={item.title}>
+								<span className={styles.groupLabel}>{item.title}</span>
+								<ul className={styles.subList}>
+									{item.children.map((child) => (
+										<li key={child.route}>
+											<NavLink to={child.route} className={linkClass}>
+												{child.title}
+											</NavLink>
+										</li>
+									))}
+								</ul>
+							</li>
+						) : (
+							<li key={item.title}>
+								<NavLink to={item.route} className={linkClass}>
+									{item.title}
+								</NavLink>
+							</li>
+						)
+					)}
 				</ul>
+				<ExternalLink
+					href={LINKS.joinForm}
+					className={`${ui.btn} ${ui.btnMustard} ${styles.join}`}
+				>
+					Join us
+				</ExternalLink>
 			</div>
 		</div>
 	);

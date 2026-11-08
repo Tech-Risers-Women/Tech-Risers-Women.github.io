@@ -1,48 +1,119 @@
-import { Link } from "react-router-dom";
-import styles from "./initiative.module.css";
-import { LuHeartHandshake } from "react-icons/lu";
+import styles from './initiative.module.css';
+import ui from '../components/ui.module.css';
+import PageHero from '../moons/PageHero';
+import { ExternalLink } from '../components/ui.jsx';
+import { LINKS } from '../data/links';
 
-function Initiative({ initiative, children }) {
-  const { initiativeText, initiativeLink, initiativeFAQs } = initiative;
-  const [banner, photo] = children;
+function PlusIcon() {
+	return (
+		<svg className={styles.chev} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true">
+			<path d="M12 5v14M5 12h14" />
+		</svg>
+	);
+}
 
-  return (
-    <div className={styles.initiative}>
-      {banner}
+// Template for every initiative page.
+//   name, eyebrow, lede, aside        – hero
+//   steps: [{ title, text }]          – optional "How it works" cards
+//   about: { title, paragraphs }      – optional longer description
+//   faqs:  [{ question, answer: [] }] – answer is a list of paragraphs
+//   cta:   { title, text, button }    – closing call to action
+function Initiative({ initiative }) {
+	const { name, eyebrow, lede, aside, heroButton, steps, about, faqs, cta } = initiative;
 
-      <div className={styles.initiativeTile}>
-        <div className={styles.initiativeText}>
-          <p>{initiativeText}</p>
-          <Link
-            className={styles.initiativeJoin}
-            to={initiativeLink}
-            target="_blank"
-          >
-            <LuHeartHandshake />
-            <p className={styles.initiativeCall}>Sign up</p>
-          </Link>
-        </div>
-        {photo}
-      </div>
+	return (
+		<div>
+			<PageHero
+				back={{ to: '/#initiatives', label: 'All initiatives' }}
+				eyebrow={eyebrow}
+				title={name}
+				lede={lede}
+				aside={aside}
+			>
+				<div className={ui.btnRow}>
+					<ExternalLink href={LINKS.joinForm} className={`${ui.btn} ${ui.btnMustard}`}>
+						{heroButton}
+					</ExternalLink>
+				</div>
+			</PageHero>
 
-      <div className={`${styles.initiativeTile} ${styles.initiativeUnflex}`}>
-        {initiativeFAQs.map((faq) => {
-          return (
-            <details
-              className={styles.initiativeQuestions}
-              key={faq.summary.substring(0, 10)}
-            >
-              <summary>{faq.summary}</summary>
+			{steps && (
+				<section className={styles.intro}>
+					<div className={`${ui.container} ${styles.introInner}`}>
+						<h2 className={styles.h2}>How it works</h2>
+						<ol className={styles.steps}>
+							{steps.map((s, idx) => (
+								<li key={s.title} className={`${ui.card} ${styles.step}`}>
+									<span className={styles.stepNum}>0{idx + 1}</span>
+									<span className={styles.stepTitle}>{s.title}</span>
+									<p>{s.text}</p>
+								</li>
+							))}
+						</ol>
+					</div>
+				</section>
+			)}
 
-              <p style={{ whiteSpace: "pre-line", marginTop: "0.5rem" }}>
-                {faq.details}
-              </p>
-            </details>
-          );
-        })}
-      </div>
-    </div>
-  );
+			{about && (
+				<section className={styles.intro}>
+					<div className={`${ui.container} ${styles.introInner}`}>
+						<div className={`${ui.card} ${styles.about}`}>
+							<h2 className={styles.h2}>{about.title}</h2>
+							{about.paragraphs.map((p) => (
+								<p key={p.slice(0, 24)}>{p}</p>
+							))}
+						</div>
+					</div>
+				</section>
+			)}
+
+			{faqs?.length > 0 && (
+				<section className={`${ui.sectionTight} ${ui.dots} ${ui.bordered}`}>
+					<div className={`${ui.narrow} ${styles.faqInner}`}>
+						<h2 className={styles.h2}>Questions</h2>
+						<div className={styles.faqs}>
+							{faqs.map((faq) => (
+								<details key={faq.question} className={`${ui.card} ${styles.faq}`}>
+									<summary>
+										{faq.question}
+										<PlusIcon />
+									</summary>
+									<div className={styles.answer}>
+										{faq.answer.map((p) => (
+											<p key={p.slice(0, 24)}>{p}</p>
+										))}
+									</div>
+								</details>
+							))}
+						</div>
+					</div>
+				</section>
+			)}
+
+			<section className={styles.ctaWrap}>
+				<div className={`${ui.container} ${styles.cta}`}>
+					<div className={styles.ctaText}>
+						<h2 className={ui.h2Small}>{cta.title}</h2>
+						<p>{cta.text}</p>
+					</div>
+					<ExternalLink href={LINKS.joinForm} className={`${ui.btn} ${ui.btnNavy}`}>
+						Sign up
+					</ExternalLink>
+				</div>
+			</section>
+		</div>
+	);
+}
+
+// Historical photo in a framed card, used as the hero aside.
+// `uncropped` shows the whole image at its own shape instead of filling
+// the landscape frame (for portrait photos that would otherwise lose detail).
+export function HeroPhoto({ src, alt, uncropped = false }) {
+	return (
+		<figure className={`${styles.photo} ${uncropped ? styles.photoUncropped : ''}`}>
+			<img src={src} alt={alt} />
+		</figure>
+	);
 }
 
 export default Initiative;

@@ -1,95 +1,63 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import styles from './navbar.module.css';
+import ui from './ui.module.css';
 import Logo from '../media/logodark.png';
-import MobileMenu from './HamburgerMenu.jsx';
+import HamburgerMenu from './HamburgerMenu.jsx';
 import DropdownNav from './DropdownNav.jsx';
+import { INITIATIVES } from '../data/initiatives';
+import { LINKS } from '../data/links';
+import { ExternalLink } from './ui.jsx';
+
+export const NAV_ITEMS = [
+	{ route: '/about', title: 'About' },
+	{ title: 'Initiatives', children: INITIATIVES.map((i) => ({ route: i.route, title: i.name })) },
+	{ route: '/events', title: 'Events' },
+	{ route: '/work-with-us', title: 'Get involved' },
+	{ route: '/contact', title: 'Contact' }
+];
+
+const navLinkClass = ({ isActive }) =>
+	`${styles.navLink} ${isActive ? styles.active : ''}`;
 
 function Navbar() {
 	return (
-		<nav className={styles.navbar}>
-			<div className={styles.mobileMenu}>
-				<MobileMenu />
-			</div>
-			<NavLink
-				to="/"
-				className={({ isActive }) => (isActive ? styles.homeLogo : '')}
-			>
-				<img src={Logo} alt="Tech Risers Women Logo" />
-			</NavLink>
-			<ul className={styles.desktopMenu}>
-				<li>
-					<NavLink
-						to="/"
-						className={({ isActive }) =>
-							isActive ? styles.active : ''
-						}
-					>
-						Home
-					</NavLink>
-				</li>
+		<header className={styles.header}>
+			<nav className={styles.nav} aria-label="Main">
+				<Link to="/" className={styles.brand}>
+					<span className={styles.badge}>
+						<img src={Logo} alt="" />
+					</span>
+					<span className={styles.wordmark}>Tech Risers Women</span>
+				</Link>
 
-				<li>
-					<DropdownNav
-						name={'About'}
-						menuItems={[
-							{
-								route: 'about',
-								title: 'About Us'
-							},
-							{
-								route: 'events',
-								title: 'Events'
-							},
+				<ul className={styles.desktopMenu}>
+					{NAV_ITEMS.map((item) => (
+						<li key={item.title}>
+							{item.children ? (
+								<DropdownNav name={item.title} menuItems={item.children} />
+							) : (
+								<NavLink to={item.route} className={navLinkClass}>
+									{item.title}
+								</NavLink>
+							)}
+						</li>
+					))}
+					<li>
+						<ExternalLink
+							href={LINKS.joinForm}
+							className={`${ui.btn} ${ui.btnMustard} ${ui.btnSmall}`}
+						>
+							Join us
+						</ExternalLink>
+					</li>
+				</ul>
 
-							{
-								route: 'code-of-conduct',
-								title: 'Code Of Conduct'
-							},
-							{
-								route: 'work-with-us',
-								title: 'Work With Us'
-							}
-						]}
-					/>
-				</li>
-
-				<li>
-					<DropdownNav
-						name={'Initiatives'}
-						menuItems={[
-							{
-								route: 'group-coding-sessions',
-								title: 'Group Coding Sessions'
-							},
-							{
-								route: 'architect-s-club',
-								title: "Architects' Kata Club"
-							},
-							{
-								route: 'bootcamp-plus-plus',
-								title: 'Bootcamp ++'
-							},
-							{
-								route: 'career-corner',
-								title: 'Career Corner'
-							}
-						]}
-						inHamburger={false}
-					/>
-				</li>
-				<li>
-					<NavLink
-						to="/contact"
-						className={({ isActive }) =>
-							isActive ? styles.active : ''
-						}
-					>
-						Contact
-					</NavLink>
-				</li>
-			</ul>
-		</nav>
+				<div className={styles.mobileMenu}>
+					<HamburgerMenu items={NAV_ITEMS} />
+				</div>
+			</nav>
+		</header>
 	);
 }
+
 export default Navbar;

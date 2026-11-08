@@ -1,0 +1,177 @@
+/* Shared styles for the content pages: About, Code of Conduct,
+   Work With Us, Contact and the 404 page. */
+
+.body {
+	padding: 40px var(--gutter) 100px;
+}
+
+.inner {
+	max-width: var(--max-width);
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.prose {
+	max-width: 860px;
+	padding: 44px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.prose h2 {
+	margin: 16px 0 0;
+	font-family: var(--font-heading);
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 1.15;
+}
+
+.prose h2:first-child {
+	margin-top: 0;
+}
+
+.prose h3 {
+	margin: 8px 0 0;
+	font-family: var(--font-heading);
+	font-weight: 700;
+	font-size: 24px;
+}
+
+.prose p,
+.prose li {
+	margin: 0;
+	font-size: 17px;
+	line-height: 1.65;
+	color: var(--muted);
+}
+
+.prose ul {
+	margin: 0;
+	padding-left: 22px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.prose strong {
+	color: var(--navy);
+}
+
+.callout {
+	background: var(--sand);
+	border-left: 6px solid var(--mustard);
+	padding: 18px 22px;
+	font-weight: 600;
+	color: var(--navy) !important;
+}
+
+.h2 {
+	margin: 0;
+	font-family: var(--font-heading);
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 1.1;
+}
+
+/* Grid of cards (pillars, roles, contact options) */
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+	gap: 24px;
+}
+
+.card {
+	padding: 28px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.card h3 {
+	margin: 0;
+	font-family: var(--font-heading);
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 1.2;
+}
+
+.card p {
+	margin: 0;
+	font-size: 16px;
+	line-height: 1.6;
+	color: var(--muted);
+}
+
+.cardMedia {
+	padding: 0;
+	gap: 0;
+}
+
+.cardMedia img {
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	border-bottom: var(--border);
+}
+
+.cardMediaBody {
+	padding: 26px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.num {
+	align-self: flex-start;
+	width: 40px;
+	height: 40px;
+	background: var(--mustard);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-family: var(--font-mono);
+	font-weight: 500;
+}
+
+.linkCard {
+	text-decoration: none;
+	color: var(--navy);
+}
+
+.linkCard:hover {
+	color: var(--navy);
+}
+
+.icon {
+	width: 52px;
+	height: 52px;
+	background: var(--navy);
+	color: var(--mustard);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+}
+
+.cta {
+	font-weight: 600;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	margin-top: auto;
+}
+
+@media (max-width: 760px) {
+	.prose {
+		padding: 26px;
+	}
+
+	.prose h2,
+	.h2 {
+		font-size: 28px;
+	}
+}

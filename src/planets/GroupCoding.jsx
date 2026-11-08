@@ -1,49 +1,80 @@
-import eniacImage from "../media/ENIAC.webp";
-import Initiative from "./Initiative";
-import InitiativePhoto from "../moons/InitiativePhoto";
-import Banner from "../moons/Banner";
+import Initiative from './Initiative';
+import styles from './initiative.module.css';
+
+function CodeSample() {
+	return (
+		<div className={styles.code} aria-hidden="true">
+			<div className={styles.codeDots}>
+				<span />
+				<span />
+				<span />
+			</div>
+			<pre>
+				<span className={styles.comment}>// red → green → refactor</span>
+				{'\n'}
+				<span className={styles.kw}>test</span>(&quot;a rising woman gets promoted&quot;, () =&gt; {'{'}
+				{'\n'}  const you = <span className={styles.kw}>join</span>(&quot;Tech Risers&quot;);
+				{'\n'}  you.<span className={styles.kw}>practise</span>({'{'} together: true {'}'});
+				{'\n'}  expect(you.confidence).toRise();
+				{'\n'}
+				{'});'}
+			</pre>
+			<span className={styles.pass}>✓ 1 passing</span>
+		</div>
+	);
+}
+
+const initiative = {
+	name: 'Group Coding Sessions',
+	eyebrow: 'Initiative · Ad hoc sessions',
+	lede: 'A continuous practice group focused on hands-on skill development. We ensemble-code on katas and practice applications, applying Test Driven Development and good coding practices.',
+	aside: <CodeSample />,
+	heroButton: 'Get notified about the next intake',
+	steps: [
+		{
+			title: 'Sign up',
+			text: 'Register interest and we’ll tell you when the next onboarding opens.'
+		},
+		{
+			title: 'Onboarding',
+			text: 'Learn how we work: ensemble coding, TDD and how a session runs.'
+		},
+		{
+			title: 'Code together',
+			text: 'At each session, rotate between driving and navigating on a shared kata.'
+		},
+		{
+			title: 'Grow',
+			text: 'Build habits that carry into your day job — and confidence that shows.'
+		}
+	],
+	faqs: [
+		{
+			question: 'When and where do the Group Coding Sessions take place?',
+			answer: [
+				'Sessions are held online on Zoom and are scheduled ad hoc. New dates go on our Events page and are shared with signed-up members, along with the joining links.'
+			]
+		},
+		{
+			question: 'Which programming languages do you use?',
+			answer: ['We welcome all programming languages.']
+		},
+		{
+			question: 'What do I need to know before attending?',
+			answer: [
+				'These sessions are suitable for people at all stages of their career, as well as those who are considering a career in tech, and would like to experience coding with others in a friendly environment and to expand their skills and knowledge.',
+				'You’ll need to know the basics of at least one programming language before attending - that’s it! The basics include: setting up a project, basic syntax, variables, primitive types, loops and functions.'
+			]
+		}
+	],
+	cta: {
+		title: 'We onboard new starters a few times a year',
+		text: 'Sign up and we’ll let you know when the next intake opens.'
+	}
+};
 
 function GroupCoding() {
-  const initiative = {
-    initiativeName: "Group Coding Sessions",
-    initiativeText: `Our group coding sessions are a continuous practice group focused on 
-            hands-on skill development. We apply Test Driven Design/Development
-            and good coding practices while Ensemble coding on Katas and
-            practice applications. We onboard new starters a few times a year.
-            Sign-up here to get notified about the next session.`,
-    initiativeLink:
-      "https://docs.google.com/forms/d/1avQMSWMHpTmXv3atDX1hk3ZUU2T7xuw3M30nuEIXGpU/viewform",
-    initiativeImage: eniacImage,
-    initiativeImageAlt: "The Women employed by the ENIAC project",
-    initiativeFAQs: [
-      {
-        summary: "When and where do the Group Coding Sessions take place?",
-        details:
-          "Our Group Coding sessions are held on Zoom on Wednesdays at 6pm BST.",
-      },
-      {
-        summary: "Which programming languages do you use?",
-        details: "We welcome all programming languages.",
-      },
-      {
-        summary: "What do I need to know before attending?",
-        details: `These sessions are suitable for people at all stages of their
-          career, as well as those who are considering a career in tech, and
-          would like to experience coding with others in a friendly
-          environment and to expand their skills and knowledge. You'll need to
-          know the basics of at least of one programming language before
-          attending - that's it! The basics include: Setting up a project,
-          basic syntax, variables, primitive types, loops and functions.`,
-      },
-    ],
-  };
-
-  return (
-    <Initiative initiative={{initiativeFAQs: initiative.initiativeFAQs, initiativeLink: initiative.initiativeLink, initiativeText: initiative.initiativeText}}>
-      <Banner name={initiative.initiativeName} />
-      <InitiativePhoto src={initiative.initiativeImage} alt={initiative.initiativeImageAlt} />
-    </Initiative>
-  );
+	return <Initiative initiative={initiative} />;
 }
 
 export default GroupCoding;

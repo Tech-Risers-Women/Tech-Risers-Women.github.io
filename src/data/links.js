@@ -2,7 +2,7 @@
 // only need updating once.
 export const LINKS = {
 	joinForm:
-		'https://docs.google.com/forms/d/1avQMSWMHpTmXv3atDX1hk3ZUU2T7xuw3M30nuEIXGpU/viewform?edit_requested=true',
+		'https://docs.google.com/forms/d/1avQMSWMHpTmXv3atDX1hk3ZUU2T7xuw3M30nuEIXGpU/viewform',
 	newsletter:
 		'https://www.linkedin.com/newsletters/tech-risers-women-newsletter-7422318142938468352/',
 	email: 'mailto:techriserswomen@gmail.com?subject=Tech Risers Women',

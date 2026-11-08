@@ -1,87 +1,77 @@
-import React, { useEffect, useRef, useState } from "react";
-import styles from "./contact.module.css";
-import { LuMail } from "react-icons/lu";
-import { TbHeartCode } from "react-icons/tb";
-import { LuHeartHandshake } from "react-icons/lu";
+import styles from './page.module.css';
+import ui from '../components/ui.module.css';
+import PageHero from '../moons/PageHero';
+import { LuMail, LuHeartHandshake } from 'react-icons/lu';
+import { TbHeartCode } from 'react-icons/tb';
+import { FaLinkedin } from 'react-icons/fa6';
+import { ArrowIcon } from '../components/ui.jsx';
+import { LINKS } from '../data/links';
+
+const OPTIONS = [
+	{
+		icon: <LuMail />,
+		title: 'Send us an email',
+		text: LINKS.emailAddress,
+		href: LINKS.email,
+		external: false
+	},
+	{
+		icon: <LuHeartHandshake />,
+		title: 'Join us',
+		text: 'Sign up as a member and choose the initiatives you’d like to take part in.',
+		href: LINKS.joinForm
+	},
+	{
+		icon: <TbHeartCode />,
+		title: 'Get updates',
+		text: 'Subscribe to our newsletter on LinkedIn. Everyone welcome!',
+		href: LINKS.newsletter
+	},
+	{
+		icon: <FaLinkedin />,
+		title: 'LinkedIn',
+		text: 'Follow Tech Risers Women on LinkedIn.',
+		href: LINKS.linkedin
+	}
+];
 
 function Contact() {
-  const [isInViewport, setIsInViewport] = useState(false);
-  const contactHeroDividerRef = useRef(null);
-
-  useEffect(() => {
-    const handleIntersection = (entries) => {
-      const isIntersecting = entries[0].isIntersecting;
-      setIsInViewport(isIntersecting);
-    };
-
-    const observer = new IntersectionObserver(handleIntersection);
-
-    const currentRef = contactHeroDividerRef.current;
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
-
-    return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
-    };
-  }, [contactHeroDividerRef]);
-  return (
-    <div className={styles.contact}>
-      <div ref={contactHeroDividerRef} className={styles.contactHeroDivider}>
-        <div>
-          <h1
-            className={`${styles.noContactHeadline} ${
-              isInViewport ? styles.contactHeadline : styles.noContactHeadline
-            }`}
-          >
-            Contact us!
-          </h1>
-        </div>
-      </div>
-      <div className={styles.contactWrapper}>
-        <h2>Get in Touch </h2>
-        <p>
-          If you have any questions or would like to learn more about{" "}
-          <em>Tech Risers Women</em>, please don't hesitate to contact us. We
-          also welcome curious women to join our Wednesday group sessions.
-        </p>
-        <div>
-          <div className={styles.contactLinks}>
-            <a className={styles.linkWrapper}
-                href="mailto:techriserswomen@gmail.com?subject=Tech Risers Women"
-                target="_blank"
-                rel="noreferrer"
-                title="send an email to Tech Risers Women to get in touch"
-              >
-                <LuMail className={styles.contactLink} />
-              <p>send us an email</p>
-            </a>
-            <a className={styles.linkWrapper}
-                href="https://www.linkedin.com/newsletters/tech-risers-women-newsletter-7422318142938468352/"
-                target="_blank"
-                rel="noreferrer"
-                title="Sign up for updates about Tech Risers Women - everyone welcome!"
-            >
-                <TbHeartCode className={styles.contactLink} />
-              <p>sign up for updates</p>
-            </a>
-            <a
-              className={styles.linkWrapper}
-              href="https://docs.google.com/forms/d/1avQMSWMHpTmXv3atDX1hk3ZUU2T7xuw3M30nuEIXGpU/viewform"
-              target="_blank"
-              rel="noreferrer"
-              title="Sign-up as a member - choose the initiatives you would like to participate in"
-            >
-              <LuHeartHandshake className={styles.contactLink} />
-              <p>join us</p>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+	return (
+		<div>
+			<PageHero
+				eyebrow="Say hello"
+				title="Contact us"
+				lede="If you have any questions or would like to learn more about Tech Risers Women, please don’t hesitate to contact us. We also welcome curious women to come along to our sessions."
+			/>
+			<section className={styles.body}>
+				<div className={styles.inner}>
+					<div className={styles.cards}>
+						{OPTIONS.map((o) => (
+							<a
+								key={o.title}
+								href={o.href}
+								className={`${ui.card} ${ui.cardHover} ${styles.card} ${styles.linkCard}`}
+								{...(o.external === false
+									? {}
+									: { target: '_blank', rel: 'noreferrer' })}
+							>
+								<span className={styles.icon} aria-hidden="true">
+									{o.icon}
+								</span>
+								<h2 className={styles.h2} style={{ fontSize: 24 }}>
+									{o.title}
+								</h2>
+								<p>{o.text}</p>
+								<span className={styles.cta} aria-hidden="true">
+									<ArrowIcon size={16} />
+								</span>
+							</a>
+						))}
+					</div>
+				</div>
+			</section>
+		</div>
+	);
 }
 
 export default Contact;

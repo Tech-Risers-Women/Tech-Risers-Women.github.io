@@ -18,6 +18,7 @@
 .env.production.local
 .idea/
 dist/
+dist-ssr/
 scratch/
 
 npm-debug.log*

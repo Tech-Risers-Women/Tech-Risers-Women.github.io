@@ -13,13 +13,21 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the site for production to the `dist` folder, then pre-renders every
+page to its own HTML file (`dist/about.html`, `dist/events.html`, …) plus
+`dist/404.html` and `dist/sitemap.xml` (see `scripts/prerender.mjs`).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Pre-rendering means GitHub Pages returns HTTP 200 for every page (rather than
+serving the 404 page and letting React fill it in), and search engines and
+link previews see the real content, title and social-preview tags.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Adding a page:** add the route in `src/App.jsx` *and* an entry with its
+title and description in `src/data/seo.js`. Routes missing from `seo.js` are
+not pre-rendered and will return 404 to search engines.
+
+**Share image:** `public/og-image.png` is generated from
+`scripts/og-image.html`; instructions for regenerating it are at the top of
+that file.
 
 ### `npm run dev`
 

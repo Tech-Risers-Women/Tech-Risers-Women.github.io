@@ -1,62 +1,92 @@
-.navbar img {
-	max-height: 3.75rem;
-	margin: -1rem;
-	padding: 0;
-	background-color: var(---baselight);
-}
-
-.navbar {
+.header {
 	position: relative;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 1rem;
-	background-color: var(---baselight);
-	background-image: radial-gradient(circle, #003666a9 1px, transparent 0);
-	background-size: 1.5rem 1.5rem;
-	z-index: 5;
+	z-index: 20;
+	background: var(--navy);
+	color: var(--cream);
 }
 
-/* Menu */
+.nav {
+	max-width: var(--max-width);
+	margin: 0 auto;
+	padding: 14px var(--gutter);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	min-height: 76px;
+}
+
+.brand {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	text-decoration: none;
+	color: var(--cream);
+}
+
+.brand:hover {
+	color: var(--cream);
+}
+
+.badge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 48px;
+	height: 48px;
+	background: var(--mustard);
+	flex: none;
+}
+
+.badge img {
+	width: 40px;
+	height: auto;
+}
+
+.wordmark {
+	font-family: var(--font-heading);
+	font-weight: 700;
+	font-size: 20px;
+	letter-spacing: 0.02em;
+	padding-top: 3px;
+}
 
 .desktopMenu {
 	display: flex;
-	overflow: hidden;
+	align-items: center;
+	gap: 28px;
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	z-index: 9;
+	font-size: 15px;
+	font-weight: 500;
 }
 
-.desktopMenu li {
-	margin-right: 1rem;
-}
-
-.desktopMenu a {
+.navLink {
+	display: inline-flex;
+	align-items: center;
+	min-height: 44px;
+	color: var(--cream);
 	text-decoration: none;
-	color: var(---basedark);
-	font-weight: bold;
-	font-size: 1.2rem;
-	transition: color 0.3s ease-in-out;
+	text-underline-offset: 6px;
 }
 
-.desktopMenu a:hover {
-	color: white;
-	opacity: 1;
+.navLink:hover {
+	color: var(--cream);
+	text-decoration: underline;
 }
 
-/* Visuals */
+.active,
+.active:hover {
+	color: var(--mustard);
+	text-decoration: underline;
+}
 
-.active {
-	color: var(---light) !important;
-}
-.homeLogo {
-	opacity: 0;
-}
 .mobileMenu {
 	display: none;
 }
-@media (max-width: 768px) {
+
+@media (max-width: 960px) {
 	.desktopMenu {
 		display: none;
 	}
@@ -66,4 +96,8 @@
 	}
 }
 
-/* done */
+@media (max-width: 400px) {
+	.wordmark {
+		font-size: 17px;
+	}
+}

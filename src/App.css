@@ -1,10 +1,26 @@
-:root {
-  ---basedark: #003666;
-  ---baselight: #ffc300;
-  ---light: #fffaf0;
-  ---dark: #214f94;
-  ---accent: #ff0000; 
-  ---babyblue: #a6c8ef;
-  ---basefont: "Josefin Sans", sans-serif;
+.skipLink {
+	position: absolute;
+	left: 16px;
+	top: -100px;
+	z-index: 100;
+	padding: 12px 18px;
+	background: var(--mustard);
+	color: var(--navy);
+	font-weight: 600;
+	text-decoration: none;
 }
 
+.skipLink:focus {
+	top: 16px;
+}
+
+/* Legacy colour variables, still used by the unlinked Donate page. */
+:root {
+	---basedark: #003666;
+	---baselight: #ffc300;
+	---light: #fffaf0;
+	---dark: #214f94;
+	---accent: #ff0000;
+	---babyblue: #a6c8ef;
+	---basefont: 'Josefin Sans', sans-serif;
+}

@@ -1,35 +1,272 @@
-.events {
-	min-height: 100vh;
-	height: 100%;
-	margin: 0;
-	padding-top: 3.1rem;
-	padding-bottom: 3rem;
-	background-color: var(---light);
-	background-image: radial-gradient(circle, #0036667d 1px, transparent 0);
-	background-size: 1.5rem 1.5rem;
-	font-weight: 400;
-	font-family: var(---basefont);
-	color: var(---baselight);
-	overflow: hidden;
+.upcoming {
+	padding: 40px var(--gutter) 90px;
 }
 
-.eventsText {
-	border: 1px dotted black;
-	margin: 2rem 2rem 0 2rem;
-	padding: 2rem;
-	background-color: var(---light);
-	font-size: 1.5rem;
-	text-align: left;
-	color: var(---basedark);
-	& > ul {
-		padding: 0;
+.upcomingInner {
+	display: flex;
+	flex-direction: column;
+	gap: 28px;
+}
+
+.upcomingHead {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 16px;
+}
+
+.filters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.filter {
+	font-family: var(--font-body);
+	font-size: 15px;
+	font-weight: 600;
+	padding: 10px 16px;
+	min-height: 44px;
+	cursor: pointer;
+	border: var(--border);
+	background: var(--white);
+	color: var(--navy);
+}
+
+.filter:hover {
+	background: var(--sand);
+}
+
+.filterOn,
+.filterOn:hover {
+	background: var(--navy);
+	color: var(--cream);
+}
+
+/* Event rows */
+
+.rows {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	transition: box-shadow 0.15s ease;
+}
+
+.row:hover {
+	box-shadow: 6px 6px 0 var(--navy);
+}
+
+.date {
+	flex: 0 0 140px;
+	background: var(--navy);
+	color: var(--mustard);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	gap: 2px;
+	border-right: var(--border);
+}
+
+.dateMustard {
+	background: var(--mustard);
+	color: var(--navy);
+}
+
+.dateDay {
+	font-family: var(--font-mono);
+	font-size: 13px;
+	letter-spacing: 0.1em;
+}
+
+.dateNum {
+	font-family: var(--font-heading);
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 1;
+	padding-top: 4px;
+}
+
+.dateMonth {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.body {
+	flex: 999 1 400px;
+	min-width: 0;
+	padding: 22px 28px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	justify-content: center;
+}
+
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	align-items: center;
+}
+
+.tagLink {
+	text-decoration: none;
+}
+
+.tagLink:hover {
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+.title {
+	margin: 0;
+	font-family: var(--font-heading);
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 1.2;
+}
+
+.description {
+	margin: 0;
+	font-size: 16px;
+	line-height: 1.5;
+	color: var(--muted);
+}
+
+.action {
+	flex: 1 0 220px;
+	padding: 22px 28px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.time {
+	font-size: 15px;
+	color: var(--muted);
+}
+
+/* The full date is only shown when the date block is hidden (mobile). */
+.fullDate {
+	display: none;
+}
+
+.empty {
+	margin: 0;
+	border: 2px dashed var(--navy);
+	padding: 36px;
+	text-align: center;
+	color: var(--muted);
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+/* Past events */
+
+.pastInner {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.pastGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+	gap: 20px;
+}
+
+.pastCard {
+	display: flex;
+	flex-direction: column;
+}
+
+.pastBand {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 14px 22px;
+	background: var(--navy);
+	color: var(--cream);
+	border-bottom: var(--border);
+}
+
+.pastBandMustard {
+	background: var(--mustard);
+	color: var(--navy);
+}
+
+.pastGlyph {
+	font-family: var(--font-mono);
+	font-weight: 500;
+	font-size: 15px;
+	color: var(--mustard);
+}
+
+.pastBandMustard .pastGlyph {
+	color: var(--navy);
+}
+
+.pastInitiative {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.pastBody {
+	padding: 22px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.pastDate {
+	font-family: var(--font-mono);
+	font-size: 12px;
+	letter-spacing: 0.08em;
+	color: var(--muted-2);
+}
+
+.pastTitle {
+	margin: 0;
+	font-family: var(--font-heading);
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 1.2;
+}
+
+.more {
+	align-self: flex-start;
+}
+
+@media (max-width: 640px) {
+	.date {
+		display: none;
 	}
-	& > ul > li,
-	& > ul > li > a,
-	& > p > a {
-		padding: 0.5rem;
-		list-style-type: none;
-		text-decoration: none;
-		color: unset;
+
+	.fullDate {
+		display: block;
+		font-weight: 600;
+		color: var(--navy);
+	}
+
+	.body {
+		padding: 22px 22px 0;
+	}
+
+	.action {
+		padding: 14px 22px 22px;
+	}
+
+	.title {
+		font-size: 23px;
 	}
 }

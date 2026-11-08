@@ -1,50 +1,91 @@
 .footer {
-  padding: 2rem;
-  background-color: var(---baselight);
-  background-image: radial-gradient(circle, #003666a9 1px, transparent 0);
-  background-size: 1.5rem 1.5rem;
+	background: var(--navy-deep);
+	color: var(--on-navy);
+	padding: 72px var(--gutter) 40px;
 }
 
-.footer p {
-  margin: 0;
-  padding: 1rem 1rem 0 1rem;
-  background-color: var(---baselight);
-  text-align: center;
+.footer a {
+	color: var(--on-navy);
 }
 
-.contactLink {
-  position: relative;
-  top: 0.2rem;
-  margin-inline: 0.5rem 0.9rem;
-  color: var(---dark);
+.footer a:hover {
+	color: var(--mustard);
 }
 
-.contactLink:hover {
-  color: var(---light);
+.inner {
+	max-width: var(--max-width);
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 48px;
 }
 
-.footer .footnote {
-  display: block;
-  margin: 1.2rem 0 0 0;
-  font-size: 0.75rem;
+.top {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 40px;
 }
 
-.footer .socialMedia {
-  margin: 0;
-  padding: 1rem 1rem 0 1rem;
-  background-color: var(---baselight);
-  text-align: center;
+.mission {
+	max-width: 420px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
 }
 
-.footer .socialMedia .contactLink {
-  margin-inline: 0.5rem 0.2rem;
+.mission p {
+	margin: 0;
+	font-size: 15px;
+	line-height: 1.6;
 }
 
-.footnote a {
-  text-decoration: none;
-  color: var(---dark);
+.name {
+	font-family: var(--font-heading);
+	font-weight: 700;
+	font-size: 26px;
+	color: var(--cream);
 }
 
-.footnote a:hover {
-  color: var(---light);
+.columns {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px 64px;
+	font-size: 15px;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.column a {
+	display: inline-flex;
+	align-items: center;
+	min-height: 32px;
+}
+
+.label {
+	font-family: var(--font-mono);
+	font-size: 12px;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--mustard);
+	margin-bottom: 8px;
+}
+
+.bottom {
+	border-top: 1px solid rgba(220, 226, 240, 0.25);
+	padding-top: 24px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 12px;
+	font-size: 14px;
+	color: var(--on-navy-muted);
+}
+
+.bottom a {
+	color: var(--on-navy-muted);
 }

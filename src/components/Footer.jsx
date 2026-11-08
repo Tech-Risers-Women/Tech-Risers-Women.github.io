@@ -1,60 +1,99 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
 import styles from './footer.module.css';
-import { INITIATIVES } from '../data/initiatives';
-import { LINKS } from '../data/links';
-import { ExternalLink } from './ui.jsx';
+import { FaXTwitter } from "react-icons/fa6";
+import { SiInstagram } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa6";
+import {LuMail} from 'react-icons/lu';
+import {TbHeartCode} from 'react-icons/tb';
 
 function Footer() {
-	const year = new Date().getFullYear();
-
-	return (
-		<footer className={styles.footer}>
-			<div className={styles.inner}>
-				<div className={styles.top}>
-					<div className={styles.mission}>
-						<div className={styles.name}>Tech Risers Women</div>
-						<p>
-							An initiative to empower women in tech through
-							collaborative learning, skill-building, and career
-							reflection sessions. Online, for everyone, everywhere.
-						</p>
-					</div>
-					<div className={styles.columns}>
-						<div className={styles.column}>
-							<span className={styles.label}>Community</span>
-							<Link to="/about">About us</Link>
-							<Link to="/events">Events</Link>
-							<Link to="/code-of-conduct">Code of conduct</Link>
-							<Link to="/work-with-us">Work with us</Link>
-						</div>
-						<div className={styles.column}>
-							<span className={styles.label}>Initiatives</span>
-							{INITIATIVES.map((i) => (
-								<Link key={i.id} to={i.route}>
-									{i.name}
-								</Link>
-							))}
-						</div>
-						<div className={styles.column}>
-							<span className={styles.label}>Say hello</span>
-							<a href={LINKS.email}>{LINKS.emailAddress}</a>
-							<ExternalLink href={LINKS.linkedin}>LinkedIn</ExternalLink>
-							<ExternalLink href={LINKS.newsletter}>Newsletter</ExternalLink>
-						</div>
-					</div>
-				</div>
-				<div className={styles.bottom}>
-					<span>© {year} Tech Risers Women</span>
-					<span>
-						This website is{' '}
-						<ExternalLink href={LINKS.github}>open source</ExternalLink>.
-						Original developed by{' '}
-						<ExternalLink href={LINKS.evaNagengast}>Eva Nagengast</ExternalLink>.
-					</span>
-				</div>
-			</div>
-		</footer>
-	);
+  return (
+    <footer className={styles.footer}>
+      <p className={styles.footerWrapper}>
+        <b>Tech Risers Women</b> is an initiative to empower women in tech
+        through collaborative learning, skill-building, and career reflection
+        sessions
+      </p>
+      <p>
+        contact us
+        <span className={styles.icon}>
+          <a
+            href='mailto:techriserswomen@gmail.com?subject=Tech Risers Women'
+            target='_blank'
+            rel='noreferrer'
+            title='send an Email to Tech Risers Women to get in touch'
+            className={styles.contactLink}>
+            <LuMail />
+          </a>
+        </span>
+        get updates
+        <span className={styles.icon}>
+          <a
+            href='https://www.linkedin.com/newsletters/tech-risers-women-newsletter-7422318142938468352/'
+            target='_blank'
+            rel='noreferrer'
+            title='Sign up for updates about Tech Risers Women - everyone welcome!'
+            className={styles.contactLink}>
+            <TbHeartCode />
+          </a>
+        </span>
+        <wbr/>
+        join&nbsp;us
+        <span className={styles.icon}>
+          <a
+            href='https://docs.google.com/forms/d/1avQMSWMHpTmXv3atDX1hk3ZUU2T7xuw3M30nuEIXGpU/viewform'
+            target='_blank'
+            rel='noreferrer'
+            title='Fill out this form to join our workshops and group coding sessions'
+            className={styles.contactLink}>
+            <TbHeartCode />
+          </a>
+        </span>
+      </p>
+      <p className={styles.socialMedia}>
+        follow us
+        <span className={styles.icon}>
+          <a
+            href='https://www.linkedin.com/company/tech-risers-women'
+            target='_blank'
+            rel='noreferrer'
+            title='Follow Tech Risers Women on LinkedIn'
+            className={styles.contactLink}>
+            <FaLinkedin />
+          </a>
+        </span>
+        <span className={styles.icon}>
+          <a
+            href='https://www.instagram.com/techrisers_women/'
+            target='_blank'
+            rel='noreferrer'
+            title='Follow Tech Risers Women on Instagram'
+            className={styles.contactLink}>
+            <SiInstagram />
+          </a>
+        </span>
+      </p>
+      <p className={styles.footnote}>
+        This website is{' '}
+        <a
+          href='https://github.com/Tech-Risers-Women/Tech-Risers-Women.github.io'
+          target='_blank'
+          rel='noreferrer'
+          alt='Tech risers women gitHub repository'>
+          open source
+        </a>
+        , developed by{' '}
+        <a
+          href='https://www.eva-nagengast.com'
+          target='_blank'
+          rel='noreferrer'
+          alt='Eva Nagengasts website'>
+          Eva Nagengast
+        </a>
+        .
+      </p>
+    </footer>
+  );
 }
 
 export default Footer;

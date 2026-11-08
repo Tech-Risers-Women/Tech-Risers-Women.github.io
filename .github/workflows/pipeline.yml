@@ -31,10 +31,9 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install
+      # Also pre-renders every page and 404.html (scripts/prerender.mjs)
       - name: Build
         run: npm run build
-      - name: Copy index.html to 404.html
-        run: cp ./dist/index.html ./dist/404.html
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact

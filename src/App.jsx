@@ -9,10 +9,10 @@ import CareerCorner from './planets/CareerCorner';
 import Conduct from './planets/Conduct';
 import WorkWithUs from './planets/WorkWithUs';
 import Contact from './planets/Contact';
-import Donate from './planets/Donate';
+// Donate page hidden until there's a real donation link
+// import Donate from './planets/Donate';
 import GroupCoding from './planets/GroupCoding';
 import Home from './planets/Home';
-import Join from './planets/Join';
 import Events from './planets/Events';
 import ScrollToTop from './utils/ScrollToTop';
 
@@ -28,14 +28,13 @@ function App() {
 						path="group-coding-sessions"
 						element={<GroupCoding />}
 					/>
-					<Route path="/join" element={<Join />} />
 					<Route path="/code-of-conduct" element={<Conduct />} />
 					<Route path="/work-with-us" element={<WorkWithUs />} />
 					<Route path="/events" element={<Events />} />
 					<Route path="/bootcamp-plus-plus" element={<Bootcamp />} />
 					<Route path="/architect-s-club" element={<Architect />} />
 					<Route path="/career-corner" element={<CareerCorner />} />
-					<Route path="/donate" element={<Donate />} />
+					{/* <Route path="/donate" element={<Donate />} /> */}
 					<Route path="/contact" element={<Contact />} />
 					<Route path="*" element={<Error />} />
 				</Route>

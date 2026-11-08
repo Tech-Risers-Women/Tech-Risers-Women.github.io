@@ -53,7 +53,7 @@ function NextEventCard() {
 						</div>
 						<div className={styles.metaItem}>
 							<ClockIcon />
-							<span>{timeRange(next)} UK time</span>
+							<span>{timeRange(next)}</span>
 						</div>
 					</div>
 				</>

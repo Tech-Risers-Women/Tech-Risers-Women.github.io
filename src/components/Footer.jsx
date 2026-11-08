@@ -41,7 +41,7 @@ function Footer() {
         join&nbsp;us
         <span className={styles.icon}>
           <a
-            href='https://docs.google.com/forms/d/1avQMSWMHpTmXv3atDX1hk3ZUU2T7xuw3M30nuEIXGpU/viewform?edit_requested=true'
+            href='https://docs.google.com/forms/d/1avQMSWMHpTmXv3atDX1hk3ZUU2T7xuw3M30nuEIXGpU/viewform'
             target='_blank'
             rel='noreferrer'
             title='Fill out this form to join our workshops and group coding sessions'

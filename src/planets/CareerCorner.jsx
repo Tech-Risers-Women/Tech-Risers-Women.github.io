@@ -14,7 +14,7 @@ function CareerCorner() {
         Whether you’re returning from a break, settling into a new role, or looking to level up, this is your opportunity to reconnect with your goals, design the path that fits you best and practise the skills that’ll get you there, along with other women doing the same.
 		`,
 		initiativeLink:
-			'https://docs.google.com/forms/d/1avQMSWMHpTmXv3atDX1hk3ZUU2T7xuw3M30nuEIXGpU/viewform?edit_requested=true',
+			'https://docs.google.com/forms/d/1avQMSWMHpTmXv3atDX1hk3ZUU2T7xuw3M30nuEIXGpU/viewform',
 		initiativeImage: easleyImage,
 		initiativeImageAlt:
         	`Annie Easley, Computer Scientist and Mathematician who made critical contributions to NASA's rocket systems and energy technologies.`,

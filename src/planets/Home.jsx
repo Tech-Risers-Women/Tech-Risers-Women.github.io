@@ -12,49 +12,50 @@ useEffect(() => {
 
   return (
     <div className={styles.home}>
-      <div className={styles.heroDivider}>
-        <div>
-          <h1
-            className={`${styles.noHeadlineOne} ${
+      {/* One <h1> so screen readers and search engines read "Tech Risers
+          Women" as a single heading. Spans (not divs) because a heading
+          can only contain inline content; CSS makes them display as blocks. */}
+      <h1 className={styles.heroDivider}>
+        <span className={styles.heroLine}>
+          <span
+            className={`${styles.heroWord} ${styles.noHeadlineOne} ${
               fadeIn ? styles.headlineOne : ""
             }`}
           >
-            Tech{" "}
-          </h1>
-        </div>
-
-        <div
-          className={`${styles.noheadlineDivider} ${
+            Tech
+          </span>
+        </span>{" "}
+        <span
+          aria-hidden="true"
+          className={`${styles.heroRule} ${styles.noheadlineDivider} ${
             fadeIn ? styles.headlineDivider : ""
           }`}
-        ></div>
-        <div>
-          <h1
-            className={`${styles.noHeadlineTwo} ${
+        ></span>
+        <span className={styles.heroLine}>
+          <span
+            className={`${styles.heroWord} ${styles.noHeadlineTwo} ${
               fadeIn ? styles.headlineTwo : ""
             }`}
           >
-            {" "}
-            Risers{" "}
-          </h1>
-        </div>
-        <div
-          className={`${styles.noheadlineDivider} ${
+            Risers
+          </span>
+        </span>{" "}
+        <span
+          aria-hidden="true"
+          className={`${styles.heroRule} ${styles.noheadlineDivider} ${
             fadeIn ? styles.headlineDivider2 : ""
           }`}
-        ></div>
-
-        <div>
-          <h1
-            className={`${styles.noHeadlineThree} ${
+        ></span>
+        <span className={styles.heroLine}>
+          <span
+            className={`${styles.heroWord} ${styles.noHeadlineThree} ${
               fadeIn ? styles.headlineThree : ""
             }`}
           >
-            {" "}
             Women
-          </h1>
-        </div>
-      </div>
+          </span>
+        </span>
+      </h1>
       <Intro />
       {/* <MainContent /> */}
       {/* Main content: links to about, group sessions, donation */}

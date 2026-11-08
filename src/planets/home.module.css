@@ -27,14 +27,29 @@
   overflow: hidden;
 }
 
-.heroDivider h1 {
-  margin: 0;
-  padding: 0.4rem 0 0 0;
+/* The hero is a single <h1> containing spans; these rules reproduce the
+   layout of the previous separate <div>/<h1> elements. */
+.heroDivider {
+  font-size: 1rem;
+  font-weight: normal;
 }
 
-.heroDivider div {
+.heroLine,
+.heroRule {
+  display: block;
+}
+
+.heroLine {
   font-size: 3.4rem;
   text-align: center;
+}
+
+.heroWord {
+  display: block;
+  margin: 0;
+  padding: 0.4rem 0 0 0;
+  font-size: 2em;
+  font-weight: bold;
 }
 
 /*  Headline Animation */
@@ -98,7 +113,7 @@
     height: 16rem;
   }
 
-  .heroDivider div {
+  .heroLine {
     font-size: 2rem;
   }
   .headlineDivider {

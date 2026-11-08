@@ -12,7 +12,7 @@ function GroupCoding() {
             practice applications. We onboard new starters a few times a year.
             Sign-up here to get notified about the next session.`,
     initiativeLink:
-      "https://docs.google.com/forms/d/1avQMSWMHpTmXv3atDX1hk3ZUU2T7xuw3M30nuEIXGpU/viewform?edit_requested=true",
+      "https://docs.google.com/forms/d/1avQMSWMHpTmXv3atDX1hk3ZUU2T7xuw3M30nuEIXGpU/viewform",
     initiativeImage: eniacImage,
     initiativeImageAlt: "The Women employed by the ENIAC project",
     initiativeFAQs: [

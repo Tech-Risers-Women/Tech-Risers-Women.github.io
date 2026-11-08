@@ -12,7 +12,7 @@ function Bootcamp() {
 			Then Bootcamp++ might be what you are looking for. Together, we deep-dive into various computer science and software engineering topics which are relevant to our careers. We'll complete practical exercises with peer-reviews, along with occasional workshops from experienced engineers.
 			This is not a course, but rather a pathway you can walk with others, while we rise in our careers together.`,
 		initiativeLink:
-			'https://docs.google.com/forms/d/1avQMSWMHpTmXv3atDX1hk3ZUU2T7xuw3M30nuEIXGpU/viewform?edit_requested=true',
+			'https://docs.google.com/forms/d/1avQMSWMHpTmXv3atDX1hk3ZUU2T7xuw3M30nuEIXGpU/viewform',
 		initiativeImage: moutonImage,
 		initiativeImageAlt:
 			'Melba Roy Mouton, mathematician and computer programmer in NASA’s Trajectory and Geodynamics Division',

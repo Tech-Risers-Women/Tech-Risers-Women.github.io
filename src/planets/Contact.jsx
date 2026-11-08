@@ -69,7 +69,7 @@ function Contact() {
             </a>
             <a
               className={styles.linkWrapper}
-              href="https://docs.google.com/forms/d/1avQMSWMHpTmXv3atDX1hk3ZUU2T7xuw3M30nuEIXGpU/viewform?edit_requested=true"
+              href="https://docs.google.com/forms/d/1avQMSWMHpTmXv3atDX1hk3ZUU2T7xuw3M30nuEIXGpU/viewform"
               target="_blank"
               rel="noreferrer"
               title="Sign-up as a member - choose the initiatives you would like to participate in"

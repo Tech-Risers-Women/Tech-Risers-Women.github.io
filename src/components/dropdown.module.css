@@ -41,7 +41,7 @@
 	margin: 0;
 	padding: 8px 0;
 	list-style: none;
-	background: var(--cream);
+	background: var(--bg);
 	border: var(--border);
 	box-shadow: 6px 6px 0 var(--mustard);
 }
@@ -49,14 +49,14 @@
 .item {
 	display: block;
 	padding: 12px 18px;
-	color: var(--navy);
+	color: var(--ink);
 	font-weight: 500;
 	text-decoration: none;
 }
 
 .item:hover {
-	background: var(--sand);
-	color: var(--navy);
+	background: var(--surface-2);
+	color: var(--ink);
 }
 
 .itemActive {

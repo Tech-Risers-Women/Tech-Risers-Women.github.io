@@ -9,7 +9,7 @@ import sessionPhoto from '../media/session.jpg';
 
 const STATS = [
 	{ value: '15', label: 'countries and counting' },
-	{ value: '0–15+', label: 'years in engineering — every stage welcome' },
+	{ value: '1–15+', label: 'years in engineering - every stage welcome' },
 	{ value: 'Online', label: 'join from anywhere in the world' },
 	{ value: '4', label: 'initiatives to join' }
 ];
@@ -33,7 +33,7 @@ const EXPERIENCE = [
 	{ pct: 19, label: 'not yet in engineering', bg: 'var(--sand)', fg: 'var(--navy)' },
 	{ pct: 19, label: 'under 2 years', bg: 'var(--mustard)', fg: 'var(--navy)' },
 	{ pct: 29, label: '2–5 years', bg: 'var(--slate)', fg: 'var(--navy-deep)' },
-	{ pct: 21, label: '5–10 years', bg: 'var(--muted)', fg: 'var(--cream)' },
+	{ pct: 21, label: '5–10 years', bg: 'var(--navy-mid)', fg: 'var(--cream)' },
 	{ pct: 12, label: '10+ years', bg: 'var(--navy-deep)', fg: 'var(--mustard)' }
 ];
 
@@ -41,6 +41,7 @@ const ROLES = [
 	'Software Engineer',
 	'Data Engineer',
 	'Frontend & Backend Engineer',
+	'Lead Architect',
 	'iOS Developer',
 	'Solution Architect',
 	'Enterprise Architect',
@@ -249,7 +250,7 @@ function Home() {
 					<SectionHeading
 						eyebrow="03 / Who you’ll meet"
 						title="Career changers to principal engineers, across five continents"
-						lede="Our members are students, bootcamp grads, software and data engineers, architects and tech leads. Wherever you are on the ladder, there’s someone a step ahead and someone a step behind."
+						lede="Our members are software and data engineers, students, bootcamp grads, architects and tech leads. Wherever you are on the ladder, you’ll find people who’ve been where you are and people figuring it out with you."
 					/>
 
 					<div className={`${ui.card} ${styles.experience}`}>
@@ -300,7 +301,7 @@ function Home() {
 							</ul>
 						</div>
 						<div className={`${styles.tagPanel} ${styles.tagPanelNavy}`}>
-							<h3 className={styles.h3Small}>Joining from 15 countries</h3>
+							<h3 className={styles.h3Small}>Joining from 15 countries and counting</h3>
 							<ul className={styles.chips}>
 								{COUNTRIES.map((c) => (
 									<li key={c} className={`${styles.chip} ${styles.chipOnNavy}`}>
@@ -368,7 +369,7 @@ function Home() {
 			{/* Join + newsletter */}
 			<section id="join" className={ui.section}>
 				<div className={`${ui.container} ${styles.joinGrid}`}>
-					<div className={`${styles.panel} ${styles.panelMustard}`}>
+					<div className={`${styles.panel} ${styles.panelMustard} light-surface`}>
 						<h2 className={styles.panelTitle}>Join the community</h2>
 						<p>
 							Curious? Come along to one of our sessions. Tell us a

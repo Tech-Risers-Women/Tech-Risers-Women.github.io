@@ -23,12 +23,12 @@
 }
 
 .white {
-	background: var(--white);
+	background: var(--surface);
 }
 
 .dots {
 	background-image: radial-gradient(
-		rgba(28, 46, 90, 0.13) 1.2px,
+		var(--dot) 1.2px,
 		transparent 1.2px
 	);
 	background-size: 22px 22px;
@@ -135,26 +135,26 @@
 }
 
 .btnNavy {
-	background: var(--navy);
-	border-color: var(--navy);
-	color: var(--cream);
+	background: var(--inverse-bg);
+	border-color: var(--inverse-bg);
+	color: var(--inverse-fg);
 }
 
 .btnNavy:hover {
-	background: var(--navy-deep);
-	border-color: var(--navy-deep);
-	color: var(--cream);
+	background: var(--inverse-bg-hover);
+	border-color: var(--inverse-bg-hover);
+	color: var(--inverse-fg);
 }
 
 .btnOutline {
 	background: transparent;
-	border-color: var(--navy);
-	color: var(--navy);
+	border-color: var(--ink);
+	color: var(--ink);
 }
 
 .btnOutline:hover {
-	background: rgba(28, 46, 90, 0.06);
-	color: var(--navy);
+	background: var(--hover-tint);
+	color: var(--ink);
 }
 
 .btnOutlineLight {
@@ -177,7 +177,7 @@
 /* Cards */
 
 .card {
-	background: var(--white);
+	background: var(--surface);
 	border: var(--border);
 }
 
@@ -189,7 +189,7 @@
 
 .cardHover:hover {
 	transform: translateY(-3px);
-	box-shadow: 6px 6px 0 var(--navy);
+	box-shadow: 6px 6px 0 var(--shadow);
 }
 
 /* Tags */
@@ -201,8 +201,8 @@
 	font-size: 13px;
 	font-weight: 600;
 	padding: 4px 10px;
-	background: var(--sand);
-	color: var(--navy);
+	background: var(--surface-2);
+	color: var(--ink);
 	line-height: 1.3;
 }
 

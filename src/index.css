@@ -1,25 +1,18 @@
+/* Brand palette. These stay the same in light and dark mode: use them for
+   brand surfaces (navy bands, mustard panels) and the text that sits on them. */
 :root {
-	/* Colours */
 	--navy: #1c2e5a;
 	--navy-deep: #0f1a38;
+	--navy-mid: #33406a;
 	--mustard: #f4c542;
 	--mustard-hover: #ffd45c;
 	--cream: #fbf7ee;
 	--white: #ffffff;
-	--muted: #33406a;
-	--muted-2: #4a5578;
 	--sand: #e8e2d2;
 	--slate: #8c97b8;
 	--on-navy: #dce2f0;
 	--on-navy-muted: #b7c0d8;
-
-	/* Tag colours */
-	--tag-green-bg: #e3f2e8;
-	--tag-green-fg: #1e5b34;
-	--tag-amber-bg: #fdefc6;
-	--tag-amber-fg: #6b4e00;
-	--tag-grey-bg: #eef0f6;
-	--tag-grey-fg: #33406a;
+	--on-mustard: #1c2e5a;
 
 	/* Type */
 	--font-heading: 'Josefin Sans', sans-serif;
@@ -29,7 +22,110 @@
 	/* Layout */
 	--max-width: 1200px;
 	--gutter: 32px;
-	--border: 2px solid var(--navy);
+}
+
+/* Theme tokens: what the page uses for its own background, text, cards and
+   lines. Light values here; dark values below. `.light-surface` pins an
+   element (e.g. a mustard panel) to the light values in either theme. */
+:root,
+.light-surface {
+	color-scheme: light;
+	--bg: var(--cream);
+	--surface: var(--white);
+	--surface-2: var(--sand);
+	--ink: var(--navy);
+	--ink-strong: var(--navy-deep);
+	--muted: #33406a;
+	--muted-2: #4a5578;
+	--line: var(--navy);
+	--shadow: var(--navy);
+	--border: 2px solid var(--line);
+	--dot: rgba(28, 46, 90, 0.13);
+	--hover-tint: rgba(28, 46, 90, 0.06);
+	--inverse-bg: var(--navy);
+	--inverse-bg-hover: var(--navy-deep);
+	--inverse-fg: var(--cream);
+	--footer-edge: 0 solid transparent;
+
+	--tag-green-bg: #e3f2e8;
+	--tag-green-fg: #1e5b34;
+	--tag-amber-bg: #fdefc6;
+	--tag-amber-fg: #6b4e00;
+	--tag-grey-bg: #eef0f6;
+	--tag-grey-fg: #33406a;
+
+	/* Used by the theme toggle to show the right icon. */
+	--show-when-light: inline-flex;
+	--show-when-dark: none;
+}
+
+.light-surface {
+	color: var(--ink);
+}
+
+/* Dark mode follows the system setting unless the visitor has picked a theme
+   with the toggle (stored as data-theme on <html>). Keep these two blocks
+   identical. */
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme='light']) {
+		color-scheme: dark;
+		--bg: #0a1029;
+		--surface: #131c3d;
+		--surface-2: #212c55;
+		--ink: #f3eee2;
+		--ink-strong: #ffffff;
+		--muted: #c5cce0;
+		--muted-2: #a9b3d1;
+		--line: #4d5d8f;
+		--shadow: #4d5d8f;
+		--border: 2px solid var(--line);
+		--dot: rgba(220, 226, 240, 0.09);
+		--hover-tint: rgba(255, 255, 255, 0.06);
+		--inverse-bg: var(--cream);
+		--inverse-bg-hover: var(--white);
+		--inverse-fg: var(--navy);
+		--footer-edge: 2px solid #1f2b52;
+
+		--tag-green-bg: #173b27;
+		--tag-green-fg: #a5e0b9;
+		--tag-amber-bg: #3d3112;
+		--tag-amber-fg: #f6d679;
+		--tag-grey-bg: #252f55;
+		--tag-grey-fg: #c5cce0;
+
+		--show-when-light: none;
+		--show-when-dark: inline-flex;
+	}
+}
+
+:root[data-theme='dark'] {
+	color-scheme: dark;
+	--bg: #0a1029;
+	--surface: #131c3d;
+	--surface-2: #212c55;
+	--ink: #f3eee2;
+	--ink-strong: #ffffff;
+	--muted: #c5cce0;
+	--muted-2: #a9b3d1;
+	--line: #4d5d8f;
+	--shadow: #4d5d8f;
+	--border: 2px solid var(--line);
+	--dot: rgba(220, 226, 240, 0.09);
+	--hover-tint: rgba(255, 255, 255, 0.06);
+	--inverse-bg: var(--cream);
+	--inverse-bg-hover: var(--white);
+	--inverse-fg: var(--navy);
+	--footer-edge: 2px solid #1f2b52;
+
+	--tag-green-bg: #173b27;
+	--tag-green-fg: #a5e0b9;
+	--tag-amber-bg: #3d3112;
+	--tag-amber-fg: #f6d679;
+	--tag-grey-bg: #252f55;
+	--tag-grey-fg: #c5cce0;
+
+	--show-when-light: none;
+	--show-when-dark: inline-flex;
 }
 
 *,
@@ -40,8 +136,8 @@
 
 body {
 	margin: 0;
-	background: var(--cream);
-	color: var(--navy);
+	background: var(--bg);
+	color: var(--ink);
 	font-family: var(--font-body);
 	font-size: 16px;
 	line-height: 1.5;
@@ -50,11 +146,11 @@ body {
 }
 
 a {
-	color: var(--navy);
+	color: var(--ink);
 }
 
 a:hover {
-	color: var(--navy-deep);
+	color: var(--ink-strong);
 }
 
 img {

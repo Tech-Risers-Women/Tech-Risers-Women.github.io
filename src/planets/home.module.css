@@ -72,7 +72,7 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 	gap: 2px;
-	background: var(--navy);
+	background: var(--line);
 	border: var(--border);
 }
 
@@ -82,7 +82,7 @@
 	justify-content: flex-end;
 	gap: 4px;
 	padding: 26px 28px;
-	background: var(--white);
+	background: var(--surface);
 }
 
 .statValue {
@@ -109,7 +109,7 @@
 .initiativeCard {
 	padding: 28px;
 	text-decoration: none;
-	color: var(--navy);
+	color: var(--ink);
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
@@ -117,7 +117,7 @@
 }
 
 .initiativeCard:hover {
-	color: var(--navy);
+	color: var(--ink);
 }
 
 .initiativeTop {
@@ -227,6 +227,7 @@
 	width: 40px;
 	height: 40px;
 	background: var(--mustard);
+	color: var(--on-mustard);
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -248,8 +249,8 @@
 
 .photoFrame {
 	border: var(--border);
-	box-shadow: 14px 14px 0 var(--navy);
-	background: var(--sand);
+	box-shadow: 14px 14px 0 var(--shadow);
+	background: var(--surface-2);
 	overflow: hidden;
 }
 
@@ -368,8 +369,8 @@
 .chip {
 	font-size: 15px;
 	padding: 8px 14px;
-	background: var(--cream);
-	border: 1.5px solid var(--navy);
+	background: var(--bg);
+	border: 1.5px solid var(--line);
 }
 
 .chipOnNavy {
@@ -419,6 +420,7 @@
 	font-size: 17px;
 	padding: 14px 20px;
 	background: var(--mustard);
+	color: var(--on-mustard);
 	border: var(--border);
 }
 

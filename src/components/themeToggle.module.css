@@ -1,0 +1,33 @@
+/* A quiet text button, styled like the links in the footer's bottom row. */
+.button {
+	display: inline-flex;
+	align-items: center;
+	min-height: 32px;
+	padding: 0;
+	background: none;
+	border: 0;
+	color: var(--on-navy-muted);
+	font: inherit;
+	cursor: pointer;
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+.button:hover {
+	color: var(--mustard);
+}
+
+/* "Dark mode" shows in light mode and "Light mode" in dark mode. */
+.whenLight,
+.whenDark {
+	align-items: center;
+	gap: 6px;
+}
+
+.whenLight {
+	display: var(--show-when-light);
+}
+
+.whenDark {
+	display: var(--show-when-dark);
+}

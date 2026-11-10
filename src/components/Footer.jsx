@@ -3,6 +3,7 @@ import styles from './footer.module.css';
 import { INITIATIVES } from '../data/initiatives';
 import { LINKS } from '../data/links';
 import { ExternalLink } from './ui.jsx';
+import ThemeToggle from './ThemeToggle.jsx';
 
 function Footer() {
 	const year = new Date().getFullYear();
@@ -44,7 +45,10 @@ function Footer() {
 					</div>
 				</div>
 				<div className={styles.bottom}>
-					<span>© {year} Tech Risers Women</span>
+					<span className={styles.bottomStart}>
+						<span>© {year} Tech Risers Women</span>
+						<ThemeToggle />
+					</span>
 					<span>
 						This website is{' '}
 						<ExternalLink href={LINKS.github}>open source</ExternalLink>.

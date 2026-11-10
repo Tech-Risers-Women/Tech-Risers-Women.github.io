@@ -91,7 +91,7 @@ function Initiative({ initiative }) {
 			)}
 
 			<section className={styles.ctaWrap}>
-				<div className={`${ui.container} ${styles.cta}`}>
+				<div className={`${ui.container} ${styles.cta} light-surface`}>
 					<div className={styles.ctaText}>
 						<h2 className={ui.h2Small}>{cta.title}</h2>
 						<p>{cta.text}</p>

@@ -1,6 +1,7 @@
 .footer {
 	background: var(--navy-deep);
 	color: var(--on-navy);
+	border-top: var(--footer-edge);
 	padding: 72px var(--gutter) 40px;
 }
 
@@ -81,9 +82,17 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	align-items: center;
 	gap: 12px;
 	font-size: 14px;
 	color: var(--on-navy-muted);
+}
+
+.bottomStart {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 24px;
 }
 
 .bottom a {

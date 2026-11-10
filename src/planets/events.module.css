@@ -30,18 +30,18 @@
 	min-height: 44px;
 	cursor: pointer;
 	border: var(--border);
-	background: var(--white);
-	color: var(--navy);
+	background: var(--surface);
+	color: var(--ink);
 }
 
 .filter:hover {
-	background: var(--sand);
+	background: var(--surface-2);
 }
 
 .filterOn,
 .filterOn:hover {
-	background: var(--navy);
-	color: var(--cream);
+	background: var(--inverse-bg);
+	color: var(--inverse-fg);
 }
 
 /* Event rows */
@@ -60,7 +60,7 @@
 }
 
 .row:hover {
-	box-shadow: 6px 6px 0 var(--navy);
+	box-shadow: 6px 6px 0 var(--shadow);
 }
 
 .date {
@@ -163,7 +163,7 @@
 
 .empty {
 	margin: 0;
-	border: 2px dashed var(--navy);
+	border: 2px dashed var(--line);
 	padding: 36px;
 	text-align: center;
 	color: var(--muted);
@@ -255,7 +255,7 @@
 	.fullDate {
 		display: block;
 		font-weight: 600;
-		color: var(--navy);
+		color: var(--ink);
 	}
 
 	.body {

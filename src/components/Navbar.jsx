@@ -5,14 +5,18 @@ import Logo from '../media/logodark.png';
 import HamburgerMenu from './HamburgerMenu.jsx';
 import DropdownNav from './DropdownNav.jsx';
 import { INITIATIVES } from '../data/initiatives';
-import { LINKS } from '../data/links';
-import { ExternalLink } from './ui.jsx';
 
 export const NAV_ITEMS = [
 	{ route: '/about', title: 'About' },
-	{ title: 'Initiatives', children: INITIATIVES.map((i) => ({ route: i.route, title: i.name })) },
+	{
+		title: 'Programmes',
+		children: [
+			{ route: '/programmes', title: 'All programmes' },
+			...INITIATIVES.map((i) => ({ route: i.route, title: i.name }))
+		]
+	},
 	{ route: '/events', title: 'Events' },
-	{ route: '/work-with-us', title: 'Get involved' },
+	{ route: '/faq', title: 'FAQs' },
 	{ route: '/contact', title: 'Contact' }
 ];
 
@@ -43,12 +47,12 @@ function Navbar() {
 						</li>
 					))}
 					<li>
-						<ExternalLink
-							href={LINKS.joinForm}
+						<NavLink
+							to="/join-us"
 							className={`${ui.btn} ${ui.btnMustard} ${ui.btnSmall}`}
 						>
 							Join us
-						</ExternalLink>
+						</NavLink>
 					</li>
 				</ul>
 

@@ -1,9 +1,10 @@
 import Initiative, { HeroPhoto } from './Initiative';
-import moutonImage from '../media/melbaMouton.png';
+import moutonImage from '../media/melbaMouton.webp';
 
 const initiative = {
+	id: 'bootcamp-plus-plus',
 	name: 'Bootcamp++',
-	eyebrow: 'Initiative · Ad hoc sessions',
+	eyebrow: 'Programme · Ad hoc sessions',
 	lede: 'Have you completed a bootcamp and started working, but feel you’ve barely scratched the surface? Are you looking for a friendly place to structure your learning journey and build knowledge in a community-driven environment?',
 	aside: (
 		<HeroPhoto

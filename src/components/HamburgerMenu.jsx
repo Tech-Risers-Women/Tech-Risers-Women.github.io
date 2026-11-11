@@ -2,8 +2,6 @@ import { useState, useRef, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import styles from './hamburgerMenu.module.css';
 import ui from './ui.module.css';
-import { LINKS } from '../data/links';
-import { ExternalLink } from './ui.jsx';
 
 function HamburgerMenu({ items }) {
 	const [open, setOpen] = useState(false);
@@ -76,12 +74,12 @@ function HamburgerMenu({ items }) {
 						)
 					)}
 				</ul>
-				<ExternalLink
-					href={LINKS.joinForm}
+				<NavLink
+					to="/join-us"
 					className={`${ui.btn} ${ui.btnMustard} ${styles.join}`}
 				>
 					Join us
-				</ExternalLink>
+				</NavLink>
 			</div>
 		</div>
 	);

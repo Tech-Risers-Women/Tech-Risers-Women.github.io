@@ -3,29 +3,53 @@ import styles from './home.module.css';
 import ui from '../components/ui.module.css';
 import { ArrowIcon, ExternalLink, SectionHeading, toneClass } from '../components/ui.jsx';
 import NextEventCard from '../moons/NextEventCard.jsx';
+import UpcomingEvents from '../moons/UpcomingEvents.jsx';
 import { INITIATIVES } from '../data/initiatives';
 import { LINKS } from '../data/links';
-import sessionPhoto from '../media/session.jpg';
+import sessionPhoto from '../media/session.webp';
 
 const STATS = [
 	{ value: '15', label: 'countries and counting' },
 	{ value: '1–15+', label: 'years in engineering - every stage welcome' },
 	{ value: 'Online', label: 'join from anywhere in the world' },
-	{ value: '4', label: 'initiatives to join' }
+	{ value: '4', label: 'free programmes to join' }
 ];
 
+// What members come away with.
+const OUTCOMES = [
+	'Develop practical, industry-relevant technical skills',
+	'Grow your confidence and professional visibility',
+	'Prepare for more senior technical responsibilities',
+	'Connect with peers who understand your challenges',
+	'Learn from experienced engineers and architects',
+	'Share your knowledge with the wider women in tech community'
+];
+
+// The three pillars of Tech Risers Women, plus how they come together.
 const PILLARS = [
 	{
-		title: 'A supportive community',
-		text: 'Share experiences, insights and opportunities with women who get it.'
+		title: 'Technical skills',
+		tagline: 'Learn by doing',
+		text: 'Coding, Test Driven Development, software architecture, system design, algorithms and technical interview practice.',
+		link: { to: '/programmes', label: 'Explore programmes' }
 	},
 	{
-		title: 'Practical, hands-on skills',
-		text: 'Workshops and collaborative projects in architecture, development and testing.'
+		title: 'Peer community',
+		tagline: 'Grow together',
+		text: 'Peer learning, knowledge sharing and collaboration, with guidance from industry-experienced engineers and leaders.',
+		link: { to: '/join-us', label: 'Join the community' }
 	},
 	{
-		title: 'Continuous growth',
-		text: 'Space to reflect on where you are, and guidance for where you want to go.'
+		title: 'Career growth',
+		tagline: 'Develop your potential',
+		text: 'Career planning and progression, technical leadership, and interview and negotiation preparation.',
+		link: { to: '/career-corner', label: 'About Career Corner' }
+	},
+	{
+		title: 'Programme events',
+		tagline: 'Practise and connect',
+		text: 'Regular hands-on online sessions where you solve real technical problems with women who understand your journey.',
+		link: { to: '/events', label: 'Discover events' }
 	}
 ];
 
@@ -90,25 +114,6 @@ const SHORT_QUOTES = [
 	'I wish there were more sessions!'
 ];
 
-const ROLES_TO_FILL = [
-	{
-		title: 'Lead / Co-Lead',
-		text: 'Plan sessions, cover hosting and run onboarding. We’re looking for Bootcamp++ leads and a Group Coding co-lead.'
-	},
-	{
-		title: 'Organiser',
-		text: 'Join the core team: plan initiatives, create events and LinkedIn posts, and support the leads.'
-	},
-	{
-		title: 'Mentor',
-		text: 'Drop in when you can. Python, Java or JavaScript proficiency; TDD or architecture experience a plus.'
-	},
-	{
-		title: 'Partner',
-		text: 'Communities and companies who want to see more women promoted on the IC career track.'
-	}
-];
-
 function QuoteMark() {
 	return (
 		<svg width="34" height="26" viewBox="0 0 34 26" aria-hidden="true">
@@ -128,28 +133,34 @@ function Home() {
 				<div className={styles.heroInner}>
 					<div className={styles.heroMain}>
 						<div className={styles.heroEyebrow}>
-							&gt; Online · Global · Community-run
+							&gt; Online · Global · Free
 						</div>
 						<h1 className={styles.heroTitle}>
-							Practical skills for women{' '}
-							<span className={styles.highlight}>rising</span> in tech.
+							Grow your technical confidence. Strengthen your skills.{' '}
+							<span className={styles.highlight}>Rise together.</span>
 						</h1>
 						<p className={styles.heroLede}>
-							Hands-on sessions in coding, architecture and career
-							growth, supporting more women to climb the technical
-							ladder, get promoted, and lead. Run by women in tech,
-							for women in tech, wherever you are.
+							A peer-to-peer community for women in software
+							engineering and data. Practise, learn and solve real
+							technical problems alongside women who understand your
+							journey.
 						</p>
 						<div className={ui.btnRow}>
-							<a href="#join" className={`${ui.btn} ${ui.btnMustard}`}>
-								Join the community <ArrowIcon />
-							</a>
 							<ExternalLink
-								href={LINKS.newsletter}
+								href={LINKS.joinForm}
+								className={`${ui.btn} ${ui.btnMustard}`}
+							>
+								Join the community <ArrowIcon />
+							</ExternalLink>
+							<Link
+								to="/programmes"
 								className={`${ui.btn} ${ui.btnOutlineLight}`}
 							>
-								Read the newsletter
-							</ExternalLink>
+								Explore programmes
+							</Link>
+							<Link to="/events" className={`${ui.btn} ${ui.btnOutlineLight}`}>
+								Discover events
+							</Link>
 						</div>
 					</div>
 					<NextEventCard />
@@ -168,13 +179,81 @@ function Home() {
 				</dl>
 			</section>
 
-			{/* Initiatives */}
-			<section id="initiatives" className={`${ui.section} ${ui.dots}`}>
+			{/* What we are */}
+			<section id="about" className={ui.section}>
+				<div className={`${ui.container} ${styles.split}`}>
+					<div className={styles.splitText}>
+						<SectionHeading
+							eyebrow="01 / Who we are"
+							title="Your technical growth doesn’t have to happen alone."
+							lede="Tech Risers Women is a peer-to-peer professional development community that helps women in software engineering and data grow their technical expertise through practical learning and problem-solving. That builds confidence, and supports real career progression through peer collaboration and shared experience."
+						/>
+						<p className={styles.callout}>
+							We’re not just another networking community. We’re an
+							online place to practise, learn, solve real technical
+							problems, and grow alongside women who understand your
+							journey.
+						</p>
+						<Link to="/about" className={styles.textLink}>
+							More about us <ArrowIcon size={16} />
+						</Link>
+					</div>
+					<div className={styles.splitMedia}>
+						<div className={styles.photoFrame}>
+							<img
+								src={sessionPhoto}
+								alt="Six Tech Risers Women members smiling on a Zoom call during one of our online sessions"
+								width="1200"
+								height="1018"
+							/>
+						</div>
+					</div>
+				</div>
+				<div className={`${ui.container} ${styles.outcomes}`}>
+					<h3 className={styles.h3}>Here, you can:</h3>
+					<ul className={styles.outcomeList}>
+						{OUTCOMES.map((o) => (
+							<li key={o}>{o}</li>
+						))}
+					</ul>
+				</div>
+			</section>
+
+			{/* Pillars */}
+			<section id="pillars" className={`${ui.section} ${ui.white} ${styles.ruled}`}>
 				<div className={`${ui.container} ${ui.stack}`}>
 					<SectionHeading
-						eyebrow="01 / Initiatives"
+						eyebrow="02 / What you can achieve"
+						title="Explore what you can achieve"
+						lede="Practical technical development for professional women, built on three pillars and brought together in hands-on sessions."
+					/>
+					<ol className={styles.pillarGrid}>
+						{PILLARS.map((p, idx) => (
+							<li key={p.title} className={`${ui.card} ${styles.pillarCard}`}>
+								<span className={styles.pillarNum} aria-hidden="true">
+									0{idx + 1}
+								</span>
+								<h3 className={styles.pillarTitle}>
+									{p.title}
+									<span className={styles.pillarTagline}>{p.tagline}</span>
+								</h3>
+								<p className={styles.pillarText}>{p.text}</p>
+								<Link to={p.link.to} className={styles.learnMore}>
+									{p.link.label} <ArrowIcon size={16} />
+								</Link>
+							</li>
+						))}
+					</ol>
+				</div>
+			</section>
+
+			{/* Programmes */}
+			<section id="programmes" className={`${ui.section} ${ui.dots}`}>
+				<div className={`${ui.container} ${ui.stack}`}>
+					<SectionHeading
+						eyebrow="03 / Programmes"
 						title="Find your way in"
-						lede="Hands-on programmes for every stage — from writing cleaner code to designing systems and planning your next promotion."
+						lede="Hands-on programmes for every stage, from writing cleaner code to designing systems and planning your next promotion. All free, all online."
 					/>
 					<div className={styles.initiativeGrid}>
 						{INITIATIVES.map((i) => (
@@ -204,43 +283,25 @@ function Home() {
 							</Link>
 						))}
 					</div>
+					<Link to="/programmes" className={styles.textLink}>
+						Not sure where to start? See which programme fits your career
+						stage <ArrowIcon size={16} />
+					</Link>
 				</div>
 			</section>
 
-			{/* Why we exist */}
-			<section id="about" className={`${ui.section} ${ui.white} ${styles.ruled}`}>
-				<div className={`${ui.container} ${styles.split}`}>
-					<div className={styles.splitText}>
-						<SectionHeading
-							eyebrow="02 / Why we exist"
-							title="A sense of belonging you may not have at work - yet."
-							lede="Tech Risers Women is a community-driven space focused on practical skills and continuous professional growth. We build confidence, share experiences and opportunities, and make sure every woman here feels heard."
-						/>
-						<ol className={styles.pillars}>
-							{PILLARS.map((p, idx) => (
-								<li key={p.title} className={styles.pillar}>
-									<span className={styles.pillarNum} aria-hidden="true">
-										0{idx + 1}
-									</span>
-									<div>
-										<div className={styles.pillarTitle}>{p.title}</div>
-										<div className={styles.pillarText}>{p.text}</div>
-									</div>
-								</li>
-							))}
-						</ol>
-						<Link to="/about" className={styles.textLink}>
-							More about us <ArrowIcon size={16} />
-						</Link>
-					</div>
-					<div className={styles.splitMedia}>
-						<div className={styles.photoFrame}>
-							<img
-								src={sessionPhoto}
-								alt="Six Tech Risers Women members smiling on a Zoom call during one of our online sessions"
-							/>
-						</div>
-					</div>
+			{/* Upcoming events */}
+			<section id="events" className={`${ui.section} ${ui.white} ${styles.ruled}`}>
+				<div className={`${ui.container} ${ui.stack}`}>
+					<SectionHeading
+						eyebrow="04 / Coming up"
+						title="Upcoming events"
+						lede="Pick a session and register. Times are shown in your time zone."
+					/>
+					<UpcomingEvents limit={3} />
+					<Link to="/events" className={`${ui.btn} ${ui.btnOutline} ${styles.selfStart}`}>
+						See all events <ArrowIcon size={16} />
+					</Link>
 				</div>
 			</section>
 
@@ -248,7 +309,7 @@ function Home() {
 			<section id="community" className={`${ui.section} ${ui.dots}`}>
 				<div className={`${ui.container} ${ui.stack}`}>
 					<SectionHeading
-						eyebrow="03 / Who you’ll meet"
+						eyebrow="05 / Who you’ll meet"
 						title="Career changers to principal engineers, across five continents"
 						lede="Our members are software and data engineers, students, bootcamp grads, architects and tech leads. Wherever you are on the ladder, you’ll find people who’ve been where you are and people figuring it out with you."
 					/>
@@ -318,7 +379,7 @@ function Home() {
 			<section className={`${ui.section} ${ui.white} ${ui.bordered}`}>
 				<div className={`${ui.container} ${styles.voices}`}>
 					<SectionHeading
-						eyebrow="04 / Member voices"
+						eyebrow="06 / Member voices"
 						title="In their words"
 						lede="What members told us after their sessions."
 					/>
@@ -338,58 +399,57 @@ function Home() {
 				</div>
 			</section>
 
-			{/* Get involved */}
-			<section id="get-involved" className={`${ui.section} ${ui.dotsDark}`}>
-				<div className={`${ui.container} ${styles.voices}`}>
+			{/* Get started */}
+			<section id="join" className={`${ui.section} ${ui.dotsDark}`}>
+				<div className={`${ui.container} ${ui.stack}`}>
 					<SectionHeading
-						eyebrow="05 / Get involved"
-						title="Help more women stay, grow and lead"
-						lede="Share your skills, practise your own mentoring and facilitation, and build a global network of women engineers."
+						eyebrow="07 / Get started"
+						title="Get started and grow with us"
 						onNavy
 					/>
-					<div className={styles.roleGrid}>
-						{ROLES_TO_FILL.map((r) => (
-							<div key={r.title} className={styles.role}>
-								<h3 className={styles.roleTitle}>{r.title}</h3>
-								<p>{r.text}</p>
+					<div className={styles.joinGrid}>
+						<div className={`${styles.panel} ${styles.panelMustard} light-surface`}>
+							<h2 className={styles.panelTitle}>Join the community</h2>
+							<p>
+								Membership is free. Tell us a little about yourself
+								and we’ll send you everything you need to take part.
+							</p>
+							<ExternalLink href={LINKS.joinForm} className={`${ui.btn} ${ui.btnNavy}`}>
+								Fill in the join form
+							</ExternalLink>
+						</div>
+						<div id="newsletter" className={`${styles.panel} ${ui.card}`}>
+							<h2 className={styles.panelTitle}>Get the newsletter</h2>
+							<p className={styles.muted}>
+								Session recaps, new programmes and opportunities from
+								across the community, on LinkedIn.
+							</p>
+							<ExternalLink href={LINKS.newsletter} className={`${ui.btn} ${ui.btnOutline}`}>
+								Subscribe on LinkedIn
+							</ExternalLink>
+						</div>
+						<div className={`${styles.panel} ${ui.card}`}>
+							<h2 className={styles.panelTitle}>Got questions?</h2>
+							<p className={styles.muted}>
+								Find quick answers in our FAQs, or send us your
+								question and we’ll get back to you.
+							</p>
+							<div className={ui.btnRow}>
+								<Link to="/faq" className={`${ui.btn} ${ui.btnOutline}`}>
+									Read the FAQs
+								</Link>
+								<Link to="/contact" className={`${ui.btn} ${ui.btnOutline}`}>
+									Contact us
+								</Link>
 							</div>
-						))}
+						</div>
 					</div>
-					<div className={ui.btnRow}>
-						<Link to="/work-with-us" className={`${ui.btn} ${ui.btnMustard}`}>
-							Volunteer with us
-						</Link>
-						<Link to="/work-with-us" className={`${ui.btn} ${ui.btnOutlineLight}`}>
-							Partner with us
-						</Link>
-					</div>
-				</div>
-			</section>
-
-			{/* Join + newsletter */}
-			<section id="join" className={ui.section}>
-				<div className={`${ui.container} ${styles.joinGrid}`}>
-					<div className={`${styles.panel} ${styles.panelMustard} light-surface`}>
-						<h2 className={styles.panelTitle}>Join the community</h2>
-						<p>
-							Curious? Come along to one of our sessions. Tell us a
-							little about yourself and we’ll send you everything you
-							need.
-						</p>
-						<ExternalLink href={LINKS.joinForm} className={`${ui.btn} ${ui.btnNavy}`}>
-							Fill in the join form
-						</ExternalLink>
-					</div>
-					<div id="newsletter" className={`${styles.panel} ${ui.card}`}>
-						<h2 className={styles.panelTitle}>Get the newsletter</h2>
-						<p className={styles.muted}>
-							Session recaps, new initiatives and opportunities from
-							across the community — on LinkedIn.
-						</p>
-						<ExternalLink href={LINKS.newsletter} className={`${ui.btn} ${ui.btnOutline}`}>
-							Subscribe on LinkedIn
-						</ExternalLink>
-					</div>
+					<p className={styles.giveBack}>
+						Experienced engineer? Grow your own leadership as a{' '}
+						<Link to="/join-us#volunteer">mentor, organiser or lead</Link>.
+						Company or community?{' '}
+						<Link to="/join-us#partner">Partner with us</Link>.
+					</p>
 				</div>
 			</section>
 		</div>

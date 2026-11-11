@@ -1,67 +1,17 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import styles from './events.module.css';
+import rowStyles from '../moons/eventRow.module.css';
 import ui from '../components/ui.module.css';
 import PageHero from '../moons/PageHero';
 import useEvents, { eventKey } from '../hooks/useEvents';
 import { INITIATIVES, getInitiativeByEventKey } from '../data/initiatives';
 import { LINKS } from '../data/links';
 import { ExternalLink } from '../components/ui.jsx';
-import {
-	dayOfMonth,
-	longDate,
-	monthShort,
-	monthYear,
-	timeRange,
-	weekdayShort
-} from '../utils/formatEvent';
+import EventRow from '../moons/EventRow';
+import { monthYear } from '../utils/formatEvent';
 
 const PAST_PREVIEW = 6;
 const FILTER_ORDER = ['career-corner', 'architects-kata-club', 'group-coding', 'bootcamp-plus-plus'];
-
-function EventRow({ event }) {
-	const initiative = getInitiativeByEventKey(event.initiative);
-	const mustard = initiative?.dateStyle === 'mustard';
-
-	return (
-		<article className={`${styles.row} ${ui.card}`}>
-			<div
-				className={`${styles.date} ${mustard ? styles.dateMustard : ''}`}
-				aria-hidden="true"
-			>
-				<span className={styles.dateDay}>{weekdayShort(event.start)}</span>
-				<span className={styles.dateNum}>{dayOfMonth(event.start)}</span>
-				<span className={styles.dateMonth}>{monthShort(event.start)}</span>
-			</div>
-			<div className={styles.body}>
-				<div className={styles.tags}>
-					{initiative ? (
-						<Link to={initiative.route} className={`${ui.tag} ${styles.tagLink}`}>
-							{initiative.shortName}
-						</Link>
-					) : (
-						event.initiative && <span className={ui.tag}>{event.initiative}</span>
-					)}
-				</div>
-				<h3 className={styles.title}>{event.title}</h3>
-				{event.description && <p className={styles.description}>{event.description}</p>}
-			</div>
-			<div className={styles.action}>
-				<time className={styles.time} dateTime={event.start}>
-					<span className={styles.fullDate}>{longDate(event.start)}</span>
-					{timeRange(event)}
-				</time>
-				<ExternalLink
-					href={LINKS.joinForm}
-					className={`${ui.btn} ${ui.btnMustard} ${ui.btnSmall}`}
-					aria-label={`Sign up: ${event.title}`}
-				>
-					Sign up
-				</ExternalLink>
-			</div>
-		</article>
-	);
-}
 
 function PastEventCard({ event }) {
 	const initiative = getInitiativeByEventKey(event.initiative);
@@ -106,12 +56,21 @@ function Events() {
 	return (
 		<div>
 			<PageHero
-				eyebrow="All events are online"
-				title="Events"
-				lede="Career Corner and Architects’ Kata Club each meet at least once a quarter. Group Coding and Bootcamp++ sessions are added here as they’re scheduled."
-			/>
+				eyebrow="Free · Online · Times in your time zone"
+				title="Upcoming events"
+				lede="Practise and connect in hands-on sessions: architecture katas, system design interview practice, group coding and career development. Career Corner and Architects’ Kata Club each meet at least once a quarter; Group Coding and Bootcamp++ sessions are added as they’re scheduled."
+			>
+				<div className={ui.btnRow}>
+					<a href="#upcoming" className={`${ui.btn} ${ui.btnMustard}`}>
+						Register for an event
+					</a>
+					<ExternalLink href={LINKS.newsletter} className={`${ui.btn} ${ui.btnOutlineLight}`}>
+						Get new dates in the newsletter
+					</ExternalLink>
+				</div>
+			</PageHero>
 
-			<section className={styles.upcoming}>
+			<section id="upcoming" className={styles.upcoming}>
 				<div className={`${ui.container} ${styles.upcomingInner}`}>
 					<div className={styles.upcomingHead}>
 						<h2 className={ui.h2Small}>Coming up</h2>
@@ -131,15 +90,15 @@ function Events() {
 					</div>
 
 					{error && (
-						<p role="alert" className={styles.empty}>
+						<p role="alert" className={rowStyles.empty}>
 							Sorry, we couldn’t load events right now. Please try
 							again later.
 						</p>
 					)}
-					{isLoading && <p className={styles.empty}>Loading events…</p>}
+					{isLoading && <p className={rowStyles.empty}>Loading events…</p>}
 
 					{!isLoading && !error && shown.length > 0 && (
-						<div className={styles.rows}>
+						<div className={rowStyles.rows}>
 							{shown.map((e) => (
 								<EventRow key={eventKey(e)} event={e} />
 							))}
@@ -147,10 +106,10 @@ function Events() {
 					)}
 
 					{!isLoading && !error && shown.length === 0 && (
-						<p className={styles.empty}>
+						<p className={rowStyles.empty}>
 							Nothing scheduled
 							{filter === 'all' ? '' : ' in this series'} right now.{' '}
-							<ExternalLink href={LINKS.joinForm}>Sign up as a member</ExternalLink>{' '}
+							<ExternalLink href={LINKS.joinForm}>Join the community</ExternalLink>{' '}
 							to hear about new dates first.
 						</p>
 					)}

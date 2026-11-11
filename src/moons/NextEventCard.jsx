@@ -62,7 +62,7 @@ function NextEventCard() {
 			{!isLoading && !next && (
 				<p className={styles.note}>
 					Nothing is scheduled right now.{' '}
-					<ExternalLink href={LINKS.joinForm}>Sign up as a member</ExternalLink>{' '}
+					<ExternalLink href={LINKS.joinForm}>Join the community</ExternalLink>{' '}
 					to hear about new dates first.
 				</p>
 			)}

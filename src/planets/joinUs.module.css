@@ -1,0 +1,237 @@
+.section {
+	padding: 40px var(--gutter) 100px;
+}
+
+.split {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 56px;
+	align-items: flex-start;
+}
+
+.splitText {
+	flex: 1 1 440px;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.text {
+	margin: 0;
+	font-size: 17px;
+	line-height: 1.65;
+	color: var(--muted);
+}
+
+.h3 {
+	margin: 0;
+	font-family: var(--font-heading);
+	font-weight: 700;
+	font-size: 24px;
+}
+
+.benefits {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.benefits li {
+	position: relative;
+	padding-left: 34px;
+	font-size: 17px;
+	line-height: 1.5;
+}
+
+.benefits li::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 3px;
+	width: 20px;
+	height: 20px;
+	background: var(--mustard);
+	border: var(--border);
+}
+
+/* How to join */
+
+.steps,
+.partnerPanel {
+	flex: 1 1 380px;
+	min-width: 0;
+	padding: 36px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 22px;
+	box-shadow: 10px 10px 0 var(--shadow);
+}
+
+.partnerPanel {
+	background: var(--mustard);
+	border: var(--border);
+}
+
+.partnerPanel p {
+	margin: 0;
+	font-size: 17px;
+	line-height: 1.6;
+}
+
+.stepsTitle {
+	margin: 0;
+	font-family: var(--font-heading);
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 1.1;
+}
+
+.steps ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+}
+
+.steps li {
+	display: flex;
+	gap: 16px;
+	align-items: flex-start;
+}
+
+.stepNum {
+	flex: none;
+	width: 40px;
+	height: 40px;
+	background: var(--navy);
+	color: var(--mustard);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-family: var(--font-mono);
+	font-weight: 500;
+}
+
+.stepTitle {
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.steps p {
+	margin: 4px 0 0;
+	font-size: 16px;
+	line-height: 1.55;
+	color: var(--muted);
+}
+
+/* Ways to take part */
+
+.wayLink {
+	margin-top: auto;
+	font-weight: 600;
+	font-size: 15px;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	min-height: 44px;
+}
+
+/* Volunteer gains and roles (on navy) */
+
+.gains {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+	gap: 24px 32px;
+}
+
+.gains li {
+	position: relative;
+	padding-left: 34px;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	font-size: 16px;
+	line-height: 1.55;
+	color: var(--on-navy);
+}
+
+.gains li::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 3px;
+	width: 20px;
+	height: 20px;
+	background: var(--mustard);
+}
+
+.gainTitle {
+	font-weight: 600;
+	font-size: 18px;
+	color: var(--cream);
+}
+
+.rolesHeading {
+	margin: 16px 0 -24px;
+	font-family: var(--font-heading);
+	font-weight: 700;
+	font-size: 28px;
+	color: var(--cream);
+}
+
+.role p.roleGain {
+	margin-top: auto;
+	padding-top: 12px;
+	border-top: 1px solid rgba(251, 247, 238, 0.25);
+	color: var(--cream);
+}
+
+.roleGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+	gap: 20px;
+}
+
+.role {
+	border: 2px solid rgba(251, 247, 238, 0.35);
+	padding: 26px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.roleTitle {
+	margin: 0;
+	font-family: var(--font-heading);
+	font-weight: 700;
+	font-size: 24px;
+	color: var(--mustard);
+}
+
+.role p {
+	margin: 0;
+	font-size: 15px;
+	line-height: 1.55;
+	color: var(--on-navy);
+}
+
+@media (max-width: 760px) {
+	.steps,
+	.partnerPanel {
+		padding: 26px;
+	}
+
+	.stepsTitle {
+		font-size: 28px;
+	}
+}

@@ -1,7 +1,8 @@
 import styles from './page.module.css';
 import ui from '../components/ui.module.css';
 import PageHero from '../moons/PageHero';
-import { LuMail, LuHeartHandshake } from 'react-icons/lu';
+import { Link } from 'react-router-dom';
+import { LuMail, LuHeartHandshake, LuHelpCircle } from 'react-icons/lu';
 import { TbHeartCode } from 'react-icons/tb';
 import { FaLinkedin } from 'react-icons/fa6';
 import { ArrowIcon } from '../components/ui.jsx';
@@ -16,9 +17,15 @@ const OPTIONS = [
 		external: false
 	},
 	{
+		icon: <LuHelpCircle />,
+		title: 'Read the FAQs',
+		text: 'Quick answers about joining, our programmes, events and getting involved.',
+		to: '/faq'
+	},
+	{
 		icon: <LuHeartHandshake />,
 		title: 'Join us',
-		text: 'Sign up as a member and choose the initiatives you’d like to take part in.',
+		text: 'Become a member and choose the programmes you’d like to take part in. It’s free.',
 		href: LINKS.joinForm
 	},
 	{
@@ -41,32 +48,44 @@ function Contact() {
 			<PageHero
 				eyebrow="Say hello"
 				title="Contact us"
-				lede="If you have any questions or would like to learn more about Tech Risers Women, please don’t hesitate to contact us. We also welcome curious women to come along to our sessions."
+				lede="Questions about Tech Risers Women, our programmes, membership, volunteering or partnerships? Send them our way and we’ll get back to you. Curious women are always welcome to come along to a session."
 			/>
 			<section className={styles.body}>
 				<div className={styles.inner}>
 					<div className={styles.cards}>
-						{OPTIONS.map((o) => (
-							<a
-								key={o.title}
-								href={o.href}
-								className={`${ui.card} ${ui.cardHover} ${styles.card} ${styles.linkCard}`}
-								{...(o.external === false
-									? {}
-									: { target: '_blank', rel: 'noreferrer' })}
-							>
-								<span className={styles.icon} aria-hidden="true">
-									{o.icon}
-								</span>
-								<h2 className={styles.h2} style={{ fontSize: 24 }}>
-									{o.title}
-								</h2>
-								<p>{o.text}</p>
-								<span className={styles.cta} aria-hidden="true">
-									<ArrowIcon size={16} />
-								</span>
-							</a>
-						))}
+						{OPTIONS.map((o) => {
+							const className = `${ui.card} ${ui.cardHover} ${styles.card} ${styles.linkCard}`;
+							const content = (
+								<>
+									<span className={styles.icon} aria-hidden="true">
+										{o.icon}
+									</span>
+									<h2 className={styles.h2} style={{ fontSize: 24 }}>
+										{o.title}
+									</h2>
+									<p>{o.text}</p>
+									<span className={styles.cta} aria-hidden="true">
+										<ArrowIcon size={16} />
+									</span>
+								</>
+							);
+							return o.to ? (
+								<Link key={o.title} to={o.to} className={className}>
+									{content}
+								</Link>
+							) : (
+								<a
+									key={o.title}
+									href={o.href}
+									className={className}
+									{...(o.external === false
+										? {}
+										: { target: '_blank', rel: 'noreferrer' })}
+								>
+									{content}
+								</a>
+							);
+						})}
 					</div>
 				</div>
 			</section>

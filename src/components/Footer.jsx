@@ -15,21 +15,24 @@ function Footer() {
 					<div className={styles.mission}>
 						<div className={styles.name}>Tech Risers Women</div>
 						<p>
-							An initiative to empower women in tech through
-							collaborative learning, skill-building, and career
-							reflection sessions. Online, for everyone, everywhere.
+							Grow your technical confidence. Strengthen your skills.
+							Rise together. A peer-to-peer community helping women in
+							software engineering and data grow through practical
+							learning. Online, free, everywhere.
 						</p>
 					</div>
 					<div className={styles.columns}>
 						<div className={styles.column}>
 							<span className={styles.label}>Community</span>
 							<Link to="/about">About us</Link>
+							<Link to="/join-us">Join us</Link>
 							<Link to="/events">Events</Link>
+							<Link to="/faq">FAQs</Link>
 							<Link to="/code-of-conduct">Code of conduct</Link>
-							<Link to="/work-with-us">Work with us</Link>
 						</div>
 						<div className={styles.column}>
-							<span className={styles.label}>Initiatives</span>
+							<span className={styles.label}>Programmes</span>
+							<Link to="/programmes">All programmes</Link>
 							{INITIATIVES.map((i) => (
 								<Link key={i.id} to={i.route}>
 									{i.name}
@@ -38,6 +41,7 @@ function Footer() {
 						</div>
 						<div className={styles.column}>
 							<span className={styles.label}>Say hello</span>
+							<Link to="/contact">Contact us</Link>
 							<a href={LINKS.email}>{LINKS.emailAddress}</a>
 							<ExternalLink href={LINKS.linkedin}>LinkedIn</ExternalLink>
 							<ExternalLink href={LINKS.newsletter}>Newsletter</ExternalLink>

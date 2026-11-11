@@ -15,4 +15,6 @@ export function render(url) {
 	);
 }
 
-export { SITE, PAGES, NOT_FOUND } from './data/seo';
+export { SITE, PAGES, REDIRECTS, NOT_FOUND } from './data/seo';
+export { FAQ_GROUPS } from './data/faqs';
+export { LINKS } from './data/links';

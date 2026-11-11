@@ -69,7 +69,7 @@
 	color: var(--muted);
 }
 
-/* FAQs */
+/* Questions, upcoming sessions, other programmes */
 
 .faqInner {
 	display: flex;
@@ -77,50 +77,57 @@
 	gap: 28px;
 }
 
-.faqs {
+/* At a glance */
+
+.glance {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+	gap: 20px;
+}
+
+.fact {
+	padding: 26px;
 	display: flex;
 	flex-direction: column;
-	gap: 12px;
+	gap: 10px;
 }
 
-.faq summary {
-	padding: 22px 26px;
-	min-height: 44px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 16px;
-	font-weight: 600;
-	font-size: 18px;
-	cursor: pointer;
-	list-style: none;
+.factLabel {
+	font-family: var(--font-mono);
+	font-size: 13px;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--muted-2);
 }
 
-.faq summary::-webkit-details-marker {
-	display: none;
-}
-
-.chev {
-	flex: none;
-	transition: transform 0.15s ease;
-}
-
-.faq[open] .chev {
-	transform: rotate(45deg);
-}
-
-.answer {
-	padding: 0 26px 24px;
-	display: flex;
-	flex-direction: column;
-	gap: 12px;
-}
-
-.answer p {
+.fact p,
+.fact li {
 	margin: 0;
 	font-size: 16px;
-	line-height: 1.6;
+	line-height: 1.55;
 	color: var(--muted);
+}
+
+.fact ul {
+	margin: 0;
+	padding-left: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.free {
+	font-family: var(--font-heading);
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 1.1;
+	color: var(--ink);
+}
+
+.others {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
 }
 
 /* Closing call to action */
@@ -240,15 +247,6 @@
 
 	.about p {
 		font-size: 17px;
-	}
-
-	.faq summary {
-		padding: 18px 20px;
-		font-size: 17px;
-	}
-
-	.answer {
-		padding: 0 20px 20px;
 	}
 
 	.code {

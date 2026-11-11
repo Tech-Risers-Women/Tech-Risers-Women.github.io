@@ -1,0 +1,22 @@
+.pillars {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.pillarTitle {
+	margin: 0;
+	font-family: var(--font-heading);
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 1.15;
+}
+
+.topics {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}

@@ -1,30 +1,30 @@
+import { Link } from 'react-router-dom';
 import styles from './initiative.module.css';
 import ui from '../components/ui.module.css';
 import PageHero from '../moons/PageHero';
-import { ExternalLink } from '../components/ui.jsx';
+import UpcomingEvents from '../moons/UpcomingEvents';
+import FaqList from '../components/FaqList';
+import { ArrowIcon, ExternalLink } from '../components/ui.jsx';
+import { INITIATIVES, getInitiativeById } from '../data/initiatives';
 import { LINKS } from '../data/links';
 
-function PlusIcon() {
-	return (
-		<svg className={styles.chev} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true">
-			<path d="M12 5v14M5 12h14" />
-		</svg>
-	);
-}
-
-// Template for every initiative page.
+// Template for every programme page.
+//   id                                – entry in src/data/initiatives.js
+//                                       (at-a-glance facts and events)
 //   name, eyebrow, lede, aside        – hero
 //   steps: [{ title, text }]          – optional "How it works" cards
 //   about: { title, paragraphs }      – optional longer description
 //   faqs:  [{ question, answer: [] }] – answer is a list of paragraphs
 //   cta:   { title, text, button }    – closing call to action
 function Initiative({ initiative }) {
-	const { name, eyebrow, lede, aside, heroButton, steps, about, faqs, cta } = initiative;
+	const { id, name, eyebrow, lede, aside, heroButton, steps, about, faqs, cta } = initiative;
+	const data = getInitiativeById(id);
+	const others = INITIATIVES.filter((i) => i.id !== id);
 
 	return (
 		<div>
 			<PageHero
-				back={{ to: '/#initiatives', label: 'All initiatives' }}
+				back={{ to: '/programmes', label: 'All programmes' }}
 				eyebrow={eyebrow}
 				title={name}
 				lede={lede}
@@ -34,13 +34,46 @@ function Initiative({ initiative }) {
 					<ExternalLink href={LINKS.joinForm} className={`${ui.btn} ${ui.btnMustard}`}>
 						{heroButton}
 					</ExternalLink>
+					<a href="#sessions" className={`${ui.btn} ${ui.btnOutlineLight}`}>
+						Upcoming sessions
+					</a>
 				</div>
 			</PageHero>
+
+			<section className={styles.intro}>
+				<div className={`${ui.container} ${styles.introInner}`}>
+					<h2 className={styles.h2}>At a glance</h2>
+					<div className={styles.glance}>
+						<div className={`${ui.card} ${styles.fact}`}>
+							<span className={styles.factLabel}>Who it’s for</span>
+							<p>{data.audience}</p>
+						</div>
+						<div className={`${ui.card} ${styles.fact}`}>
+							<span className={styles.factLabel}>What you’ll learn</span>
+							<ul>
+								{data.learn.map((l) => (
+									<li key={l}>{l}</li>
+								))}
+							</ul>
+						</div>
+						<div className={`${ui.card} ${styles.fact}`}>
+							<span className={styles.factLabel}>It helps when</span>
+							<p>{data.solves}</p>
+						</div>
+						<div className={`${ui.card} ${styles.fact}`}>
+							<span className={styles.factLabel}>How it works</span>
+							<p>{data.format}</p>
+							<span className={styles.factLabel}>Cost</span>
+							<span className={styles.free}>Free</span>
+						</div>
+					</div>
+				</div>
+			</section>
 
 			{steps && (
 				<section className={styles.intro}>
 					<div className={`${ui.container} ${styles.introInner}`}>
-						<h2 className={styles.h2}>How it works</h2>
+						<h2 className={styles.h2}>Your path</h2>
 						<ol className={styles.steps}>
 							{steps.map((s, idx) => (
 								<li key={s.title} className={`${ui.card} ${styles.step}`}>
@@ -67,25 +100,24 @@ function Initiative({ initiative }) {
 				</section>
 			)}
 
+			<section
+				id="sessions"
+				className={`${ui.sectionTight} ${ui.dots} ${ui.bordered}`}
+			>
+				<div className={`${ui.container} ${styles.faqInner}`}>
+					<h2 className={styles.h2}>Upcoming {data.shortName} sessions</h2>
+					<UpcomingEvents initiative={data.eventKey} />
+					<Link to="/events" className={`${ui.btn} ${ui.btnOutline}`} style={{ alignSelf: 'flex-start' }}>
+						All events <ArrowIcon size={16} />
+					</Link>
+				</div>
+			</section>
+
 			{faqs?.length > 0 && (
-				<section className={`${ui.sectionTight} ${ui.dots} ${ui.bordered}`}>
+				<section className={`${ui.sectionTight} ${ui.bordered}`}>
 					<div className={`${ui.narrow} ${styles.faqInner}`}>
 						<h2 className={styles.h2}>Questions</h2>
-						<div className={styles.faqs}>
-							{faqs.map((faq) => (
-								<details key={faq.question} className={`${ui.card} ${styles.faq}`}>
-									<summary>
-										{faq.question}
-										<PlusIcon />
-									</summary>
-									<div className={styles.answer}>
-										{faq.answer.map((p) => (
-											<p key={p.slice(0, 24)}>{p}</p>
-										))}
-									</div>
-								</details>
-							))}
-						</div>
+						<FaqList faqs={faqs} />
 					</div>
 				</section>
 			)}
@@ -97,8 +129,21 @@ function Initiative({ initiative }) {
 						<p>{cta.text}</p>
 					</div>
 					<ExternalLink href={LINKS.joinForm} className={`${ui.btn} ${ui.btnNavy}`}>
-						Sign up
+						Join the community
 					</ExternalLink>
+				</div>
+			</section>
+
+			<section className={styles.ctaWrap}>
+				<div className={`${ui.container} ${styles.faqInner}`}>
+					<h2 className={ui.h2Small}>Explore other programmes</h2>
+					<div className={styles.others}>
+						{others.map((o) => (
+							<Link key={o.id} to={o.route} className={`${ui.btn} ${ui.btnOutline}`}>
+								{o.name} <ArrowIcon size={16} />
+							</Link>
+						))}
+					</div>
 				</div>
 			</section>
 		</div>

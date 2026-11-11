@@ -1,0 +1,150 @@
+/* Event rows */
+
+.rows {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	transition: box-shadow 0.15s ease;
+}
+
+.row:hover {
+	box-shadow: 6px 6px 0 var(--shadow);
+}
+
+.date {
+	flex: 0 0 140px;
+	background: var(--navy);
+	color: var(--mustard);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	gap: 2px;
+	border-right: var(--border);
+}
+
+.dateMustard {
+	background: var(--mustard);
+	color: var(--navy);
+}
+
+.dateDay {
+	font-family: var(--font-mono);
+	font-size: 13px;
+	letter-spacing: 0.1em;
+}
+
+.dateNum {
+	font-family: var(--font-heading);
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 1;
+	padding-top: 4px;
+}
+
+.dateMonth {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.body {
+	flex: 999 1 400px;
+	min-width: 0;
+	padding: 22px 28px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	justify-content: center;
+}
+
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	align-items: center;
+}
+
+.tagLink {
+	text-decoration: none;
+}
+
+.tagLink:hover {
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+.title {
+	margin: 0;
+	font-family: var(--font-heading);
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 1.2;
+}
+
+.description {
+	margin: 0;
+	font-size: 16px;
+	line-height: 1.5;
+	color: var(--muted);
+}
+
+.action {
+	flex: 1 0 220px;
+	padding: 22px 28px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.time {
+	font-size: 15px;
+	color: var(--muted);
+}
+
+/* The full date is only shown when the date block is hidden (mobile). */
+.fullDate {
+	display: none;
+}
+
+.empty {
+	margin: 0;
+	border: 2px dashed var(--line);
+	padding: 36px;
+	text-align: center;
+	color: var(--muted);
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+	.date {
+		display: none;
+	}
+
+	.fullDate {
+		display: block;
+		font-weight: 600;
+		color: var(--ink);
+	}
+
+	.body {
+		padding: 22px 22px 0;
+	}
+
+	.action {
+		padding: 14px 22px 22px;
+	}
+
+	.title {
+		font-size: 23px;
+	}
+}

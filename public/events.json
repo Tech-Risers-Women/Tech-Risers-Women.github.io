@@ -1,5 +1,13 @@
 [
     {
+      "id": "quarterly-review-session",
+      "title": "Quarterly Career Check-in Q4 2026",
+      "initiative": "Career Corner",
+      "start": "2026-12-07T18:00:00+00:00",
+      "end": "2026-12-07T19:00:00+00:00",
+      "description": "That's a wrap for 2026! Step back, reflect on the past quarter, recognise your progress, revisit your career goals and identify where you want to focus your energy in 2027."
+    },
+    {
       "id": "tickethub-tipping-point",
       "title": "TicketHub's Tipping Point Architecture Kata",
       "initiative": "Architects Kata Club",

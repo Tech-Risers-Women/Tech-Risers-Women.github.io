@@ -16,9 +16,9 @@ function Footer() {
 						<div className={styles.name}>Tech Risers Women</div>
 						<p>
 							Grow your technical confidence. Strengthen your skills.
-							Rise together. A peer-to-peer community helping women in
-							software engineering and data grow through practical
-							learning. Online, free, everywhere.
+							Rise together. A peer-to-peer community supporting women and
+							non-binary people in software engineering and data to grow
+							through practical learning. Online, everywhere.
 						</p>
 					</div>
 					<div className={styles.columns}>

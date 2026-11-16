@@ -28,6 +28,7 @@ function Footer() {
 							<Link to="/events">Events</Link>
 							<Link to="/faq">FAQs</Link>
 							<Link to="/code-of-conduct">Code of conduct</Link>
+							<Link to="/privacy">Privacy notice</Link>
 						</div>
 						<div className={styles.column}>
 							<span className={styles.label}>Initiatives</span>

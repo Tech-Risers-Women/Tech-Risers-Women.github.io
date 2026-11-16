@@ -11,6 +11,7 @@ import JoinUs from './planets/JoinUs';
 import Faq from './planets/Faq';
 import Initiatives from './planets/Initiatives';
 import Contact from './planets/Contact';
+import Privacy from './planets/Privacy';
 // Donate page hidden until there's a real donation link
 // import Donate from './planets/Donate';
 import GroupCoding from './planets/GroupCoding';
@@ -37,10 +38,11 @@ function App() {
 					<Route path="/faq" element={<Faq />} />
 					<Route path="/events" element={<Events />} />
 					<Route path="/bootcamp-plus-plus" element={<Bootcamp />} />
-					<Route path="/architect-s-club" element={<Architect />} />
+					<Route path="/architects-kata-club" element={<Architect />} />
 					<Route path="/career-corner" element={<CareerCorner />} />
 					{/* <Route path="/donate" element={<Donate />} /> */}
 					<Route path="/contact" element={<Contact />} />
+					<Route path="/privacy" element={<Privacy />} />
 					{Object.entries(REDIRECTS).map(([from, to]) => (
 						<Route key={from} path={from} element={<Navigate to={to} replace />} />
 					))}

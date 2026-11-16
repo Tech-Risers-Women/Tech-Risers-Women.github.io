@@ -40,14 +40,14 @@ export const PAGES = {
 	'/events': {
 		title: 'Upcoming events for women in tech | Tech Risers Women',
 		description:
-			'Register for free online sessions: architecture katas, system design interview practice, group coding and career development for women in software and data.'
+			'Free online sessions for members: architecture katas, system design interview practice, group coding and career development for women in software and data.'
 	},
 	'/group-coding-sessions': {
 		title: 'Group Coding Sessions: practise TDD together | Tech Risers Women',
 		description:
-			'A continuous practice group for women in tech. Ensemble-code katas and practice apps using Test Driven Development and good coding habits. Any language.'
+			'A continuous practice group for women in tech. Ensemble-code katas, practice apps and portfolio projects with Test Driven Development. Any language.'
 	},
-	'/architect-s-club': {
+	'/architects-kata-club': {
 		title: 'Architecture katas & system design practice | Tech Risers Women',
 		description:
 			'Software architecture learning for women engineers. Practise system design and interview-style reviews in small, moderated groups. Free and online.'
@@ -70,7 +70,7 @@ export const PAGES = {
 	'/faq': {
 		title: 'FAQs | Tech Risers Women',
 		description:
-			'Who Tech Risers Women is for, what it costs, how to join and register for events, system design interview practice, and how to volunteer or partner.'
+			'Who Tech Risers Women is for, what it costs, how to join and get event links, system design interview practice, and how to volunteer or partner.'
 	},
 	'/code-of-conduct': {
 		title: 'Code of Conduct | Tech Risers Women',
@@ -81,6 +81,11 @@ export const PAGES = {
 		title: 'Contact us | Tech Risers Women',
 		description:
 			'Questions about Tech Risers Women, our initiatives, membership or partnerships? Get in touch, or find quick answers in our FAQs.'
+	},
+	'/privacy': {
+		title: 'Privacy notice | Tech Risers Women',
+		description:
+			'How Tech Risers Women collects, uses and looks after the personal information of members, volunteers and partners around the world.'
 	}
 	// Donate page hidden until there's a real donation link. Uncomment along
 	// with the route in App.jsx.
@@ -96,7 +101,8 @@ export const PAGES = {
 // in the browser.
 export const REDIRECTS = {
 	'/work-with-us': '/join-us',
-	'/programmes': '/initiatives'
+	'/programmes': '/initiatives',
+	'/architect-s-club': '/architects-kata-club'
 };
 
 export const NOT_FOUND = {

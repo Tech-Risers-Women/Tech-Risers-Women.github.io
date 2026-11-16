@@ -93,14 +93,14 @@ export const FAQ_GROUPS = [
 				answer: [
 					'The Architects’ Kata Club runs architecture katas: practical exercises where small, moderated groups design a system for a real-world domain, discuss trade-offs and share architectural patterns. It’s a way to gain design experience beyond what you get to do at work.'
 				],
-				link: { to: '/architect-s-club', label: 'About the Architects’ Kata Club' }
+				link: { to: '/architects-kata-club', label: 'About the Architects’ Kata Club' }
 			},
 			{
 				question: 'Can Tech Risers Women help me prepare for a system design interview?',
 				answer: [
 					'Yes. The Architects’ Kata Club includes interview-style sessions where we walk through an existing system and practise how to assess it, ask the right questions and talk through our thinking. Members have told us the katas helped them in system design interviews soon after.'
 				],
-				link: { to: '/architect-s-club', label: 'Practise system design' }
+				link: { to: '/architects-kata-club', label: 'Practise system design' }
 			},
 			{
 				question: 'Which programming languages do you use?',

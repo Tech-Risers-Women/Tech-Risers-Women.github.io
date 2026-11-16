@@ -5,6 +5,7 @@ import ui from '../components/ui.module.css';
 import PageHero from '../moons/PageHero';
 import { ArrowIcon, ExternalLink, SectionHeading } from '../components/ui.jsx';
 import { LINKS } from '../data/links';
+import MemberQuote from '../moons/MemberQuote';
 
 const BENEFITS = [
 	'Develop practical, industry-relevant technical skills',
@@ -26,7 +27,7 @@ const STEPS = [
 	},
 	{
 		title: 'Take part',
-		text: 'Register for sessions on the Events page, practise with peers, and grow at your own pace.'
+		text: 'Joining links for sessions arrive in your inbox. Practise with peers and grow at your own pace.'
 	}
 ];
 
@@ -153,6 +154,7 @@ function JoinUs() {
 								<li key={b}>{b}</li>
 							))}
 						</ul>
+						<MemberQuote text="The session exceeded my expectations, in that I also expanded my professional network and even gained a potential mentor." />
 					</div>
 					<div className={`${ui.card} ${own.steps}`}>
 						<h3 className={own.stepsTitle}>How to join</h3>

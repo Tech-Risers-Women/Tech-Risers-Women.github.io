@@ -1,0 +1,30 @@
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr));
+	gap: 24px;
+}
+
+.quote {
+	margin: 0;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+}
+
+.quote blockquote {
+	margin: 0;
+	font-size: 19px;
+	line-height: 1.55;
+}
+
+.caption {
+	font-size: 15px;
+	color: var(--muted);
+}
+
+@media (max-width: 760px) {
+	.quote {
+		padding: 24px;
+	}
+}

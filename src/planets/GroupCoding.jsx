@@ -28,7 +28,7 @@ const initiative = {
 	id: 'group-coding',
 	name: 'Group Coding Sessions',
 	eyebrow: 'Initiative · Ad hoc sessions',
-	lede: 'A continuous practice group focused on hands-on skill development. We ensemble-code on katas and practice applications, applying Test Driven Development and good coding practices.',
+	lede: 'A continuous practice group focused on hands-on skill development. We ensemble-code on katas, practice applications and portfolio projects, applying Test Driven Development and good coding practices.',
 	aside: <CodeSample />,
 	heroButton: 'Get notified about the next intake',
 	steps: [

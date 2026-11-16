@@ -9,7 +9,7 @@ import CareerCorner from './planets/CareerCorner';
 import Conduct from './planets/Conduct';
 import JoinUs from './planets/JoinUs';
 import Faq from './planets/Faq';
-import Programmes from './planets/Programmes';
+import Initiatives from './planets/Initiatives';
 import Contact from './planets/Contact';
 // Donate page hidden until there's a real donation link
 // import Donate from './planets/Donate';
@@ -33,7 +33,7 @@ function App() {
 					/>
 					<Route path="/code-of-conduct" element={<Conduct />} />
 					<Route path="/join-us" element={<JoinUs />} />
-					<Route path="/programmes" element={<Programmes />} />
+					<Route path="/initiatives" element={<Initiatives />} />
 					<Route path="/faq" element={<Faq />} />
 					<Route path="/events" element={<Events />} />
 					<Route path="/bootcamp-plus-plus" element={<Bootcamp />} />

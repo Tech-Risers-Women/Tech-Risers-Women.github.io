@@ -4,7 +4,7 @@ import easleyImage from '../media/annieEasley.webp';
 const initiative = {
 	id: 'career-corner',
 	name: 'Career Corner',
-	eyebrow: 'Programme · At least quarterly',
+	eyebrow: 'Initiative · At least quarterly',
 	lede: 'When was the last time you negotiated a better salary, mapped out your next promotion with your boss, or simply gave yourself space to think about where you want to go next?',
 	aside: (
 		<HeroPhoto

@@ -34,7 +34,7 @@ export const FAQ_GROUPS = [
 			{
 				question: 'Is Tech Risers Women free?',
 				answer: [
-					'Yes. Joining the community and attending our programme sessions is free.'
+					'Yes. Joining the community and attending our initiative sessions is free.'
 				]
 			},
 			{
@@ -52,7 +52,7 @@ export const FAQ_GROUPS = [
 			{
 				question: 'How do I join the community?',
 				answer: [
-					'Fill in our short join form. Tell us a little about yourself and which programmes interest you, and we’ll send you everything you need, including the joining links for sessions.'
+					'Fill in our short join form. Tell us a little about yourself and which initiatives interest you, and we’ll send you everything you need, including the joining links for sessions.'
 				],
 				link: { href: LINKS.joinForm, label: 'Fill in the join form' }
 			},
@@ -64,22 +64,22 @@ export const FAQ_GROUPS = [
 				link: { to: '/events', label: 'Browse events' }
 			},
 			{
-				question: 'Which programme should I start with?',
+				question: 'Which initiative should I start with?',
 				answer: [
 					'If you’re early in your career, Group Coding Sessions and Bootcamp++ build strong foundations. Mid-level engineers often join Group Coding, the Architects’ Kata Club and Career Corner. Senior, staff and principal engineers tend to get the most from the Architects’ Kata Club and Career Corner, and from mentoring others.'
 				],
-				link: { to: '/programmes', label: 'Compare programmes' }
+				link: { to: '/initiatives', label: 'Compare initiatives' }
 			},
 			{
 				question: 'How much experience do I need?',
 				answer: [
-					'It depends on the programme. Group Coding needs the basics of one programming language. Bootcamp++ is for bootcamp graduates and self-taught engineers. The Architects’ Kata Club is for engineers who have deployed features to production. Career Corner is for working engineers.'
+					'It depends on the initiative. Group Coding needs the basics of one programming language. Bootcamp++ is for bootcamp graduates and self-taught engineers. The Architects’ Kata Club is for engineers who have deployed features to production. Career Corner is for working engineers.'
 				]
 			},
 			{
 				question: 'How can I stay up to date?',
 				answer: [
-					'Subscribe to the Tech Risers Women newsletter on LinkedIn for session recaps, new programmes and opportunities, and follow us on LinkedIn.'
+					'Subscribe to the Tech Risers Women newsletter on LinkedIn for session recaps, new initiatives and opportunities, and follow us on LinkedIn.'
 				],
 				link: { href: LINKS.newsletter, label: 'Subscribe to the newsletter' }
 			}
@@ -123,7 +123,7 @@ export const FAQ_GROUPS = [
 			{
 				question: 'Can I volunteer or mentor?',
 				answer: [
-					'Yes, and you’ll grow too. Leading, mentoring or organising is a supportive place to practise leadership, facilitation and communication: the skills senior technical roles ask for. We’re looking for programme leads and co-leads, organisers, and mentors who can drop in when they have time.'
+					'Yes, and you’ll grow too. Leading, mentoring or organising is a supportive place to practise leadership, facilitation and communication: the skills senior technical roles ask for. We’re looking for initiative leads and co-leads, organisers, and mentors who can drop in when they have time.'
 				],
 				link: { to: '/join-us', label: 'Ways to get involved' }
 			},

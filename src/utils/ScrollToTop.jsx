@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 // Scroll to the top on navigation, or to the element named in the URL hash
-// (e.g. /#programmes).
+// (e.g. /#initiatives).
 function ScrollToTop() {
 	const { pathname, hash } = useLocation();
 

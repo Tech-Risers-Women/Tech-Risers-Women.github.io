@@ -4,7 +4,7 @@ import { LINKS } from '../data/links';
 import { ExternalLink } from '../components/ui.jsx';
 import EventRow from './EventRow';
 
-// The next few upcoming events, optionally for one programme only
+// The next few upcoming events, optionally for one initiative only
 // (`eventKey` from src/data/initiatives.js).
 function UpcomingEvents({ limit = 3, initiative }) {
 	const { isLoading, error, upcoming } = useEvents();

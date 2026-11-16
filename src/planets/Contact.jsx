@@ -19,13 +19,13 @@ const OPTIONS = [
 	{
 		icon: <LuHelpCircle />,
 		title: 'Read the FAQs',
-		text: 'Quick answers about joining, our programmes, events and getting involved.',
+		text: 'Quick answers about joining, our initiatives, events and getting involved.',
 		to: '/faq'
 	},
 	{
 		icon: <LuHeartHandshake />,
 		title: 'Join us',
-		text: 'Become a member and choose the programmes you’d like to take part in. It’s free.',
+		text: 'Become a member and choose the initiatives you’d like to take part in. It’s free.',
 		href: LINKS.joinForm
 	},
 	{
@@ -48,7 +48,7 @@ function Contact() {
 			<PageHero
 				eyebrow="Say hello"
 				title="Contact us"
-				lede="Questions about Tech Risers Women, our programmes, membership, volunteering or partnerships? Send them our way and we’ll get back to you. Curious women are always welcome to come along to a session."
+				lede="Questions about Tech Risers Women, our initiatives, membership, volunteering or partnerships? Send them our way and we’ll get back to you. Curious women are always welcome to come along to a session."
 			/>
 			<section className={styles.body}>
 				<div className={styles.inner}>

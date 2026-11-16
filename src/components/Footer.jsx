@@ -30,8 +30,8 @@ function Footer() {
 							<Link to="/code-of-conduct">Code of conduct</Link>
 						</div>
 						<div className={styles.column}>
-							<span className={styles.label}>Programmes</span>
-							<Link to="/programmes">All programmes</Link>
+							<span className={styles.label}>Initiatives</span>
+							<Link to="/initiatives">All initiatives</Link>
 							{INITIATIVES.map((i) => (
 								<Link key={i.id} to={i.route}>
 									{i.name}

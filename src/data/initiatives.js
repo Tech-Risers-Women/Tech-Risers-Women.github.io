@@ -1,8 +1,8 @@
-// One entry per programme. `eventKey` is the value used for "initiative"
+// One entry per initiative. `eventKey` is the value used for "initiative"
 // in public/events.json.
 //
 // The "at a glance" fields (audience, learn, solves, format) are shown on
-// the Programmes page and at the top of each programme's own page.
+// the Initiatives page and at the top of each initiative's own page.
 export const INITIATIVES = [
 	{
 		id: 'group-coding',
@@ -115,32 +115,32 @@ export const getInitiativeByEventKey = (key) =>
 
 export const getInitiativeById = (id) => INITIATIVES.find((i) => i.id === id);
 
-// Where each stage of career tends to start. Used on the Programmes page.
-// `extra` is an optional extra link shown under the programmes.
+// Where each stage of career tends to start. Used on the Initiatives page.
+// `extra` is an optional extra link shown under the initiatives.
 export const AUDIENCES = [
 	{
 		title: 'Junior developers',
 		need: 'Looking for skills, confidence and guidance.',
 		promise: 'Find your community, build strong foundations and start climbing the career ladder.',
-		programmes: ['group-coding', 'bootcamp-plus-plus']
+		initiatives: ['group-coding', 'bootcamp-plus-plus']
 	},
 	{
 		title: 'Mid-level engineers',
 		need: 'Looking for technical growth and progression.',
 		promise: 'Become a stronger engineer, and get ready for more senior technical responsibility.',
-		programmes: ['group-coding', 'architects-kata-club', 'career-corner']
+		initiatives: ['group-coding', 'architects-kata-club', 'career-corner']
 	},
 	{
 		title: 'Senior engineers',
 		need: 'Looking for broader technical impact.',
 		promise: 'Sharpen your system design and architecture skills, and prepare for staff-level responsibility.',
-		programmes: ['architects-kata-club', 'career-corner']
+		initiatives: ['architects-kata-club', 'career-corner']
 	},
 	{
 		title: 'Staff, principal and architects',
 		need: 'Looking for influence, leadership and a way to give back.',
-		promise: 'Keep your design skills sharp, plan your next step on the IC track, and help other women rise as a mentor or programme lead.',
-		programmes: ['architects-kata-club', 'career-corner'],
+		promise: 'Keep your design skills sharp, plan your next step on the IC track, and help other women rise as a mentor or initiative lead.',
+		initiatives: ['architects-kata-club', 'career-corner'],
 		extra: { to: '/join-us#volunteer', label: 'Mentor or lead' }
 	}
 ];

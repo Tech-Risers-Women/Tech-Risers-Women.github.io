@@ -4,7 +4,7 @@ import hamiltonImage from '../media/MargeretHamilton.avif';
 const initiative = {
 	id: 'architects-kata-club',
 	name: 'Architects’ Kata Club',
-	eyebrow: 'Programme · Quarterly sessions',
+	eyebrow: 'Initiative · Quarterly sessions',
 	lede: 'The Architects’ Kata Club is where we practise designing systems for various domains and technical problems. What better way to improve your architecture skills than to practise them and gain exposure, beyond what you get to do at work?',
 	aside: (
 		<HeroPhoto

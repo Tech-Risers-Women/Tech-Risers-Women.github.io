@@ -9,9 +9,9 @@ import { INITIATIVES } from '../data/initiatives';
 export const NAV_ITEMS = [
 	{ route: '/about', title: 'About' },
 	{
-		title: 'Programmes',
+		title: 'Initiatives',
 		children: [
-			{ route: '/programmes', title: 'All programmes' },
+			{ route: '/initiatives', title: 'All initiatives' },
 			...INITIATIVES.map((i) => ({ route: i.route, title: i.name }))
 		]
 	},

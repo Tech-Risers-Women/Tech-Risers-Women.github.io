@@ -8,7 +8,7 @@ import { ArrowIcon, ExternalLink } from '../components/ui.jsx';
 import { INITIATIVES, getInitiativeById } from '../data/initiatives';
 import { LINKS } from '../data/links';
 
-// Template for every programme page.
+// Template for every initiative page.
 //   id                                – entry in src/data/initiatives.js
 //                                       (at-a-glance facts and events)
 //   name, eyebrow, lede, aside        – hero
@@ -24,7 +24,7 @@ function Initiative({ initiative }) {
 	return (
 		<div>
 			<PageHero
-				back={{ to: '/programmes', label: 'All programmes' }}
+				back={{ to: '/initiatives', label: 'All initiatives' }}
 				eyebrow={eyebrow}
 				title={name}
 				lede={lede}
@@ -136,7 +136,7 @@ function Initiative({ initiative }) {
 
 			<section className={styles.ctaWrap}>
 				<div className={`${ui.container} ${styles.faqInner}`}>
-					<h2 className={ui.h2Small}>Explore other programmes</h2>
+					<h2 className={ui.h2Small}>Explore other initiatives</h2>
 					<div className={styles.others}>
 						{others.map((o) => (
 							<Link key={o.id} to={o.route} className={`${ui.btn} ${ui.btnOutline}`}>

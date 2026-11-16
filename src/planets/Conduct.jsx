@@ -15,7 +15,7 @@ function Conduct() {
 			<PageHero
 				eyebrow="Community"
 				title="Code of Conduct"
-				lede="All attendees, organisers, facilitators, mentors, volunteers and hosts involved in Tech Risers Women events are required to agree with the following code of conduct."
+				lede="All attendees, organisers, facilitators, trainers, volunteers and hosts involved in Tech Risers Women events are required to agree with the following code of conduct."
 			/>
 			<section className={styles.body}>
 				<div className={styles.inner}>

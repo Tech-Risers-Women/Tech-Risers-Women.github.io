@@ -58,7 +58,7 @@ const initiative = {
 		},
 		{
 			question: 'Which programming languages do you use?',
-			answer: ['We welcome all programming languages.']
+			answer: ['All languages are welcome in Group Coding Sessions. Knowing a widely used one, such as Python, Java, C#, Ruby, Swift or JavaScript, makes it easier to work with others in a session. You only need the basics: setting up a project, syntax, variables, primitive types, loops and functions.']
 		},
 		{
 			question: 'What do I need to know before attending?',

@@ -2,8 +2,6 @@ import { Link } from 'react-router-dom';
 import styles from './eventRow.module.css';
 import ui from '../components/ui.module.css';
 import { getInitiativeByEventKey } from '../data/initiatives';
-import { LINKS } from '../data/links';
-import { ExternalLink } from '../components/ui.jsx';
 import {
 	dayOfMonth,
 	longDate,
@@ -12,8 +10,8 @@ import {
 	weekdayShort
 } from '../utils/formatEvent';
 
-// One upcoming event: date block, title and description, and a Register
-// button. Used on the Events page, the home page and each initiative page.
+// One upcoming event: date block, title and description, and the full date
+// and time. Used on the Events page, the home page and each initiative page.
 function EventRow({ event, headingLevel = 'h3' }) {
 	const initiative = getInitiativeByEventKey(event.initiative);
 	const mustard = initiative?.dateStyle === 'mustard';
@@ -47,13 +45,6 @@ function EventRow({ event, headingLevel = 'h3' }) {
 					<span className={styles.fullDate}>{longDate(event.start)}</span>
 					{timeRange(event)}
 				</time>
-				<ExternalLink
-					href={LINKS.joinForm}
-					className={`${ui.btn} ${ui.btnMustard} ${ui.btnSmall}`}
-					aria-label={`Register: ${event.title}`}
-				>
-					Register
-				</ExternalLink>
 			</div>
 		</article>
 	);

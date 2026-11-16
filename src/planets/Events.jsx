@@ -59,16 +59,7 @@ function Events() {
 				eyebrow="Free · Online · Times in your time zone"
 				title="Upcoming events"
 				lede="Practise and connect in hands-on sessions: architecture katas, system design interview practice, group coding and career development. Career Corner and Architects’ Kata Club each meet at least once a quarter; Group Coding and Bootcamp++ sessions are added as they’re scheduled."
-			>
-				<div className={ui.btnRow}>
-					<a href="#upcoming" className={`${ui.btn} ${ui.btnMustard}`}>
-						Register for an event
-					</a>
-					<ExternalLink href={LINKS.newsletter} className={`${ui.btn} ${ui.btnOutlineLight}`}>
-						Get new dates in the newsletter
-					</ExternalLink>
-				</div>
-			</PageHero>
+			/>
 
 			<section id="upcoming" className={styles.upcoming}>
 				<div className={`${ui.container} ${styles.upcomingInner}`}>
@@ -88,6 +79,13 @@ function Events() {
 							))}
 						</div>
 					</div>
+					{!isLoading && !error && shown.length > 0 && (
+						<p className={styles.joinNote}>
+							Joining links are emailed to members.{' '}
+							<ExternalLink href={LINKS.joinForm}>Join the community</ExternalLink>{' '}
+							to get them.
+						</p>
+					)}
 
 					{error && (
 						<p role="alert" className={rowStyles.empty}>

@@ -3,9 +3,8 @@ import styles from './faq.module.css';
 import ui from '../components/ui.module.css';
 import PageHero from '../moons/PageHero';
 import FaqList from '../components/FaqList';
-import { ArrowIcon, ExternalLink } from '../components/ui.jsx';
+import { ArrowIcon } from '../components/ui.jsx';
 import { FAQ_GROUPS } from '../data/faqs';
-import { LINKS } from '../data/links';
 
 const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
@@ -38,16 +37,12 @@ function Faq() {
 					<div className={`${styles.cta} light-surface`}>
 						<h2 className={ui.h2Small}>Still have a question?</h2>
 						<p>
-							Send it our way and we’ll get back to you. Or jump straight
-							in and join the community.
+							Send it our way and we’ll get back to you.
 						</p>
 						<div className={ui.btnRow}>
 							<Link to="/contact" className={`${ui.btn} ${ui.btnNavy}`}>
 								Contact us <ArrowIcon size={16} />
 							</Link>
-							<ExternalLink href={LINKS.joinForm} className={`${ui.btn} ${ui.btnOutline}`}>
-								Join the community
-							</ExternalLink>
 						</div>
 					</div>
 				</div>

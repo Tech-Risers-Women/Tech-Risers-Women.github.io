@@ -139,8 +139,8 @@ export const AUDIENCES = [
 	{
 		title: 'Staff, principal and architects',
 		need: 'Looking for influence, leadership and a way to give back.',
-		promise: 'Keep your design skills sharp, plan your next step on the IC track, and help other women rise as a mentor or initiative lead.',
+		promise: 'Keep your design skills sharp, plan your next step on the IC track, and help other women rise as a trainer or initiative lead.',
 		initiatives: ['architects-kata-club', 'career-corner'],
-		extra: { to: '/join-us#volunteer', label: 'Mentor or lead' }
+		extra: { to: '/join-us#volunteer', label: 'Train or lead' }
 	}
 ];

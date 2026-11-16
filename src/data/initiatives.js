@@ -17,14 +17,15 @@ export const INITIATIVES = [
 		dateStyle: 'navy',
 		pillar: 'Coding · TDD · Clean code',
 		summary:
-			'A continuous practice group. We ensemble-code katas and practice apps using Test Driven Development and good coding habits.',
+			'A continuous practice group. We ensemble-code katas, practice apps and portfolio projects using Test Driven Development and good coding habits.',
 		audience:
 			'Anyone who knows the basics of one programming language, from career changers and students to experienced engineers.',
 		learn: [
 			'Test Driven Development (red, green, refactor)',
 			'Ensemble (mob) programming',
 			'Clean, readable code and good habits',
-			'Thinking out loud and coding in front of others'
+			'Thinking out loud and coding in front of others',
+			'Building portfolio projects you can show employers'
 		],
 		solves:
 			'You want to practise TDD or pair programming but don’t get the chance at work, or you’re learning alone with no one to review your code.',
@@ -35,7 +36,7 @@ export const INITIATIVES = [
 		eventKey: 'Architects Kata Club',
 		name: 'Architects’ Kata Club',
 		shortName: 'Architects’ Kata Club',
-		route: '/architect-s-club',
+		route: '/architects-kata-club',
 		frequency: 'Quarterly',
 		tone: 'amber',
 		glyph: '/\\',

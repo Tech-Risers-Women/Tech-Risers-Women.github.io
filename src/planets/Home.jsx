@@ -4,9 +4,14 @@ import ui from '../components/ui.module.css';
 import { ArrowIcon, ExternalLink, SectionHeading, toneClass } from '../components/ui.jsx';
 import NextEventCard from '../moons/NextEventCard.jsx';
 import UpcomingEvents from '../moons/UpcomingEvents.jsx';
+import { QuoteMark } from '../moons/MemberQuote.jsx';
+import { QUOTES } from '../data/quotes';
 import { INITIATIVES } from '../data/initiatives';
 import { LINKS } from '../data/links';
 import sessionPhoto from '../media/session.webp';
+
+const LONG_QUOTES = QUOTES.filter((q) => !q.short).map((q) => q.text);
+const SHORT_QUOTES = QUOTES.filter((q) => q.short).map((q) => q.text);
 
 const STATS = [
 	{ value: '15', label: 'countries and counting' },
@@ -98,32 +103,6 @@ const COUNTRIES = [
 	'Mexico',
 	'Australia'
 ];
-
-// Real member quotes. Please don't edit them.
-const QUOTES = [
-	'This experience not only enriched my technical skills but also boosted my confidence in participating in architectural discussions. Kudos to the entire team for creating such a nurturing community!',
-	'I’m really glad that I woke up that morning and went to participate in that kata. Helped me a ton at system design interview two weeks later.',
-	'Kudos to Sarah, Nele and the entire team to organize these TDD coding sessions. They are very well organized and help us learn so much. This has helped me gain confidence while coding.',
-	'The session exceeded my expectations, in that I also expanded my professional network and even gained a potential mentor.'
-];
-
-const SHORT_QUOTES = [
-	'It’s a lovely way to practice in a friendly environment.',
-	'A great way to practice system design skills and learn from others.',
-	'I learned more about how to ask better questions.',
-	'I wish there were more sessions!'
-];
-
-function QuoteMark() {
-	return (
-		<svg width="34" height="26" viewBox="0 0 34 26" aria-hidden="true">
-			<path
-				d="M0 26V14C0 6 4 1 12 0l1 4c-4 1-6 4-6 8h6v14H0zm20 0V14c0-8 4-13 12-14l1 4c-4 1-6 4-6 8h6v14H20z"
-				fill="var(--mustard)"
-			/>
-		</svg>
-	);
-}
 
 function Home() {
 	return (
@@ -389,7 +368,7 @@ function Home() {
 						lede="What members told us after their sessions."
 					/>
 					<div className={styles.quoteGrid}>
-						{QUOTES.map((q) => (
+						{LONG_QUOTES.map((q) => (
 							<figure key={q.slice(0, 20)} className={`${ui.card} ${styles.quote}`}>
 								<QuoteMark />
 								<blockquote>{q}</blockquote>

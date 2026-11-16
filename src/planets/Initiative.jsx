@@ -4,6 +4,8 @@ import ui from '../components/ui.module.css';
 import PageHero from '../moons/PageHero';
 import UpcomingEvents from '../moons/UpcomingEvents';
 import FaqList from '../components/FaqList';
+import { MemberQuotes } from '../moons/MemberQuote';
+import { quotesFor } from '../data/quotes';
 import { ArrowIcon, ExternalLink } from '../components/ui.jsx';
 import { INITIATIVES, getInitiativeById } from '../data/initiatives';
 import { LINKS } from '../data/links';
@@ -20,6 +22,7 @@ function Initiative({ initiative }) {
 	const { id, name, eyebrow, lede, aside, heroButton, steps, about, faqs, cta } = initiative;
 	const data = getInitiativeById(id);
 	const others = INITIATIVES.filter((i) => i.id !== id);
+	const quotes = quotesFor(id);
 
 	return (
 		<div>
@@ -96,6 +99,15 @@ function Initiative({ initiative }) {
 								<p key={p.slice(0, 24)}>{p}</p>
 							))}
 						</div>
+					</div>
+				</section>
+			)}
+
+			{quotes.length > 0 && (
+				<section className={styles.intro}>
+					<div className={`${ui.container} ${styles.introInner}`}>
+						<h2 className={styles.h2}>What members say</h2>
+						<MemberQuotes quotes={quotes} />
 					</div>
 				</section>
 			)}

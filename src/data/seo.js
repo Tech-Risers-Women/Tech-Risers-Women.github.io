@@ -63,9 +63,9 @@ export const PAGES = {
 			'Career development for women software engineers. Practise negotiation, career planning and self-advocacy, and prepare for senior IC roles with peers.'
 	},
 	'/join-us': {
-		title: 'Join us: membership, mentoring & partnerships | Tech Risers Women',
+		title: 'Join us: membership, volunteering & partnerships | Tech Risers Women',
 		description:
-			'Join a free community for women in software and data. Become a member, mentor or volunteer, or partner with and sponsor Tech Risers Women.'
+			'Join a free community for women in software and data. Become a member, trainer or volunteer, or partner with and sponsor Tech Risers Women.'
 	},
 	'/faq': {
 		title: 'FAQs | Tech Risers Women',
@@ -75,7 +75,7 @@ export const PAGES = {
 	'/code-of-conduct': {
 		title: 'Code of Conduct | Tech Risers Women',
 		description:
-			'The code of conduct that all attendees, organisers, facilitators, mentors, volunteers and hosts at Tech Risers Women events agree to.'
+			'The code of conduct that all attendees, organisers, facilitators, trainers, volunteers and hosts at Tech Risers Women events agree to.'
 	},
 	'/contact': {
 		title: 'Contact us | Tech Risers Women',

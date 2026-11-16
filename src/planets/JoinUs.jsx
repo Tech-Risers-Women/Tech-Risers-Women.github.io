@@ -65,13 +65,13 @@ const ROLES = [
 		gain: 'Experience planning, promoting and running online events for a global audience.'
 	},
 	{
-		title: 'Mentor',
-		text: 'Share your expertise during sessions. Mentors are proficient in Python, Java or JavaScript, ideally with TDD experience, or are experienced engineers or architects who can review code and designs. Ad hoc, so perfect if you have little time.',
-		gain: 'Coaching and review practice, and a reputation as someone others learn from.'
+		title: 'Trainer',
+		text: 'Share your expertise by running workshops in sessions. Trainers are proficient in Python, Java or JavaScript, ideally with TDD experience, or are experienced engineers or architects who can review code and designs. Ad hoc, so perfect if you have little time.',
+		gain: 'Teaching and review practice, and a reputation as someone others learn from.'
 	}
 ];
 
-// What volunteers get out of leading, mentoring and organising.
+// What volunteers get out of leading, training and organising.
 const GAINS = [
 	{
 		title: 'Practise leadership safely',
@@ -79,7 +79,7 @@ const GAINS = [
 	},
 	{
 		title: 'Build evidence for promotion',
-		text: 'Mentoring, facilitation and technical influence are what senior IC roles ask for. You’ll have real examples to point to.'
+		text: 'Training, facilitation and technical influence are what senior IC roles ask for. You’ll have real examples to point to.'
 	},
 	{
 		title: 'Deepen your own expertise',
@@ -131,7 +131,7 @@ function JoinUs() {
 						Become a member <ArrowIcon />
 					</ExternalLink>
 					<a href="#volunteer" className={`${ui.btn} ${ui.btnOutlineLight}`}>
-						Volunteer or mentor
+						Volunteer or train
 					</a>
 					<a href="#partner" className={`${ui.btn} ${ui.btnOutlineLight}`}>
 						Partner with us
@@ -200,9 +200,9 @@ function JoinUs() {
 			<section id="volunteer" className={`${ui.section} ${ui.dotsDark}`}>
 				<div className={`${ui.container} ${ui.stack}`}>
 					<SectionHeading
-						eyebrow="03 / Volunteer and mentor"
+						eyebrow="03 / Volunteer and train"
 						title="Grow as a leader by helping others rise"
-						lede="Leading, mentoring or organising with Tech Risers Women is a place to practise the skills senior technical roles ask for, while you help more women stay, grow and lead. New to this? We’re here to support you."
+						lede="Leading, training or organising with Tech Risers Women is a place to practise the skills senior technical roles ask for, while you help more women stay, grow and lead. New to this? We’re here to support you."
 						onNavy
 					/>
 					<ul className={own.gains}>

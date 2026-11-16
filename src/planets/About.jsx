@@ -38,7 +38,7 @@ function About() {
 		<div>
 			<PageHero
 				eyebrow="About us"
-				title="Helping women in software rise, technically"
+				title="More women staying, growing and leading in tech"
 				lede="Tech Risers Women is a peer-to-peer professional development community for women in software engineering and data, and especially for individual contributors who want to grow their technical expertise, confidence and careers."
 			/>
 			<section className={styles.body}>
@@ -53,17 +53,16 @@ function About() {
 							collaboration and shared experience.
 						</p>
 						<p>
-							Many communities for women in tech focus on networking or
-							career inspiration. We focus on the technical skills
-							themselves: designing systems, writing better code,
+							We focus on the technical skills themselves: designing
+							systems, writing better code,
 							preparing for interviews and planning the next step on the
 							individual contributor career track.
 						</p>
 						<p className={styles.callout}>
-							Tech Risers Women is not just another networking community.
-							It’s an online place to practise, learn, solve real
-							technical problems, and grow alongside women who
-							understand your journey.
+							Every session is hands-on. Whether you’re writing code,
+							sketching a system design or reflecting on your next career
+							move, you’re practising alongside women who understand your
+							journey.
 						</p>
 						<h3>We want to see:</h3>
 						<ul>

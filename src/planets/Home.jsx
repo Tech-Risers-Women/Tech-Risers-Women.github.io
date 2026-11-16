@@ -189,10 +189,9 @@ function Home() {
 							lede="Tech Risers Women is a peer-to-peer professional development community that helps women in software engineering and data grow their technical expertise through practical learning and problem-solving. That builds confidence, and supports real career progression through peer collaboration and shared experience."
 						/>
 						<p className={styles.callout}>
-							We’re not just another networking community. We’re an
-							online place to practise, learn, solve real technical
-							problems, and grow alongside women who understand your
-							journey.
+							An online place to practise, learn and solve real
+							technical problems, and to grow alongside women who
+							understand your journey.
 						</p>
 						<Link to="/about" className={styles.textLink}>
 							More about us <ArrowIcon size={16} />
@@ -296,7 +295,13 @@ function Home() {
 					<SectionHeading
 						eyebrow="04 / Coming up"
 						title="Upcoming events"
-						lede="Pick a session and register. Times are shown in your time zone."
+						lede={
+							<>
+								Members get the joining links by email, so{' '}
+								<ExternalLink href={LINKS.joinForm}>join the community</ExternalLink>{' '}
+								to take part. Times are shown in your time zone.
+							</>
+						}
 					/>
 					<UpcomingEvents limit={3} />
 					<Link to="/events" className={`${ui.btn} ${ui.btnOutline} ${styles.selfStart}`}>
@@ -446,7 +451,7 @@ function Home() {
 					</div>
 					<p className={styles.giveBack}>
 						Experienced engineer? Grow your own leadership as a{' '}
-						<Link to="/join-us#volunteer">mentor, organiser or lead</Link>.
+						<Link to="/join-us#volunteer">volunteer</Link>.
 						Company or community?{' '}
 						<Link to="/join-us#partner">Partner with us</Link>.
 					</p>

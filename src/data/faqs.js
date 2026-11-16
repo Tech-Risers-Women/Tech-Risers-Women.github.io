@@ -28,7 +28,7 @@ export const FAQ_GROUPS = [
 			{
 				question: 'How is it different from other women in tech communities?',
 				answer: [
-					'Tech Risers Women is not just another networking community. It’s an online place to practise, learn and solve real technical problems: coding katas, architecture katas, system design and career planning, alongside women who understand your journey.'
+					'Tech Risers Women focuses on putting skills into practice, both technical and core. Every session is hands-on: you might be writing code, drawing a solution design or reflecting on your career, rather than just listening.'
 				]
 			},
 			{
@@ -40,7 +40,7 @@ export const FAQ_GROUPS = [
 			{
 				question: 'Where do sessions take place?',
 				answer: [
-					'All of our sessions are online, so you can join from anywhere. Members currently join from 15 countries across five continents. Event times on our Events page are shown in your own time zone.'
+					'All of our sessions are online, so you can join from anywhere. Members currently join from 15 countries across five continents. We’d love to see even more coverage. Get in touch if you’d be keen on joining our global trainer team.'
 				],
 				link: { to: '/events', label: 'See upcoming events' }
 			}
@@ -59,14 +59,14 @@ export const FAQ_GROUPS = [
 			{
 				question: 'How do I register for an event?',
 				answer: [
-					'Find the session on our Events page and select Register. If you’re not a member yet, you’ll be asked to sign up first. Signed-up members receive the joining links.'
+					'There’s no separate registration for each event. We email the joining links for sessions to members, so once you’ve joined the community you’ll get them straight to your inbox.'
 				],
-				link: { to: '/events', label: 'Browse events' }
+				link: { href: LINKS.joinForm, label: 'Join the community' }
 			},
 			{
 				question: 'Which initiative should I start with?',
 				answer: [
-					'If you’re early in your career, Group Coding Sessions and Bootcamp++ build strong foundations. Mid-level engineers often join Group Coding, the Architects’ Kata Club and Career Corner. Senior, staff and principal engineers tend to get the most from the Architects’ Kata Club and Career Corner, and from mentoring others.'
+					'If you’re early in your career, Group Coding Sessions and Bootcamp++ build strong foundations. Mid-level engineers often join Group Coding, the Architects’ Kata Club and Career Corner. Senior, staff and principal engineers tend to get the most from the Architects’ Kata Club and Career Corner, and from training others.'
 				],
 				link: { to: '/initiatives', label: 'Compare initiatives' }
 			},
@@ -105,7 +105,7 @@ export const FAQ_GROUPS = [
 			{
 				question: 'Which programming languages do you use?',
 				answer: [
-					'All languages are welcome in Group Coding Sessions. You only need the basics of one: setting up a project, syntax, variables, primitive types, loops and functions.'
+					'All languages are welcome in Group Coding Sessions. Knowing a widely used one, such as Python, Java, C#, Ruby, Swift or JavaScript, makes it easier to work with others in a session. You only need the basics: setting up a project, syntax, variables, primitive types, loops and functions.'
 				]
 			},
 			{
@@ -121,11 +121,12 @@ export const FAQ_GROUPS = [
 		title: 'Getting involved',
 		faqs: [
 			{
-				question: 'Can I volunteer or mentor?',
+				question: 'Can I volunteer or become a trainer?',
 				answer: [
-					'Yes, and you’ll grow too. Leading, mentoring or organising is a supportive place to practise leadership, facilitation and communication: the skills senior technical roles ask for. We’re looking for initiative leads and co-leads, organisers, and mentors who can drop in when they have time.'
+					'Yes, please! We’re looking for initiative leads and co-leads, organisers, and trainers who can run a workshop when they have time.',
+					'Volunteering is good for your own growth too. Leading a session, running a workshop or organising events lets you practise leadership, facilitation and communication in a supportive community. These are the skills senior technical roles ask for.'
 				],
-				link: { to: '/join-us', label: 'Ways to get involved' }
+				link: { to: '/join-us#volunteer', label: 'Ways to get involved' }
 			},
 			{
 				question: 'Can my company partner with or sponsor Tech Risers Women?',
@@ -137,7 +138,7 @@ export const FAQ_GROUPS = [
 			{
 				question: 'Do you have a code of conduct?',
 				answer: [
-					'Yes. Everyone who takes part in Tech Risers Women events, including attendees, organisers, facilitators, mentors and hosts, agrees to our code of conduct.'
+					'Yes. Everyone who takes part in Tech Risers Women events, including attendees, organisers, facilitators, trainers and hosts, agrees to our code of conduct.'
 				],
 				link: { to: '/code-of-conduct', label: 'Read the code of conduct' }
 			}

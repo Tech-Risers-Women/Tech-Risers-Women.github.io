@@ -8,6 +8,12 @@
 	gap: 28px;
 }
 
+.joinNote {
+	margin: 0;
+	color: var(--muted);
+	font-size: 16px;
+}
+
 .upcomingHead {
 	display: flex;
 	flex-wrap: wrap;

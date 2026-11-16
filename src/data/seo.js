@@ -32,10 +32,10 @@ export const PAGES = {
 		description:
 			'Our mission: help women in software engineering and data grow their technical expertise, confidence and careers through practical, peer-to-peer learning.'
 	},
-	'/programmes': {
-		title: 'Programmes for women software engineers | Tech Risers Women',
+	'/initiatives': {
+		title: 'Initiatives for women software engineers | Tech Risers Women',
 		description:
-			'Free, hands-on programmes: Group Coding (TDD), Architects’ Kata Club (system design), Bootcamp++ and Career Corner. Find the right place to start.'
+			'Free, hands-on initiatives: Group Coding (TDD), Architects’ Kata Club (system design), Bootcamp++ and Career Corner. Find the right place to start.'
 	},
 	'/events': {
 		title: 'Upcoming events for women in tech | Tech Risers Women',
@@ -80,7 +80,7 @@ export const PAGES = {
 	'/contact': {
 		title: 'Contact us | Tech Risers Women',
 		description:
-			'Questions about Tech Risers Women, our programmes, membership or partnerships? Get in touch, or find quick answers in our FAQs.'
+			'Questions about Tech Risers Women, our initiatives, membership or partnerships? Get in touch, or find quick answers in our FAQs.'
 	}
 	// Donate page hidden until there's a real donation link. Uncomment along
 	// with the route in App.jsx.
@@ -95,7 +95,8 @@ export const PAGES = {
 // redirects (and tells search engines the new URL), and App.jsx redirects
 // in the browser.
 export const REDIRECTS = {
-	'/work-with-us': '/join-us'
+	'/work-with-us': '/join-us',
+	'/programmes': '/initiatives'
 };
 
 export const NOT_FOUND = {

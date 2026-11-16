@@ -27,7 +27,7 @@ function CodeSample() {
 const initiative = {
 	id: 'group-coding',
 	name: 'Group Coding Sessions',
-	eyebrow: 'Programme · Ad hoc sessions',
+	eyebrow: 'Initiative · Ad hoc sessions',
 	lede: 'A continuous practice group focused on hands-on skill development. We ensemble-code on katas and practice applications, applying Test Driven Development and good coding practices.',
 	aside: <CodeSample />,
 	heroButton: 'Get notified about the next intake',

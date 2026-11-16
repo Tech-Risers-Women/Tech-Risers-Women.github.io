@@ -15,7 +15,7 @@ function Faq() {
 			<PageHero
 				eyebrow="FAQs"
 				title="Frequently asked questions"
-				lede="Everything you need to know about Tech Risers Women: who it’s for, how to join, how our programmes work and how to get involved."
+				lede="Everything you need to know about Tech Risers Women: who it’s for, how to join, how our initiatives work and how to get involved."
 			>
 				<nav aria-label="Question topics" className={styles.topics}>
 					{FAQ_GROUPS.map((g) => (

@@ -96,8 +96,8 @@ function About() {
 						))}
 					</ol>
 					<div className={ui.btnRow}>
-						<Link to="/programmes" className={`${ui.btn} ${ui.btnNavy}`}>
-							Explore programmes <ArrowIcon />
+						<Link to="/initiatives" className={`${ui.btn} ${ui.btnNavy}`}>
+							Explore initiatives <ArrowIcon />
 						</Link>
 						<ExternalLink href={LINKS.joinForm} className={`${ui.btn} ${ui.btnMustard}`}>
 							Join the community

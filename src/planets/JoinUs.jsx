@@ -18,7 +18,7 @@ const BENEFITS = [
 const STEPS = [
 	{
 		title: 'Fill in the join form',
-		text: 'Tell us a little about yourself and which programmes interest you. It takes a few minutes.'
+		text: 'Tell us a little about yourself and which initiatives interest you. It takes a few minutes.'
 	},
 	{
 		title: 'Get the details',
@@ -33,8 +33,8 @@ const STEPS = [
 const WAYS = [
 	{
 		title: 'Attend sessions',
-		text: 'Code, design systems and plan your career in hands-on programme sessions.',
-		link: { to: '/programmes', label: 'Explore programmes' }
+		text: 'Code, design systems and plan your career in hands-on initiative sessions.',
+		link: { to: '/initiatives', label: 'Explore initiatives' }
 	},
 	{
 		title: 'Share and discuss',
@@ -57,11 +57,11 @@ const ROLES = [
 	{
 		title: 'Lead / Co-Lead',
 		text: 'Make sure sessions are planned and hosting is covered, run onboarding and learning sessions, and create ad hoc coding sessions. We’re looking for Bootcamp++ leads and another Group Coding co-lead.',
-		gain: 'Experience owning a programme end to end, and leading a team of volunteers.'
+		gain: 'Experience owning an initiative end to end, and leading a team of volunteers.'
 	},
 	{
 		title: 'Organiser',
-		text: 'Join the core organising team: plan initiatives, create events and LinkedIn posts, and support the programme leads.',
+		text: 'Join the core organising team: plan initiatives, create events and LinkedIn posts, and support the initiative leads.',
 		gain: 'Experience planning, promoting and running online events for a global audience.'
 	},
 	{
@@ -146,7 +146,7 @@ function JoinUs() {
 						<SectionHeading
 							eyebrow="01 / Membership"
 							title="What you get as a member"
-							lede="Membership is free. As a member you can take part in any of our programmes and hear about new sessions first."
+							lede="Membership is free. As a member you can take part in any of our initiatives and hear about new sessions first."
 						/>
 						<ul className={own.benefits}>
 							{BENEFITS.map((b) => (
@@ -261,7 +261,7 @@ function JoinUs() {
 						<p>
 							Tell us about your community or company and how you’d like
 							to work together, whether that’s sharing across our
-							audiences, hosting a session or sponsoring a programme.
+							audiences, hosting a session or sponsoring an initiative.
 						</p>
 						<div className={ui.btnRow}>
 							<ExternalLink href={LINKS.partnerForm} className={`${ui.btn} ${ui.btnNavy}`}>

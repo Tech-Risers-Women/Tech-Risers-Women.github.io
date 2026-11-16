@@ -12,7 +12,7 @@ const STATS = [
 	{ value: '15', label: 'countries and counting' },
 	{ value: '1–15+', label: 'years in engineering - every stage welcome' },
 	{ value: 'Online', label: 'join from anywhere in the world' },
-	{ value: '4', label: 'free programmes to join' }
+	{ value: '4', label: 'free initiatives to join' }
 ];
 
 // What members come away with.
@@ -31,7 +31,7 @@ const PILLARS = [
 		title: 'Technical skills',
 		tagline: 'Learn by doing',
 		text: 'Coding, Test Driven Development, software architecture, system design, algorithms and technical interview practice.',
-		link: { to: '/programmes', label: 'Explore programmes' }
+		link: { to: '/initiatives', label: 'Explore initiatives' }
 	},
 	{
 		title: 'Peer community',
@@ -46,7 +46,7 @@ const PILLARS = [
 		link: { to: '/career-corner', label: 'About Career Corner' }
 	},
 	{
-		title: 'Programme events',
+		title: 'Initiative events',
 		tagline: 'Practise and connect',
 		text: 'Regular hands-on online sessions where you solve real technical problems with women who understand your journey.',
 		link: { to: '/events', label: 'Discover events' }
@@ -153,10 +153,10 @@ function Home() {
 								Join the community <ArrowIcon />
 							</ExternalLink>
 							<Link
-								to="/programmes"
+								to="/initiatives"
 								className={`${ui.btn} ${ui.btnOutlineLight}`}
 							>
-								Explore programmes
+								Explore initiatives
 							</Link>
 							<Link to="/events" className={`${ui.btn} ${ui.btnOutlineLight}`}>
 								Discover events
@@ -247,13 +247,13 @@ function Home() {
 				</div>
 			</section>
 
-			{/* Programmes */}
-			<section id="programmes" className={`${ui.section} ${ui.dots}`}>
+			{/* Initiatives */}
+			<section id="initiatives" className={`${ui.section} ${ui.dots}`}>
 				<div className={`${ui.container} ${ui.stack}`}>
 					<SectionHeading
-						eyebrow="03 / Programmes"
+						eyebrow="03 / Initiatives"
 						title="Find your way in"
-						lede="Hands-on programmes for every stage, from writing cleaner code to designing systems and planning your next promotion. All free, all online."
+						lede="Hands-on initiatives for every stage, from writing cleaner code to designing systems and planning your next promotion. All free, all online."
 					/>
 					<div className={styles.initiativeGrid}>
 						{INITIATIVES.map((i) => (
@@ -283,8 +283,8 @@ function Home() {
 							</Link>
 						))}
 					</div>
-					<Link to="/programmes" className={styles.textLink}>
-						Not sure where to start? See which programme fits your career
+					<Link to="/initiatives" className={styles.textLink}>
+						Not sure where to start? See which initiative fits your career
 						stage <ArrowIcon size={16} />
 					</Link>
 				</div>
@@ -421,7 +421,7 @@ function Home() {
 						<div id="newsletter" className={`${styles.panel} ${ui.card}`}>
 							<h2 className={styles.panelTitle}>Get the newsletter</h2>
 							<p className={styles.muted}>
-								Session recaps, new programmes and opportunities from
+								Session recaps, new initiatives and opportunities from
 								across the community, on LinkedIn.
 							</p>
 							<ExternalLink href={LINKS.newsletter} className={`${ui.btn} ${ui.btnOutline}`}>

@@ -30,8 +30,8 @@ build writes a small page at the old URL that forwards visitors and search
 engines to the new one, and the app redirects in the browser too.
 
 **FAQs:** questions live in `src/data/faqs.js` and are also written into the
-FAQs page as structured data for Google. Programme details shown on the
-Programmes page come from `src/data/initiatives.js`.
+FAQs page as structured data for Google. Initiative details shown on the
+Initiatives page come from `src/data/initiatives.js`.
 
 **Share image:** `public/og-image.png` is generated from
 `scripts/og-image.html`; instructions for regenerating it are at the top of

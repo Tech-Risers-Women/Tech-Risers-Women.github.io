@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import styles from './programmes.module.css';
+import styles from './initiatives.module.css';
 import ui from '../components/ui.module.css';
 import PageHero from '../moons/PageHero';
 import { ArrowIcon, ExternalLink, SectionHeading, toneClass } from '../components/ui.jsx';
@@ -17,7 +17,7 @@ export function AudienceCards() {
 					<div className={styles.startWith}>
 						<span className={styles.label}>Start with</span>
 						<ul>
-							{a.programmes.map((id) => {
+							{a.initiatives.map((id) => {
 								const p = getInitiativeById(id);
 								return (
 									<li key={id}>
@@ -42,13 +42,13 @@ export function AudienceCards() {
 	);
 }
 
-function Programmes() {
+function Initiatives() {
 	return (
 		<div>
 			<PageHero
-				eyebrow="Programmes · Free · Online"
+				eyebrow="Initiatives · Free · Online"
 				title="Learn by doing, alongside women who get it"
-				lede="Our programmes help women in software and data build practical, industry-relevant skills: coding, system design, software architecture and career growth. Every session is hands-on, peer-led and free."
+				lede="Our initiatives help women in software and data build practical, industry-relevant skills: coding, system design, software architecture and career growth. Every session is hands-on, peer-led and free."
 			>
 				<div className={ui.btnRow}>
 					<ExternalLink href={LINKS.joinForm} className={`${ui.btn} ${ui.btnMustard}`}>
@@ -65,7 +65,7 @@ function Programmes() {
 					<SectionHeading
 						eyebrow="01 / Where to start"
 						title="Wherever you are in your career"
-						lede="Not sure which programme is for you? Here’s where members at each stage usually begin. You can join as many as you like."
+						lede="Not sure which initiative is for you? Here’s where members at each stage usually begin. You can join as many as you like."
 					/>
 					<AudienceCards />
 				</div>
@@ -74,13 +74,13 @@ function Programmes() {
 			<section className={`${ui.section} ${ui.dots} ${ui.bordered}`}>
 				<div className={`${ui.container} ${ui.stack}`}>
 					<SectionHeading
-						eyebrow="02 / Programmes"
+						eyebrow="02 / Initiatives"
 						title="Four ways to grow"
 					/>
 					<div className={styles.list}>
 						{INITIATIVES.map((i) => (
-							<article key={i.id} className={`${ui.card} ${styles.programme}`}>
-								<header className={styles.programmeHead}>
+							<article key={i.id} className={`${ui.card} ${styles.initiative}`}>
+								<header className={styles.initiativeHead}>
 									<span
 										className={`${styles.glyph} ${
 											i.glyphStyle === 'mustard' ? styles.glyphMustard : ''
@@ -89,7 +89,7 @@ function Programmes() {
 									>
 										{i.glyph}
 									</span>
-									<div className={styles.programmeTitle}>
+									<div className={styles.initiativeTitle}>
 										<h3 className={styles.name}>
 											<Link to={i.route}>{i.name}</Link>
 										</h3>
@@ -148,7 +148,7 @@ function Programmes() {
 					<div className={styles.ctaText}>
 						<h2 className={ui.h2Small}>Ready to start?</h2>
 						<p>
-							Join the community and choose the programmes you’d like to
+							Join the community and choose the initiatives you’d like to
 							take part in. We’ll send you everything you need, including
 							the joining links for sessions.
 						</p>
@@ -162,4 +162,4 @@ function Programmes() {
 	);
 }
 
-export default Programmes;
+export default Initiatives;

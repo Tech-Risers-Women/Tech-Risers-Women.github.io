@@ -72,7 +72,7 @@
 	min-height: 32px;
 }
 
-/* Programme list */
+/* Initiative list */
 
 .list {
 	display: flex;
@@ -80,20 +80,20 @@
 	gap: 24px;
 }
 
-.programme {
+.initiative {
 	padding: 32px;
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
 }
 
-.programmeHead {
+.initiativeHead {
 	display: flex;
 	gap: 20px;
 	align-items: flex-start;
 }
 
-.programmeTitle {
+.initiativeTitle {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
@@ -205,12 +205,12 @@
 }
 
 @media (max-width: 760px) {
-	.programme,
+	.initiative,
 	.cta {
 		padding: 24px;
 	}
 
-	.programmeHead {
+	.initiativeHead {
 		flex-direction: column;
 	}
 

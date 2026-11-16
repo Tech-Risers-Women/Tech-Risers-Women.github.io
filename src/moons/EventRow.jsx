@@ -13,7 +13,7 @@ import {
 } from '../utils/formatEvent';
 
 // One upcoming event: date block, title and description, and a Register
-// button. Used on the Events page, the home page and each programme page.
+// button. Used on the Events page, the home page and each initiative page.
 function EventRow({ event, headingLevel = 'h3' }) {
 	const initiative = getInitiativeByEventKey(event.initiative);
 	const mustard = initiative?.dateStyle === 'mustard';
